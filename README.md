@@ -10,3 +10,5 @@ INTEGRANTES:
 **DIAGRAMA DE CLASES:**  
   
 ![PIS](https://github.com/josuetrres/PIS/assets/166523266/66bca65e-eeb0-44f2-ab53-42f265d3af67)
+
+Para poder utilizar el codigo
