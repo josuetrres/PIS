@@ -24,3 +24,10 @@ def articulacion(request):
         'pinzas' : pinzas,
         })
 
+def servodetail(request, id):
+    servo = Servo.objects.get(id=id)
+    context = {
+        'servo': servo
+    }
+    return render(request, 'servodetail.html', context)
+

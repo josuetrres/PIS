@@ -6,7 +6,9 @@
 
 <ul>
     {% for servo in servos %}
-        <li>{{ servo.nombre }}</li>
+        <li>
+            <a href="/servo/{{ servo.id }}"> {{ servo.nombre }} </a>    
+        </li>
     {% endfor %}
 </ul>
     
