@@ -23,6 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'), 
     path('servo/',servo, name='servo'),
-    path('base/', base, name='base'),
+    path('articulaciones/', base, name='articulaciones'),
     path('controladorMotor/', controladorMotor, name='controladorMotor'),
 ]
