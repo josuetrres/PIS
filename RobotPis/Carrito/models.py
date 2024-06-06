@@ -25,7 +25,7 @@ class ControladorMotor(models.Model):
 
 
 class MotorDC(models.Model):
-    ontroladorMotor = models.ForeignKey(ControladorMotor, on_delete = models.DO_NOTHING)
+    controladorMotor = models.ForeignKey(ControladorMotor, on_delete = models.DO_NOTHING)
     VOLTAJE = models.DecimalField(max_digits=5,  decimal_places=2)
     CORRIENTE = models.DecimalField(max_digits=5,  decimal_places=2)
     maxVelocidad = models.DecimalField(max_digits=5, decimal_places=2)

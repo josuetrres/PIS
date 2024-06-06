@@ -1,0 +1,7 @@
+<ul>
+    {% for controladorMotor in controladores %}
+        <li> Controlador {{ controladorMotor.id }}</li>
+        <p> Estado: {{ controladorMotor.estado }}</p>
+
+    {% endfor %}
+</ul>
