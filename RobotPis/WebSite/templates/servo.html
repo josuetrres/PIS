@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Servos{% endblock %}
+
+{% block content %}
+
+<ul>
+    {% for servo in servos %}
+        <li>
+            <a href="/servo/{{ servo.id }}"> {{ servo.nombre }} </a>    
+        </li>
+    {% endfor %}
+</ul>
+    
+{% endblock %}
