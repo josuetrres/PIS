@@ -10,7 +10,17 @@ def servo(request):
     return render(request, 'servo.html', {'servos': servos})
 
 
-def base(request):
+def articulacion(request):
     bases = Base.objects.all()
-    return render(request, 'articulacion.html', {'bases': bases})
+    codos = Codo.objects.all()
+    hombros = Hombro.objects.all()
+    munecas = Muneca.objects.all()
+    pinzas = Pinza.objects.all()
+    return render(request, 'articulacion.html', {
+        'bases': bases,
+        'codos': codos,
+        'hombros': hombros,
+        'munecas': munecas,
+        'pinzas' : pinzas,
+        })
 
