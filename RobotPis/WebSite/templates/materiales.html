@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Materiales{% endblock %}
+
+{% block content %}
+<li>
+    <a href="{% url 'articulaciones' %}">Articulaciones</a>
+</li>
+<li>
+    <a href="{% url 'servo'%}">ServoMotores</a>
+</li>
+<li>
+    <a href="{% url 'motorDC'%}">Motor DC</a>
+</li>
+<li>
+    <a href="{% url 'controladorMotor'%}">Controlador Motor</a>
+</li>
+{% endblock %}

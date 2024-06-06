@@ -17,7 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from BrazoRobotico.views import home, servo, articulacion
-from Carrito.views import controladorMotor
+from Carrito.views import controladorMotor, motorDC
+from WebSite.views import materiales
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +26,6 @@ urlpatterns = [
     path('servo/',servo, name='servo'),
     path('articulaciones/', articulacion, name='articulaciones'),
     path('controladorMotor/', controladorMotor, name='controladorMotor'),
+    path('motorDC/', motorDC, name='motorDC'),
+    path('materiales/', materiales, name='materiales'),
 ]
