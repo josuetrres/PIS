@@ -12,5 +12,5 @@ def servo(request):
 
 def base(request):
     bases = Base.objects.all()
-    return render(request, 'base.html', {'base': bases})
+    return render(request, 'articulacion.html', {'bases': bases})
 
