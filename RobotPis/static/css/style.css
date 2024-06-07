@@ -875,3 +875,10 @@ ul.location_icon li a {
 .margintitle{
      margin-top: 80px;
 }
+
+#articulaciones{
+     display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
