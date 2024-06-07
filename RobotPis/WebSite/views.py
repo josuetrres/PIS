@@ -15,7 +15,6 @@ def vip(request):
 def funcionamiento (request):
     return render(request, 'funcionamiento.html')
 
-<<<<<<< HEAD
 def testimonios(request):
     if request.method == 'POST':
         form = TestimonioForm(request.POST)
@@ -31,7 +30,5 @@ def testimonios(request):
         'testimonios': testimonios
         }
     return render(request, 'testimonios.html', content)
-=======
 def diagramaClases (request):
     return render(request, 'diagramaClases.html')
->>>>>>> 88557a9b498d00e1cc1418129e443df1dca5d436
