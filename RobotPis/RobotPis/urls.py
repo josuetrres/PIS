@@ -18,7 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from BrazoRobotico.views import home, servo, articulacion, servodetail
 from Carrito.views import controladorMotor, motorDC
+<<<<<<< HEAD
+from WebSite.views import *
+=======
 from WebSite.views import materiales, desarrolladores
+>>>>>>> 8db5d00427aca1037420bd37e002e3a71b0414eb
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,5 +33,9 @@ urlpatterns = [
     path('controladorMotor/', controladorMotor, name='controladorMotor'),
     path('motorDC/', motorDC, name='motorDC'),
     path('materiales/', materiales, name='materiales'),
+<<<<<<< HEAD
+    path('testimonios/', testimonios, name='testimonios'),
+=======
+>>>>>>> 8db5d00427aca1037420bd37e002e3a71b0414eb
     path('desarrolladores/', desarrolladores, name='desarrolladores'),
 ]
