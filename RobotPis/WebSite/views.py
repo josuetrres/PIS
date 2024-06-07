@@ -11,3 +11,6 @@ def desarrolladores(request):
 
 def vip(request):
     return render(request, 'vip.html')
+
+def funcionamiento (request):
+    return render(request, 'funcionamiento.html')
