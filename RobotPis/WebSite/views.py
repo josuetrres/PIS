@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from Carrito.models import *
-from Testimonios.views import *
+from .models import *
 # Create your views here.
 
 def materiales(request):
@@ -15,5 +15,20 @@ def vip(request):
 def funcionamiento (request):
     return render(request, 'funcionamiento.html')
 
+def testimonios(request):
+    if request.method == 'POST':
+        form = TestimonioForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('testimonios') 
+    else:
+        form = TestimonioForm()
+
+    testimonios = Testimonio.objects.all().order_by('fecha')
+    content = {
+        'form': form, 
+        'testimonios': testimonios
+        }
+    return render(request, 'testimonios.html', content)
 def diagramaClases (request):
     return render(request, 'diagramaClases.html')
