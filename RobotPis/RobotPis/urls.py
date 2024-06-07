@@ -34,10 +34,7 @@ urlpatterns = [
     path('vip/', vip, name='vip'),
     path('funcionamiento/', funcionamiento, name='funcionamiento'),
     path('diagramaClases/', diagramaClases, name='diagramaClases'),
-<<<<<<< HEAD
     path('sensores/', sensor, name='sensores'),
     path('sensores/<int:id>/', sensorDetail, name='sensorDetail'),
-=======
     path('materias/', materias, name='materias')
->>>>>>> 5adcee8d5afb885f761d06ec9a78c1e796d5e50b
 ]
