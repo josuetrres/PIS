@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from Carrito.models import *
+from Sensores.views import *
 from .models import *
 # Create your views here.
 
