@@ -728,7 +728,7 @@ button {
      z-index: 999;
      background: #fff;
      padding: 40px 50px;
-     margin-top: 155px;
+     margin-top: 70px;
 }
 
 .main_form .contactus {
@@ -856,10 +856,22 @@ ul.location_icon li a {
 }
 
 #tituloDesarrolladores{
-     margin-top: 150px;
+     margin-top: 75px;
      padding: 10px;
 }
 
 #testimonios{
      margin-bottom: 40px;
+}
+
+.servotitle{
+     margin-top: 165px;
+}
+
+#basePageHeader{
+     display: flex;
+}
+
+#VipTitle{
+     margin-top: 80px;
 }
