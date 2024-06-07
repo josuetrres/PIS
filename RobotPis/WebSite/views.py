@@ -8,5 +8,6 @@ def materiales(request):
 
 def desarrolladores(request):
     return render(request, 'desarrolladores.html')
-def desarrolladores (request):
-    return render(request, 'desarrolladores.html')
+
+def vip(request):
+    return render(request, 'vip.html')
