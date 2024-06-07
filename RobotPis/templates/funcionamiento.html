@@ -1,0 +1,36 @@
+{% extends "basePage.html" %}
+{% load static %}
+
+{% block title %}
+Funcionamiento
+{% endblock  %}
+
+{% block styles %}
+{% endblock  %}
+
+{% block content %}
+<section class="banner_main">
+    <div id="banner1" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#banner1" data-slide-to="0" class="active"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="text-bg">
+                            <iframe src="https://drive.google.com/file/d/147hK-8u0G1-z9jQZ_6aogLQ3BdN4Jfb-/preview" width="640" height="480" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </a>
+        <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </a>
+    </div>
+</section>
+{% endblock %}
