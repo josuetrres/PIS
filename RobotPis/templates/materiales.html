@@ -23,27 +23,39 @@
                 <figure><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3J0XHprZ-dZBAK-yx8W5u05eJM4dKK6SQkw&s" alt="#"/></figure>
                 <h3><span class="blu">-</span>Articulaciones</h3>
                 <p>Los materiales para la articulaciones del brazo:</p>
+                <div class="col-md-12">
+                    <a class="read_more" href="{% url 'articulaciones' %}}">Ver más</a>
+                 </div>
              </div>
           </div>
           <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
              <div class="glasses_box">
-                <figure><img src="https://i.ibb.co/QF5cLxM/Imagen-de-Whats-App-2024-02-26-a-las-02-20-27-d4ad993d.jpg" alt="#"/></figure>
-                <h3><span class="blu">-</span>Funcionamiento</h3>
-                <p>Funcionamiento del Proyecto de Braxo Robotico.</p>
+                <figure><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx0LeGWunwnggj3c23klB_H3Dbn5jm55sRvw&s" alt="#"/></figure>
+                <h3><span class="blu">-</span>Servomotores</h3>
+                <p>Los servomotores que estan implementados en el proyecto:</p>
+                <div class="col-md-12">
+                    <a class="read_more" href="{% url 'servo' %}}">Ver más</a>
+                 </div>
              </div>
           </div>
           <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
              <div class="glasses_box">
-                <figure><img src="https://www.galileo.edu/fisicc/files/2020/06/preview_video_fisicc-compressor.jpg" alt="#"/></figure>
-                <h3><span class="blu">-</span>Integración de Materias.</h3>
-                <p>SConjunto de conocimientos aprendidos en las materias durante el ciclo.</p>
+                <figure><img src="https://http2.mlstatic.com/D_NQ_NP_617717-MEC49548174570_042022-O.webp" alt="#"/></figure>
+                <h3><span class="blu">-</span>Motorreductor</h3>
+                <p>El motor de DC que estamos implementndo.</p>
+                <div class="col-md-12">
+                    <a class="read_more" href="{% url 'motorDC' %}}">Ver más</a>
+                 </div>
              </div>
           </div>
           <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
              <div class="glasses_box">
-                <figure><img src="https://i.ibb.co/bXW2PZD/329444411-66bca65e-eeb0-44f2-ab53-42f265d3af67-1.jpg" alt="#"/></figure>
-                <h3><span class="blu">-</span>Diagrama de Clases</h3>
-                <p>Diagrama de Clases</p>
+                <figure><img src="https://i.ibb.co/nfqxpR0/Imagen-de-Whats-App-2024-06-07-a-las-06-35-39-02a5cac9.jpg" alt="#"/></figure>
+                <h3><span class="blu">-</span>Controlador de Motor</h3>
+                <p>Controlador para el coche del brazo robotico</p>
+                <div class="col-md-12">
+                    <a class="read_more" href="{% url 'controladorMotor' %}}">Ver más</a>
+                 </div>
              </div>
           </div>
           
@@ -52,25 +64,4 @@
     </div>
  </div>x
     
-{% endblock %}
-
-{% extends 'basePage.html' %}
-
-{% block title %}Materiales{% endblock %}
-
-{% block content %}
-
-<h1> Materiales </h1>
-<li>
-    <a href="{% url 'articulaciones' %}">Articulaciones</a>
-</li>
-<li>
-    <a href="{% url 'servo'%}">ServoMotores</a>
-</li>
-<li>
-    <a href="{% url 'motorDC'%}">Motor DC</a>
-</li>
-<li>
-    <a href="{% url 'controladorMotor'%}">Controlador Motor</a>
-</li>
 {% endblock %}
