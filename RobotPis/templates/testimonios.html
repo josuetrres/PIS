@@ -16,12 +16,15 @@ Testimonios
                 </form>
             </div>
         </div>
-        <h2>Testimonios</h2>
-        <ul>
-            {% for testimonial in testimonials %}
-                <li><strong>{{ testimonio.nombre }}</strong>: {{ testimonio.mensaje }} <em>({{ testimonio.fecha }})</em></li>
-            {% endfor %}
-        </ul>
+        <div id="testimonios">
+            <h2>Testimonios</h2>
+        
+            <ul>
+                {% for testimonio in testimonios %}
+                    <li><strong>{{ testimonio.nombre }}</strong>: {{ testimonio.mensaje }} <em>({{ testimonio.fecha }})</em></li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
     
 </div>

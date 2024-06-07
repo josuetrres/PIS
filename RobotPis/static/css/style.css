@@ -724,11 +724,11 @@ button {
 }
 
 .main_form {
-     position: absolute;
+     position: relative;
      z-index: 999;
      background: #fff;
      padding: 40px 50px;
-     margin-top: 107px;
+     margin-top: 155px;
 }
 
 .main_form .contactus {
@@ -753,7 +753,6 @@ button {
      padding-bottom: 14px;
      background: transparent;
      color: #4b4b4c;
-     ;
      font-size: 18px;
      font-weight: normal;
      border-top: inherit;
@@ -859,4 +858,8 @@ ul.location_icon li a {
 #tituloDesarrolladores{
      margin-top: 150px;
      padding: 10px;
+}
+
+#testimonios{
+     margin-bottom: 40px;
 }
