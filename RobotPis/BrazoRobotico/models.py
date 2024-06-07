@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Servo(models.Model):
+    imagen = models.URLField(max_length=200, null=True,blank=True)
     VOLTAJE = models.DecimalField(max_digits=5, decimal_places=2)
     CORRIENTE = models.DecimalField(max_digits=5, decimal_places=2)
     nombre = models.CharField(max_length=50)
@@ -12,6 +13,7 @@ class Servo(models.Model):
         return self.nombre
     
 class Articulacion(models.Model):
+    imagen = models.URLField(max_length=200, null=True,blank=True)
     nombre = models.CharField(max_length=50)
     angulo = models.DecimalField(max_digits=5, decimal_places=2)
     velocidad = models.DecimalField(max_digits=5, decimal_places=2)
@@ -22,6 +24,9 @@ class Articulacion(models.Model):
 
     def definirPosicionInicial(self):
         pass
+
+    def __str__(self):
+        return self.nombre
 
 class Base(Articulacion):
     def definirPosicionInicial(self):

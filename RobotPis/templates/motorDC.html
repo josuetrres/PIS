@@ -1,0 +1,11 @@
+{% extends 'basePage.html' %}
+
+{% block title %}Motor DC{% endblock %}
+
+{% block content %}
+<ul>
+    {% for motorDC in motores %}
+        <li>Motor DC {{ motorDC.id }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

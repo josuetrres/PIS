@@ -1,0 +1,36 @@
+{% extends "basePage.html" %}
+
+{% block title %}Detalle en Servos{% endblock %}
+
+{% block content %}
+    <h1>Detalle del Servo</h1>
+
+    <div>
+        <h2>Nombre del Servo:</h2>
+        <p>{{ servo.nombre }}</p>
+    </div>
+
+    <div>
+        <h2>Voltaje</h2>
+        <p>{{ servo.VOLTAJE }}</p>
+    </div>
+
+    <div>
+        <h2>Velocidad: </h2>
+        <p>{{ servo.velocidad }}</p>
+    </div>
+
+    <div>
+        <h2>Corriente: </h2>
+        <p>{{ servo.CORRIENTE }}</p>
+    </div>
+
+    <div>
+        <h2>Torque: </h2>
+        <p>{{ servo.torque }}</p>
+
+    </div>
+
+
+{% endblock %}
+
