@@ -5,7 +5,16 @@
 {% block content %}
 <ul>
     {% for motorDC in motores %}
-        <li>Motor DC {{ motorDC.id }}</li>
+        <li>Nombre: {{ motorDC.nombre }}</li>
+        <li>Imagen: <img src="{{ motorDC.image }}" alt="#"></li>
+        <li>Voltaje: {{ motorDC.VOLTAJE }}</li>  
+        <li>Corriente: {{ motorDC.CORRIENTE }}</li>
+        <li>Maxima Velocidad: {{ motorDC.maxVelocidad }}</li>
+        <li>RPM: {{ motorDC.rpm }}</li>
+        <li>Torque: {{ motorDC.torque }}</li>
+        <li>Controlador de Motor: {{ motorDC.controladorMotor }}</li>
+        
     {% endfor %}
+
 </ul>
 {% endblock %}
