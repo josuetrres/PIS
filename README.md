@@ -61,3 +61,11 @@ Para crear un sitio web básico con GitHub Pages:
 3. **Publicar**:
    - Una vez que el archivo esté en el repositorio, GitHub Pages lo publicará automáticamente.
    - Accede a `https://username.github.io` para ver tu sitio web.
+
+---
+## Carácteristicas del programa
+- El programa te permite agregar nuevos componentes electronicos, desde el admin.
+- El sitio web permite navegar a traves de los apartados: Inicio, Desarrolladores, Visión Integral del proyecto, Testimonios y control para una mejor visualizacion de lo que se trata nuestro proyecto Telerobob.
+- Permite a los usuarios dejar un testimonio de como apreciaron la plataforma.
+- Mediante la documentación el usuario podra conocer cada detalle de como se realizo el proyecto PIS.
+
