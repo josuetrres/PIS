@@ -54,6 +54,60 @@ INTEGRANTES:
 ![dewtgewr](https://github.com/josuetrres/PIS/assets/166523434/a1821614-d4b7-4fdd-9206-ddfb6e7145c0)
 
 ---
+##Integración de materias  
+- Análisis Matemático: Los conocimientos de esta materia se utlizara para automatizar el movimiento del brazo robotico mediante ecuaciones diferenciales e integrales, ademas de apoyar al algoritmo estadistico.
+    
+- Diseño de Circuitos: En esta materia utilizaremos los conocmientos obtenidos para lograr crear y optimizar diseños electronicos necesarios, para el correcto funcionamiento del proyecto, asi mismo, de esta manera lograr entender y preveer errores que genewren los componentes desde bajo nivel.
+   
+- Teoria de la Distribución y Probabilidad: Se pretende utilizar los concimientos de esta materia para lograr implementar estadisticas de uso del brazo robotico. Caracteristicas tales como el peso de cada objeto recolectado, la temperatura ambiente en el sitio donde esta ubicado, ademas de su posición en el GPS. Todo esto nos ayudara a realizar graficos estadisticos.
+   
+- Programación Orientada a Objetos: Implementaremos los conocimientos adquiridos en POO, para planificar y desarrollar aplicaciones web, y de esta manera darle su respectivo fucionamiento al Hardware. El mismo se lograra mediante la implementación de modelado UML, y lenguajes de programación con sus respectivos frameworks, aprendidos durante el ciclo.
+  
+- Emprendimiento e Innovación Técnologica: Los conocimientos adquiridos en esta meteria se hara uso para poder gestionar la imagen del proyecto, gastos e inversiones que se realizaran al momento del desarrollo del proyecto.
+
+---
+##Historias de usuario
+Historia 1
+Como usuario, quiero poder controlar el movimiento del brazo robótico a través de la interfaz web para realizar tareas específicas.
+
+Historia 2
+Como usuario, quiero poder programar secuencias de movimientos para que el brazo robótico los ejecute automáticamente.
+
+Historia3
+Como usuario, quiero recibir feedback en tiempo real del estado y posición del brazo robótico para asegurarme de que está funcionando correctamente.
+
+Historia 4
+Como usuario me gustaria que la aplicacion de control del brazo robotico cuente con imagen de video en vivo.
+
+---
+
+##Casos de uso
+  
+Título: Recolectar desechos peligrosos
+Actor: Usuario
+Precondiciones: El usuario debe estar registrado y debe estar familiarizado con los controles del robot.
+Flujo principal:
+- El usuario  debe escoger seleccionar los desechos destinados a recolectar.
+- El usuario debe iniciar seción.
+- Una vez dentro de la pagina principal debe dirigirce al apartado control remoto.
+- Ya familiarizado con los controles, procede a manipular el brazo robotico y de igual manera observalo en la camara integrada.
+- Recoge la basura para posteriormente colocar en el sensor de peso.
+
+Flujos alternativos: 
+- Si el cliente no tiene una cuenta, se le solicita que se registre.
+- Si el usuario no esta familiarizado, procedera a seguir el tutorial de como usarlo.
+
+
+Título: Automatizar un movimiento
+Actor: Usuario
+Precondiciones: El usuario debe estar registrado y debe estar familiarizado con los controles del robot. 
+Flujo principal:
+- El usuario  debe realizar el movimiento deseado con el brazo.
+- Luego el usuario debe guardarlo mediante un boton integrado al sitio web.
+Flujos alternativos:
+- Si el cliente no tiene una cuenta, se le solicita que se registre.
+- Si el usuario no esta familiarizado, procedera a seguir el tutorial de como usarlo.
+
 
 ## GitHub Pages
 
