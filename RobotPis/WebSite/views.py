@@ -14,3 +14,6 @@ def vip(request):
 
 def funcionamiento (request):
     return render(request, 'funcionamiento.html')
+
+def diagramaClases (request):
+    return render(request, 'diagramaClases.html')
