@@ -549,7 +549,17 @@ button {
      margin-top: 44px;
 }
 
+.glasses_box{
+     transition: all 0.4s ease;
+}
 
+.glasses_box:hover{
+     transform: translateY(-10px)  scale(1.2);
+     background-color: #bbedfa;
+     box-shadow: 0 25px 25px rgba(7, 89, 212, 0.5);
+     opacity: 1.1;
+
+}
 /** end Our  Glasses section **/
 
 
