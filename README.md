@@ -1,5 +1,5 @@
 **BIENVENIDOS A EL PROYECTO INTEGRADOR DE SABERES "PIS"**  
-  
+
 INTEGRANTES:  
 - Josue Torres (@josuetrres)
 - Alexis Roman (@vinirmn007)
@@ -7,9 +7,56 @@ INTEGRANTES:
 - Benito Minga (@manuelminga)
 - Daniel Sanchez (@DanielS110)
 
+--- 
+
+### Enlace del sitio web:
+`<link>` : <https://github.com>
+
+---
 **DIAGRAMA DE CLASES:**  
   
 ![PIS](https://github.com/josuetrres/PIS/assets/166523266/66bca65e-eeb0-44f2-ab53-42f265d3af67)
+
+---
+# Carácteristicas del sitio web
+![udgh](https://github.com/josuetrres/PIS/assets/166523434/ecbdf20c-06dc-48d4-bd73-fd9557c88804)
+
+---
+- El programa te permite agregar nuevos componentes electronicos, desde el admin.
+  Usuario: admin
+  Contraseña: 12345678
+  
+  ![Imagen de WhatsApp 2024-06-07 a las 14 27 29_986f569a](https://github.com/josuetrres/PIS/assets/166523434/2b965c9e-cdc0-40b6-a0d9-a9a380b60446)
+  ![Imagen de WhatsApp 2024-06-07 a las 14 27 30_b5a0d824](https://github.com/josuetrres/PIS/assets/166523434/529a7bcd-104d-4d72-848f-5625fc7c749d)
+
+  ---
+
+- El sitio web permite navegar a traves de los apartados: Inicio, Desarrolladores, Documentación, Testimonios, y Control, esto permitira al usuario una mejor visualizacion y navegación intuitiva, mediante el cual al usuario le permitirá  conocer de lo que se trata nuestro proyecto Telerobob y su respectivo funcionamiento del mismo.
+  ![rgrg](https://github.com/josuetrres/PIS/assets/166523434/6a181809-08de-4b16-aa14-9211a677326a)
+
+  ---
+
+- Exite una opcion para acceder al link del repsitorio de GitHub, haciendo clik en el icono del mismo.
+![tr](https://github.com/josuetrres/PIS/assets/166523434/35a7900f-9b58-4ea8-a551-7fdbf71d9d82)
+
+---
+  
+- Permite a los usuarios en el apartado de testimonio dejar un comentario de como apreciaron la plataforma.
+  ![erer](https://github.com/josuetrres/PIS/assets/166523434/d9b03ef4-61ad-4343-a778-255c0a470bc2)
+
+- Mediante el aparatdo de la documentación el usuario podra conocer cada detalle de como se realizo el proyecto PIS:
+  Materiales.- En este aparatdo se encuentran todos los materiales utilizados para la realización de nuestro Telerobot, con su respectiba implementacion y funcionamiento.
+  Funcionamiento: Se encuentran videos recopialdos, que se realizo al momento de hacer prubas de movimiento del brazo.
+  Integración de materias: Conjunto de conocimientos que se aplicaran segmentados por materias.
+  Diagrama de clases: Se observa el diagrama UML de clases, donde se puede observar la logica detras del sitio web, las relaciones que tiene cada clase para el correcto funcionamiento.
+  Historias de usuario: El historial de usuario describe las funcionalidades que se desean implementar en un proyecto de control de un brazo robótico a través de una interfaz web.
+  ![sfad](https://github.com/josuetrres/PIS/assets/166523434/aa6cf16f-e3e9-4a56-9690-1917ffc32faf)
+
+---
+- En la parte inferior de la plataforma (footer), se vusualiza los apartados de la ubicación del proyecto, como también el numero de teléfono y el correo del proyecto denominado JABED, para consultar cualquier inquietud mas personalisada.
+![dewtgewr](https://github.com/josuetrres/PIS/assets/166523434/a1821614-d4b7-4fdd-9206-ddfb6e7145c0)
+
+---
 
 ## GitHub Pages
 
@@ -63,9 +110,3 @@ Para crear un sitio web básico con GitHub Pages:
    - Accede a `https://username.github.io` para ver tu sitio web.
 
 ---
-## Carácteristicas del programa
-- El programa te permite agregar nuevos componentes electronicos, desde el admin.
-- El sitio web permite navegar a traves de los apartados: Inicio, Desarrolladores, Visión Integral del proyecto, Testimonios y control para una mejor visualizacion de lo que se trata nuestro proyecto Telerobob.
-- Permite a los usuarios dejar un testimonio de como apreciaron la plataforma.
-- Mediante la documentación el usuario podra conocer cada detalle de como se realizo el proyecto PIS.
-
