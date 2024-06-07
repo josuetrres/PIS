@@ -4,3 +4,6 @@ from Carrito.models import *
 
 def materiales(request):
     return render(request, 'materiales.html')
+
+def desarrolladores (request):
+    return render(request, 'desarrolladores.html')
