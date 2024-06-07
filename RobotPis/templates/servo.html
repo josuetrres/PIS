@@ -4,12 +4,29 @@
 
 {% block content %}
 
-<ul>
-    {% for servo in servos %}
-        <li>
-            <a href="/servo/{{ servo.id }}"> {{ servo.nombre }} </a>    
-        </li>
-    {% endfor %}
-</ul>
-    
+
+<div class="glasses">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-10 offset-md-1">
+            <div class="titlepage">
+               <h2>Servomotores Usados:</h2>
+               <p>Los servomotores quqe hemos usado para el brazo robotico son:
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container-fluid">
+      <div class="row">
+         {%for servo in servos %}
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">           
+               <div class="glasses_box">
+                  <figure><img src="{{servo.image}}" alt="#"/></figure>
+                  <p>{{servo.nombre}}</p>
+               </div>  
+          </div>
+         {%endfor%}  
+      </div>
+   </div>
 {% endblock %}
