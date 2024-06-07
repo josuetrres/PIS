@@ -1,0 +1,68 @@
+{% extends "basePage.html" %}
+{% load static %}
+
+{% block title %}
+Inicio
+{% endblock  %}
+
+{% block styles %}
+{% endblock  %}
+
+{% block content %}
+<section class="banner_main">
+    <div id="banner1" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#banner1" data-slide-to="0" class="active"></li>
+          <li data-target="#banner1" data-slide-to="1"></li>
+          <li data-target="#banner1" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="text-bg">
+                            <h1> <span class="blu">Bienvenidos <br></span>Proyecto "JABED"</h1>
+                            <figure><img src="{% static "images/brazo1.jpeg" %}" alt="#"/></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="text-bg">
+                            <h1> <span class="blu">Bienvenidos <br></span>Proyecto "JABED"</h1>
+                            <figure><img src="{% static "images/brazo2.jpeg" %}" alt="#"/></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="text-bg">
+                            <h1> <span class="blu">Bienvenidos <br></span>Proyecto "JABED"</h1>
+                            <figure><img src="{% static "images/brazo3.jpeg" %}" alt="#"/></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </a>
+        <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </a>
+    </div>
+</section>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "js/popper.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static "js/jquery-3.0.0.min.js" %}"></script>
+    <script src="{% static "js/jquery.mCustomScrollbar.concat.min.js" %}"></script>
+    <script src="{% static "js/custom.js" %}"></script>
+{% endblock %}
