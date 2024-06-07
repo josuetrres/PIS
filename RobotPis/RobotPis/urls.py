@@ -19,7 +19,6 @@ from django.urls import path
 from BrazoRobotico.views import home, servo, articulacion, servodetail
 from Carrito.views import controladorMotor, motorDC
 from WebSite.views import *
-from WebSite.views import materiales, desarrolladores
 
 urlpatterns = [
     path('admin/', admin.site.urls),

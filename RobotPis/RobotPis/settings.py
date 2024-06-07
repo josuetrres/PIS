@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'BrazoRobotico',
     'Carrito',
     'WebSite',
-    'Testimonios',
 ]
 
 MIDDLEWARE = [
