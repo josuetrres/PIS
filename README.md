@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 **BIENVENIDOS A EL PROYECTO INTEGRADOR DE SABERES "PIS"**  
   
 INTEGRANTES:  
@@ -61,3 +62,9 @@ Para crear un sitio web básico con GitHub Pages:
 3. **Publicar**:
    - Una vez que el archivo esté en el repositorio, GitHub Pages lo publicará automáticamente.
    - Accede a `https://username.github.io` para ver tu sitio web.
+=======
+**PROYECTO INTEGRADOR DE SABERES "PIS"**  
+RAMA DEVELOP: En esta rama iremos trabajando todas las funcionalidades que vayamos a implementar en nuestro proyecto  
+  
+![imagen desarrollo](https://github.com/josuetrres/PIS/assets/166523266/42721950-74cd-4452-b5f6-cd2bb901779a)
+>>>>>>> v1.0.0

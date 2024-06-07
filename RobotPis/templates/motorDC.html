@@ -1,0 +1,21 @@
+{% extends 'basePage.html' %}
+
+{% block title %}Motor DC{% endblock %}
+
+{% block content %}
+<div class="banner_main">
+
+    {% for motorDC in motores %}
+    <ul>
+        <img src="{{ motorDC.imagen }}" alt="Imagen" width="300px">
+        <li><strong>Nombre:</strong> {{ motorDC.nombre }}</li>
+        <li><strong>Voltaje:</strong> {{ motorDC.VOLTAJE }}</li>  
+        <li><strong>Corriente:</strong> {{ motorDC.CORRIENTE }}</li>
+        <li><strong>Maxima Velocidad:</strong> {{ motorDC.maxVelocidad }}</li>
+        <li><strong>RPM:</strong> {{ motorDC.rpm }}</li>
+        <li><strong>Torque:</strong> {{ motorDC.torque }}</li>
+        <li><strong>Controlador de Motor:</strong> {{ motorDC.controladorMotor }}</li>
+    </ul> 
+    {% endfor %}
+</div>
+{% endblock %}
