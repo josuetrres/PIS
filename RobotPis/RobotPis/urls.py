@@ -31,10 +31,11 @@ urlpatterns = [
     path('materiales/', materiales, name='materiales'),
     path('testimonios/', testimonios, name='testimonios'),
     path('desarrolladores/', desarrolladores, name='desarrolladores'),
-    path('vip/', vip, name='vip'),
+    path('documentacion/', documentacion, name='documentacion'),
     path('funcionamiento/', funcionamiento, name='funcionamiento'),
     path('diagramaClases/', diagramaClases, name='diagramaClases'),
     path('sensores/', sensor, name='sensores'),
     path('sensores/<int:id>/', sensorDetail, name='sensorDetail'),
-    path('materias/', materias, name='materias')
+    path('materias/', materias, name='materias'),
+    path('historiaUsuario/', historiaUsuario, name='historiaUsuario')
 ]

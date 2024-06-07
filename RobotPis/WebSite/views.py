@@ -10,8 +10,8 @@ def materiales(request):
 def desarrolladores(request):
     return render(request, 'desarrolladores.html')
 
-def vip(request):
-    return render(request, 'vip.html')
+def documentacion(request):
+    return render(request, 'documentacion.html')
 
 def funcionamiento (request):
     return render(request, 'funcionamiento.html')
@@ -37,3 +37,6 @@ def diagramaClases (request):
 
 def materias (request):
     return render(request, 'materias.html')
+
+def historiaUsuario(request):
+    return render(request, 'historiasUsuario.html')

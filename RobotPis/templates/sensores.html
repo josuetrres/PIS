@@ -23,7 +23,9 @@
             {% for sensor in sensores_list %}
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">           
                     <div class="glasses_box">
-                        <figure><img src="{{sensor.image}}" alt="#"/></figure>
+                        <figure>
+                           <img src="{{sensor.imagen}}" alt="Imagen del sensor"/>
+                        </figure>
                         <p>{{sensor.nombre}}</p>
                         <div class="col-md-12">
                             <a class="read_more" href="/sensores/{{ sensor.id }}">Ver más</a>
