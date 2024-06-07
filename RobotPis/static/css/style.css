@@ -287,6 +287,14 @@ button {
      padding-right: 10px;
 }
 
+.nav-item{
+     transition: all 0.3s;
+}
+
+.nav-item:hover{
+     transform: translateY(-10px);
+}
+
 .login_btn a {
      background: #03cafc;
      padding: 9px 32px !important;
