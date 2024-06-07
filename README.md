@@ -66,7 +66,7 @@ INTEGRANTES:
 - **Emprendimiento e Innovación Técnologica:** Los conocimientos adquiridos en esta meteria se hara uso para poder gestionar la imagen del proyecto, gastos e inversiones que se realizaran al momento del desarrollo del proyecto.
   
 ---
-**##Historias de usuario**
+**##Historias de usuario**  
 **Historia 1**  
 Como usuario, quiero poder controlar el movimiento del brazo robótico a través de la interfaz web para realizar tareas específicas.
   
