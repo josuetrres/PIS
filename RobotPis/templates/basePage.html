@@ -39,7 +39,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html">
+                              <a href="{% url "home" %}">
                               <img src="{% static "images/logo-largo.png" %}" alt="#" width="200px"/>
                               </a>
                            </div>
@@ -54,16 +54,16 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item active">
-                                 <a class="nav-link" href="#">Inicio</a>
+                                 <a class="nav-link" href="{% url "home" %}">Inicio</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="#">Desarrolladores</a>
+                                 <a class="nav-link" href="{% url "desarrolladores" %}">Desarrolladores</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="glasses.html">Vision Integral del Proyecto </a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="contact.html">Testimonios</a>
+                                 <a class="nav-link" href="{% url "testimonios" %}">Testimonios</a>
                               </li>
                               <li class="nav-item login_btn">
                                  <a class="nav-link" href="#">Control</a>
@@ -104,8 +104,12 @@
             </div>
          </div>
       </footer>
-
-      {% block js %}
-      {% endblock  %}
+      
+      <script src="{% static "js/jquery.min.js" %}"></script>
+      <script src="{% static "js/popper.min.js" %}"></script>
+      <script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+      <script src="{% static "js/jquery-3.0.0.min.js" %}"></script>
+      <script src="{% static "js/jquery.mCustomScrollbar.concat.min.js" %}"></script>
+      <script src="{% static "js/custom.js" %}"></script>
    </body>
 </html>
