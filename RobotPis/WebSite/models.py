@@ -8,7 +8,7 @@ class Testimonio(models.Model):
     fecha = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name + '-' + self.mensaje
+        return self.nombre + '-' + self.mensaje
     
 class TestimonioForm(forms.ModelForm):
     class Meta:

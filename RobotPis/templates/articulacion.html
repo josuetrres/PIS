@@ -4,34 +4,73 @@
 
 {% block content %}
 
-<ul>
-    {% for base in bases %}
-        <li>{{ base.nombre }}</li>
-    {% endfor %}
-</ul>
+<div class="banner_main" >
+    <div class="container-fluid">
+        <div class="row">
+            {% for base in bases %}
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">           
+                 <div class="glasses_box">
+                    <figure><img src="{{servo.image}}" alt="#"/></figure>
+                    <p>{{ base.nombre }}</p>
+                 </div>  
+            </div>
+           {%endfor%}  
+        </div>
+     </div>
 
-<ul>
-    {% for hombro in hombros %}
-        <li>{{ hombro.nombre }}</li>
-    {% endfor %}
-</ul>
+        <div class="container-fluid">
+            <div class="row">
+                {% for hombro in hombros %}
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">           
+                     <div class="glasses_box">
+                        <figure><img src="{{servo.image}}" alt="#"/></figure>
+                        <p>{{ hombro.nombre }}</p>
+                     </div>  
+                </div>
+               {%endfor%}  
+            </div>
+         </div>
+    
+    
+         <div class="container-fluid">
+            <div class="row">
+                {% for codo in codos %}
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">           
+                     <div class="glasses_box">
+                        <figure><img src="{{servo.image}}" alt="#"/></figure>
+                        <p>{{ codo.nombre }}</p>
+                     </div>  
+                </div>
+               {%endfor%}  
+            </div>
+         </div>
+    
+         <div class="container-fluid">
+            <div class="row">
+                {% for muneca in munecas %}
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">           
+                     <div class="glasses_box">
+                        <figure><img src="{{servo.image}}" alt="#"/></figure>
+                        <p>{{ muneca.nombre }}</p>
+                     </div>  
+                </div>
+               {%endfor%}  
+            </div>
+         </div>
 
-<ul>
-    {% for codo in codos %}
-        <li>{{ codo.nombre }}</li>
-    {% endfor %}
-</ul>
+         <div class="container-fluid">
+            <div class="row">
+                {% for pinza in pinzas %}
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">           
+                     <div class="glasses_box">
+                        <figure><img src="{{servo.image}}" alt="#"/></figure>
+                        <p>{{ pinza.nombre }}</p>
+                     </div>  
+                </div>
+               {%endfor%}  
+            </div>
+         </div>
 
-<ul>
-    {% for muneca in munecas %}
-        <li>{{ muneca.nombre }}</li>
-    {% endfor %}
-</ul>
-
-<ul>
-    {% for pinza in pinzas %}
-        <li>{{ pinza.nombre }}</li>
-    {% endfor %}
-</ul>
+</div>
 
 {% endblock %}
