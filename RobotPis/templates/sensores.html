@@ -1,0 +1,37 @@
+{% extends "basePage.html" %}
+
+{% block title %}Sensores{% endblock %}
+
+{% block content %}
+
+
+<div class="glasses">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-10 offset-md-1">
+            <div class="titlepage">
+               <h2 class = "margintitle">Sensores Usados:</h2>
+               <p>Los sensores que se implementaran son los siguientes:
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container-fluid">
+      <div class="row">
+         {%for sensores_list in sensoresTotales %}
+            {% for sensor in sensores_list %}
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">           
+                    <div class="glasses_box">
+                        <figure><img src="{{sensor.image}}" alt="#"/></figure>
+                        <p>{{sensor.nombre}}</p>
+                        <div class="col-md-12">
+                            <a class="read_more" href="/sensores/{{ sensor.id }}">Ver más</a>
+                        </div>
+                    </div>  
+                </div>
+            {% endfor %}
+         {%endfor%}  
+      </div>
+   </div>
+{% endblock %}

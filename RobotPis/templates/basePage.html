@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- basic -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- mobile metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- site metas -->
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <title>
+        {% block title %}
+        {% endblock  %}
+        </title>
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+        <!-- style css -->
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <!-- Responsive-->
+        <link rel="stylesheet" href="{% static "css/responsive.css" %}">
+        <!-- fevicon -->
+        <link rel="icon" href="{% static "images/logo.png" %}" type="image/gif" />
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="{% static "css/jquery.mCustomScrollbar.min.css" %}">
+        <!-- Tweaks for older IEs-->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+        {% block styles %}
+        {% endblock  %}
+      
+   </head>
+   <body class="main-layout">
+      <header id = "basePageHeader">
+         <div class="header">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="{% url "home" %}">
+                              <img src="{% static "images/logo-largo.png" %}" alt="#" width="200px"/>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <img src="{% static "images/menu.png" %}" alt="#" width="30px"/>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="{% url 'desarrolladores' %}">Desarrolladores</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="{% url 'vip' %}">Vision Integral del Proyecto </a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="{% url "testimonios" %}">Testimonios</a>
+                              </li>
+                              <li class="nav-item login_btn">
+                                 <a class="nav-link" href="#">Control</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+
+      {% block content %}
+      {% endblock %}
+         
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8 offset-md-2">
+                     <ul class="location_icon">
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a><br> UNL Loja-Ecuador</li>
+                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a><br> +593 99-323-4264</li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a><br> jabedrobotica@gmail.com</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2024 Todos los derechos reservados. JABED Robotics</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      
+      <script src="{% static "js/jquery.min.js" %}"></script>
+      <script src="{% static "js/popper.min.js" %}"></script>
+      <script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+      <script src="{% static "js/jquery-3.0.0.min.js" %}"></script>
+      <script src="{% static "js/jquery.mCustomScrollbar.concat.min.js" %}"></script>
+      <script src="{% static "js/custom.js" %}"></script>
+   </body>
+</html>
