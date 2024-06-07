@@ -7,11 +7,6 @@ INTEGRANTES:
 - Benito Minga (@manuelminga)
 - Daniel Sanchez (@DanielS110)
 
---- 
-
-### Enlace del sitio web:
-`<link>` : <https://github.com>
-
 ---
 **DIAGRAMA DE CLASES:**  
   
@@ -23,10 +18,11 @@ INTEGRANTES:
 
 ---
 - El programa te permite agregar nuevos componentes electronicos, desde el admin.
-  Usuario: admin
-  Contraseña: 12345678
+    Usuario: admin
+    Contraseña: 12345678
   
   ![Imagen de WhatsApp 2024-06-07 a las 14 27 29_986f569a](https://github.com/josuetrres/PIS/assets/166523434/2b965c9e-cdc0-40b6-a0d9-a9a380b60446)
+  
   ![Imagen de WhatsApp 2024-06-07 a las 14 27 30_b5a0d824](https://github.com/josuetrres/PIS/assets/166523434/529a7bcd-104d-4d72-848f-5625fc7c749d)
 
   ---
@@ -37,6 +33,7 @@ INTEGRANTES:
   ---
 
 - Exite una opcion para acceder al link del repsitorio de GitHub, haciendo clik en el icono del mismo.
+  
 ![tr](https://github.com/josuetrres/PIS/assets/166523434/35a7900f-9b58-4ea8-a551-7fdbf71d9d82)
 
 ---
