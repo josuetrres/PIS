@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-yx2h^3*g84ywlkzmu44+dl732yh0p90h%ib^5$mb+x(bkn43u9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['172.23.32.1']
 
 
 # Application definition
@@ -130,5 +130,11 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+
+
+# Media files (uploads), configuaracion para la camara
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / "media"
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
