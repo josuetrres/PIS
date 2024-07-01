@@ -49,7 +49,7 @@
                   <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                      <nav class="navigation navbar navbar-expand-md navbar-dark ">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                        <img src="{% static "images/menu.png" %}" alt="#" width="30px"/>
+                        <img src="{% static 'images/menu.png' %}" alt="#" width="30px"/>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
@@ -60,13 +60,13 @@
                                  <a class="nav-link" href="{% url 'desarrolladores' %}">Desarrolladores</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="{% url 'vip' %}">Vision Integral del Proyecto </a>
+                                 <a class="nav-link" href="{% url 'documentacion' %}"> Documentacion </a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="{% url "testimonios" %}">Testimonios</a>
+                                 <a class="nav-link" href="{% url 'testimonios' %}">Testimonios</a>
                               </li>
                               <li class="nav-item login_btn">
-                                 <a class="nav-link" href="#">Control</a>
+                                 <a class="nav-link" href="{% url 'control_servo' %}">Control</a>
                               </li>
                            </ul>
                         </div>

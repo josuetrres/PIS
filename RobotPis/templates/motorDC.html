@@ -4,18 +4,39 @@
 
 {% block content %}
 <div class="banner_main">
-
+    <h1>Proyecto JABED: Motores DC en el Brazo Robótico</h1>
+    <p>El proyecto JABED está a la vanguardia en la implementación de tecnologías avanzadas en robótica. Nuestro brazo robótico utiliza motores de corriente continua (DC) de alta precisión para lograr movimientos suaves y controlados, esenciales para aplicaciones industriales y educativas.</p>
+    <p>A continuación, se presentan las especificaciones detalladas de los motores DC utilizados en nuestro proyecto:</p>
+    
     {% for motorDC in motores %}
     <ul>
-        <img src="{{ motorDC.imagen }}" alt="Imagen" width="300px">
+        <li><img src="{{ motorDC.imagen }}" alt="Imagen de {{ motorDC.nombre }}" width="300px"></li>
         <li><strong>Nombre:</strong> {{ motorDC.nombre }}</li>
-        <li><strong>Voltaje:</strong> {{ motorDC.VOLTAJE }}</li>  
-        <li><strong>Corriente:</strong> {{ motorDC.CORRIENTE }}</li>
-        <li><strong>Maxima Velocidad:</strong> {{ motorDC.maxVelocidad }}</li>
+        <li><strong>Voltaje:</strong> {{ motorDC.VOLTAJE }} V</li>  
+        <li><strong>Corriente:</strong> {{ motorDC.CORRIENTE }} A</li>
+        <li><strong>Maxima Velocidad:</strong> {{ motorDC.maxVelocidad }} RPM</li>
         <li><strong>RPM:</strong> {{ motorDC.rpm }}</li>
-        <li><strong>Torque:</strong> {{ motorDC.torque }}</li>
+        <li><strong>Torque:</strong> {{ motorDC.torque }} Nm</li>
         <li><strong>Controlador de Motor:</strong> {{ motorDC.controladorMotor }}</li>
-    </ul> 
+    </ul>
     {% endfor %}
+</div>
+
+<div class="additional_info">
+    <h2>Implementación en el Brazo Robótico</h2>
+    <p>Los motores DC son componentes cruciales en el diseño de nuestro brazo robótico. Estos motores permiten un control preciso y una respuesta rápida a las señales de control, facilitando movimientos complejos y repetitivos con alta eficiencia. Cada motor ha sido cuidadosamente seleccionado para garantizar la máxima compatibilidad y rendimiento en nuestro sistema.</p>
+
+    <h2>Beneficios de los Motores DC en el Proyecto JABED</h2>
+    <ul>
+        <li><strong>Alta eficiencia energética:</strong> Reducen el consumo de energía, prolongando la vida útil de las baterías y disminuyendo los costos operativos.</li>
+        <li><strong>Control de velocidad preciso:</strong> Permiten ajustes finos en la velocidad y posición del brazo robótico, mejorando la exactitud de las tareas realizadas.</        </li>
+        <li><strong>Operación silenciosa:</strong> Ideal para entornos donde el ruido debe mantenerse al mínimo, como en laboratorios y áreas educativas.</li>
+        <li><strong>Larga vida útil:</strong> Su diseño robusto asegura un funcionamiento confiable y duradero, minimizando el mantenimiento y los reemplazos.</li>
+        <li><strong>Fácil integración con controladores electrónicos:</strong> Compatibles con una variedad de controladores, facilitando su implementación y programación en el proyecto.</li>
+    </ul>
+</div>
+
+<div class="product_image">
+    <img src="https://laelectronica.com.gt/image/cache/catalog/Productos/Motores/MG9952-1200x1200.jpg" alt="Motor DC">
 </div>
 {% endblock %}

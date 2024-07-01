@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Servomotor</title>
+</head>
+<body>
+    <h1>Control de Servomotor</h1>
+
+    <h2>Video-Cámara de Brazo Robotico</h2>
+    <!--<img id="videoStream" src="http://10.20.136.120:81/stream" alt="Video Stream">-->
+
+    <h2>Control Angulo Camara</h2>
+
+    <form method="get" id="form-control">
+        <label for="camera">Camara:</label>
+        <input type="range" id="camera" name="camera" min="0" max="180" value="90">
+        <span id="anguloCam">{{ camera }}</span>
+
+        <label for="base">Base:</label>
+        <input type="range" id="base" name="base" min="0" max="180" value="90">
+        <span id="anguloBas">{{ base }}</span>
+
+        <label for="hombro">Hombro:</label>
+        <input type="range" id="hombro" name="hombro" min="0" max="180" value="90">
+        <span id="anguloHom">{{ hombro }}</span>
+
+        <label for="Codo">Codo:</label>
+        <input type="range" id="codo" name="codo" min="0" max="180" value="90">
+        <span id="anguloCod">{{ codo }}</span>
+
+        <label for="muneca">Muñeca:</label>
+        <input type="range" id="muneca" name="muneca" min="0" max="180" value="90">
+        <span id="anguloMun">{{ muneca }}</span>
+
+        <label for="pinza">Pinza:</label>
+        <input type="range" id="pinza" name="pinza" min="0" max="180" value="90">
+        <span id="anguloPin">{{ pinza }}</span>
+    </form>
+
+    <script src="{% static "js/control.js" %}"></script>
+</body>
+</html>
