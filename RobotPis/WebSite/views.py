@@ -47,7 +47,7 @@ def control_servo(request):
     if 'camera' in request.GET and 'base' in request.GET:
         camera = request.GET['camera']
         base = request.GET['base']
-        esp32_ip = 'http://10.20.136.210' # Cambia a la IP de tu ESP32
+        esp32_ip = 'http://192.168.100.61' # Cambia a la IP de tu ESP32
         response = requests.get(f'{esp32_ip}/?camera={camera}&base={base}')
         return HttpResponse(f'Servomotores movidos a {camera} y {base} grados', content_type='text/plain')
     
