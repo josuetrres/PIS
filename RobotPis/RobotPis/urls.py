@@ -19,6 +19,7 @@ from django.urls import path
 from BrazoRobotico.views import home, servo, articulacion, servodetail
 from Carrito.views import controladorMotor, motorDC
 from WebSite.views import *
+from Control.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -38,5 +39,6 @@ urlpatterns = [
     path('sensores/<int:id>/', sensorDetail, name='sensorDetail'),
     path('materias/', materias, name='materias'),
     path('historiaUsuario/', historiaUsuario, name='historiaUsuario'),
-    path('control_servo/', control_servo, name='control_servo'),
+    path('control/', control, name='control'),
+    path('estadisticas/', estadisticas, name='estadisticas'),
 ]

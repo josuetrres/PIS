@@ -1,45 +1,61 @@
+{% extends "baseControl.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Control de Servomotor</title>
-</head>
-<body>
+
+{% block title %}Control de Servomotor{% endblock %}
+
+{% block content %}
     <h1>Control de Servomotor</h1>
+    
+    <div id="camera_container">
+        <h2>Video-Cámara de Brazo Robotico</h2>
+        <!--<img id="videoStream" src="http://10.20.136.120:81/stream" alt="Video Stream">-->
+        <div id="camera_controls">
+            <label for="camera">Camara:</label>
+            <input type="range" id="camera" name="camera" min="0" max="180" value="90">
+            <button id="increment_camera" type="button">Incrementar</button>
+            <button id="decrement_camera" type="button">Decrementar</button>
+            <span id="anguloCam">{{ camera }}</span>
+        </div>
+    </div>
 
-    <h2>Video-Cámara de Brazo Robotico</h2>
-    <!--<img id="videoStream" src="http://10.20.136.120:81/stream" alt="Video Stream">-->
+    <div id="radar_container">
+        <h2>Radar de Brazo Robotico</h2>
+        <!--<canvas id="radar" width="400" height="400"></canvas>-->
+    </div>
 
-    <h2>Control Angulo Camara</h2>
+    <div id="control_container">
+        <h2>Control de Brazo Robotico</h2>
+        <form method="get" id="form-control">
+            <label for="base">Base:</label>
+            <input type="range" id="base" name="base" min="0" max="180" value="90">
+            <span id="anguloBas">{{ base }}</span>
+    
+            <label for="hombro">Hombro:</label>
+            <input type="range" id="hombro" name="hombro" min="0" max="180" value="90">
+            <span id="anguloHom">{{ hombro }}</span>
+    
+            <label for="Codo">Codo:</label>
+            <input type="range" id="codo" name="codo" min="0" max="180" value="90">
+            <span id="anguloCod">{{ codo }}</span>
+    
+            <label for="muneca">Muñeca:</label>
+            <input type="range" id="muneca" name="muneca" min="0" max="180" value="90">
+            <span id="anguloMun">{{ muneca }}</span>
+    
+            <label for="pinza">Pinza:</label>
+            <input type="range" id="pinza" name="pinza" min="0" max="180" value="90">
+            <span id="anguloPin">{{ pinza }}</span>
 
-    <form method="get" id="form-control">
-        <label for="camera">Camara:</label>
-        <input type="range" id="camera" name="camera" min="0" max="180" value="90">
-        <span id="anguloCam">{{ camera }}</span>
+            <button id="forward" type="button">Adelante</button>
+            <button id="backward" type="button">Atras</button>
+            <button id="right" type="button">Derecha</button>
+            <button id="left" type="button">Izquierda</button>
 
-        <label for="base">Base:</label>
-        <input type="range" id="base" name="base" min="0" max="180" value="90">
-        <span id="anguloBas">{{ base }}</span>
+            <button id="reset" type="reset">Limpiar</button>
+        </form>    
+    </div>
+{% endblock %}
 
-        <label for="hombro">Hombro:</label>
-        <input type="range" id="hombro" name="hombro" min="0" max="180" value="90">
-        <span id="anguloHom">{{ hombro }}</span>
-
-        <label for="Codo">Codo:</label>
-        <input type="range" id="codo" name="codo" min="0" max="180" value="90">
-        <span id="anguloCod">{{ codo }}</span>
-
-        <label for="muneca">Muñeca:</label>
-        <input type="range" id="muneca" name="muneca" min="0" max="180" value="90">
-        <span id="anguloMun">{{ muneca }}</span>
-
-        <label for="pinza">Pinza:</label>
-        <input type="range" id="pinza" name="pinza" min="0" max="180" value="90">
-        <span id="anguloPin">{{ pinza }}</span>
-    </form>
-
+{% block scripts %}
     <script src="{% static "js/control.js" %}"></script>
-</body>
-</html>
+{% endblock %}
