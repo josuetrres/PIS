@@ -1,0 +1,105 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#logo {
+    margin: 0 10px;
+    width: 60%;
+}
+
+#menu-responsive{
+    display: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content:right;
+    align-items: center;
+    width: 100%;
+}
+
+#link-container {
+    background-color: #CED0E1;
+    border-radius: 30px;
+    height: 100%;
+}
+
+#nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    margin: 5px;
+    padding: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    border-radius: 30px;
+    padding: 5px 10px;  
+}
+
+.nav-item:hover {
+    background-color: #A9B1E1;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #202236;
+}
+
+#control{
+    background-color: #494C61;
+    height: 40px;
+    padding: 0px 15px;
+}
+
+#control:hover {
+    background-color: #A9B1E1;
+}
+
+#control a {
+    color: white;
+}
+
+#control a:hover {
+    color: #202236;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #494C61;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+#contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contacto-item {
+    list-style: none;
+}
