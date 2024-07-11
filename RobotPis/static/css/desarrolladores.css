@@ -11,9 +11,9 @@
 
 
 .card-container img{
-    width: 250px;
-    height: 250px;
-    border-radius: 16px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     object-fit: cover;
 }
 .card-container{
@@ -24,6 +24,8 @@
     gap: 5px;
 }
 .card{
+    background-color:  #CED0E1;
+    border-radius: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
