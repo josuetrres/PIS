@@ -1,0 +1,35 @@
+@keyframes show {
+    from {
+        opacity: 0; scale: 10%;
+    }
+    to {
+        opacity: 1; scale: 100%;
+    }
+
+}
+
+
+
+.card-container img{
+    width: 250px;
+    height: 250px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    view-timeline-name: --reveal;
+    animation-name: show;
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
