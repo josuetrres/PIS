@@ -52,10 +52,12 @@ nav {
     margin: 0 10px;
     border-radius: 30px;
     padding: 5px 10px;  
+    transition: all 0.3s ease;
 }
 
 .nav-item:hover {
     background-color: #A9B1E1;
+    transform: translateY(-10px);
 }
 
 .nav-link {
@@ -64,7 +66,7 @@ nav {
 }
 
 #control{
-    background-color: #494C61;
+    background-color: #088395;
     height: 40px;
     padding: 0px 15px;
 }

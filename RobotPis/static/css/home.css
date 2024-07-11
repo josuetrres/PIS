@@ -22,8 +22,9 @@ img{
 .nav-link {
     color: white;
 }
+
 .nav-item:hover {
-    background-color: 	#7DF9FF;
+    background-color: #379777;
 }
 .title{
     display: flex;
