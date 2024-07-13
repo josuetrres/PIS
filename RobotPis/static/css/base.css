@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Orbitron:wght@700&family=Raleway:wght@700&family=Roboto:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=DotGothic16&display=swap');
-
 @keyframes show {
     from {
         opacity: 0;
@@ -32,7 +29,7 @@ header {
 
 #logo {
     margin: 0 10px;
-    width: 60%;
+    width: 80%;
 }
 
 #menu-responsive {
@@ -46,10 +43,6 @@ nav {
     align-items: center;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 5px;
-    z-index: 1000;
-    position: fixed;
 }
 
 #link-container {
@@ -79,7 +72,7 @@ nav {
 
 .nav-item:hover {
     background-color: #379777;
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .nav-link {
@@ -109,87 +102,51 @@ nav {
     padding: 10px 10px 20px 10px;
 }
 
-.section {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    opacity: 0;
-    view-timeline-name: --reveal;
-    animation-name: show;
-    animation-fill-mode: both;
-    animation-duration: 2s;
-    animation-timeline: --reveal;
-    animation-range: entry 25% cover 50%;
-}
-
-#section1 {
-    background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqCCYefOGD8tNEHu0NajNsn4RjqnXJFZ_pqKa4wPTDaAqTY75zH52Yc15xADN2QS1eENPjV6ZRdVnX6a9XTG0in-kxw1AROPMLynuJ9rx3LkpQl4X5kPn09uDqmqhnmu1BxB3Ky_YwV27u/w7680-h4320-c/hi-tech-interface-12-4k.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 h1, h2, h3, h4, h5, h6 {
-    color: white;
-    
-}
-
-#section1 h1 {
-    color: white;
-    font-size: 40px;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-family: 'Black Ops One', sans-serif;
-    font-size: 4em;
-    text-shadow: 0 0 10px rgba(0, 255, 204, 0.7), 0 0 20px rgba(0, 255, 204, 0.5), 0 0 30px rgba(0, 255, 204, 0.3);
-    margin: 0;
-    padding: 0;
-}
-
-.title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-p { 
     color: white;
 }
 
 footer {
-    display: block;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgba(124, 124, 124, 0.5);
     color: white;
-    padding: 10px 0;
+    padding: 30px 0;
 }
 
 footer p {
+    margin: 0;
+    padding: 0;
     text-align: center;
     color: white; /* Asegura que el color del texto sea blanco, ya está definido pero lo incluyo por claridad */
 }
 
+#contacto-container {
+    width: 90%;
+    margin-bottom: 30px;
+}
 
 #contacto {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    justify-content: center;
     align-items: center;
 }
-
+ 
 .contacto-item {
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 .contacto-item a {
     color: white;
     text-decoration: none;
+    margin-left: 10px;
 }
 
 ul {

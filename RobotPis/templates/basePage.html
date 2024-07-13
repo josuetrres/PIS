@@ -13,6 +13,7 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
    <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
    <title>{% block title %}{% endblock  %}</title>
    {% block styles %}
@@ -28,7 +29,7 @@
 
       <nav>
          <button type="button" id="menu-responsive">
-            <img src="{% static 'images/menu.png' %}" alt="#"/>
+            <span class="material-symbols-outlined">menu</span>
          </button>
          <div id="link-container">
             <ul id="nav-list">
@@ -63,19 +64,22 @@
    </div>
          
    <footer>
-      <div >
+      <div id="contacto-container">
          <ul id="contacto">
             <li class="contacto-item">
+               <span class="material-symbols-outlined">location_on</span>
                <a href="https://www.unl.edu.ec/" target="_blank">
                   UNL - Loja, Ecuador
                </a>
             </li>
             <li class="contacto-item">
+               <span class="material-symbols-outlined">mail</span>
                <a href="#">
                   jabedrobotica@gmail.com
                </a> 
             </li>
             <li class="contacto-item">
+               <span class="material-symbols-outlined">call</span>
                <a href="#">
                   +593 993234264
                </a>
