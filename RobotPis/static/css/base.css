@@ -49,6 +49,7 @@ nav {
     position: absolute;
     top: 5px;
     z-index: 1000;
+    position: fixed;
 }
 
 #link-container {
@@ -158,8 +159,17 @@ p {
 }
 
 footer {
-    display: none;
+    display: block;
+    background-color: rgba(124, 124, 124, 0.5);
+    color: white;
+    padding: 10px 0;
 }
+
+footer p {
+    text-align: center;
+    color: white; /* Asegura que el color del texto sea blanco, ya está definido pero lo incluyo por claridad */
+}
+
 
 #contacto {
     display: flex;
@@ -176,3 +186,20 @@ footer {
 ul {
     color: white;
 }
+
+imagen {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}   
+
+imagen   img{
+    max-width: 30%;
+    height: auto; 
+    display: block;
+    width: 30%; 
+    object-fit: cover;
+}
+

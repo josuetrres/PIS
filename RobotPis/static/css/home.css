@@ -66,7 +66,10 @@ p {
 }
 
 footer{
-    display: none;
+    display: block;
+    background-color: rgba(124, 124, 124, 0.5);
+    color: white;
+    padding: 10px 0;
 }
 
 
@@ -82,9 +85,9 @@ footer{
     background-color: #379777;
 }
 
-    nav{
+nav{
     background: rgba(0, 0, 0, 0.5);
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 5px;
     z-index: 1000;
