@@ -8,6 +8,12 @@
 
 }
 
+body {
+    background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqCCYefOGD8tNEHu0NajNsn4RjqnXJFZ_pqKa4wPTDaAqTY75zH52Yc15xADN2QS1eENPjV6ZRdVnX6a9XTG0in-kxw1AROPMLynuJ9rx3LkpQl4X5kPn09uDqmqhnmu1BxB3Ky_YwV27u/w7680-h4320-c/hi-tech-interface-12-4k.jpg);
+    color: #FFFFFF;
+    background-size: cover; 
+    background-position: center; 
+}
 
 
 .card-container img{
@@ -25,6 +31,7 @@
 }
 .card{
     background-color:  #CED0E1;
+    color: #000000;
     border-radius: 50px;
     display: flex;
     flex-direction: row;
