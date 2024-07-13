@@ -34,4 +34,5 @@
     animation-fill-mode: both;
     animation-timeline: --reveal;
     animation-range: entry 25% cover 50%;
+    padding: 10px;
 }
