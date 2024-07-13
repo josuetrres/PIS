@@ -80,6 +80,13 @@ footer{
     background-color: #379777;
 }
 
-/*nav{
+
+/*
+    nav{
+    background: rgba(0, 0, 0, 0.5);
     position: absolute;
-}*/
+    width: 100%;
+    top: 5px;
+    z-index: 1000;
+}
+*/
