@@ -113,7 +113,7 @@ footer {
     align-items: center;
     background-color: rgba(124, 124, 124, 0.5);
     color: white;
-    padding: 30px 0;
+    padding: 50px 0;
 }
 
 footer p {
@@ -207,6 +207,10 @@ texto p{
 
 titlen h3{
     color: black;
+}
+
+form p{
+    color: white;
 }
 
 
