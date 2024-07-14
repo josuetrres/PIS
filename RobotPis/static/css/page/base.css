@@ -113,7 +113,7 @@ footer {
     align-items: center;
     background-color: rgba(124, 124, 124, 0.5);
     color: white;
-    padding: 30px 0;
+    padding: 50px 0;
 }
 
 footer p {
@@ -145,7 +145,7 @@ footer p {
 
 .contacto-item a {
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
     margin-left: 10px;
 }
 
@@ -162,10 +162,55 @@ imagen {
 }   
 
 imagen   img{
-    max-width: 30%;
-    height: auto; 
+    max-width: 20%;
+    max-height: 30%; 
     display: block;
-    width: 30%; 
+    
     object-fit: cover;
 }
+
+.card-container img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.card{
+    background-color:  #CED0E1;
+    color: #000000;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    view-timeline-name: --reveal;
+    animation-name: show;
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+    padding: 10px;
+}
+
+p{
+    color: black;
+}
+
+texto p{
+    color: white;
+}
+
+titlen h3{
+    color: black;
+}
+
+form p{
+    color: white;
+}
+
 
