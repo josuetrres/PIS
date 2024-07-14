@@ -3,57 +3,80 @@
 
 {% block title %}Control de Servomotor{% endblock %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/control/control.css" %}">
+{% endblock %}
+
 {% block content %}
-    <h1>Control de Servomotor</h1>
-    
-    <div id="camera_container">
-        <h2>Video-Cámara de Brazo Robotico</h2>
-        <!--<img id="videoStream" src="http://10.20.136.120:81/stream" alt="Video Stream">-->
-        <div id="camera_controls">
-            <label for="camera">Camara:</label>
-            <input type="range" id="camera" name="camera" min="0" max="180" value="90">
-            <button id="increment_camera" type="button">Incrementar</button>
-            <button id="decrement_camera" type="button">Decrementar</button>
-            <span id="anguloCam">{{ camera }}</span>
+    <header>
+        <h1>Control</h1>
+    </header>
+        
+    <section id="control">
+        <div id="vision-tools-container">
+            <div id="camera-container">
+                <!--<img id="video-stream" src="http://10.20.136.120:81/stream" alt="Video Stream">-->
+                <img id="video-stream" src="https://static1-es.millenium.gg/entity_articles/7/20/7/@/23649-16254-brawl-stars-el-primo-1280x720-orig-1-orig-1.png">
+                <div id="camera-slider">
+                    <input type="range" id="camera" name="camera" min="0" max="180" value="90">
+                    <span id="anguloCam">{{ camera }}</span>
+                </div>
+                <div id="camera-buttons">
+                    <button id="increment_camera" type="button">
+                        <span class="material-symbols-outlined">arrow_forward_ios</span>
+                    </button>
+                    <button id="decrement_camera" type="button">
+                        <span class="material-symbols-outlined">arrow_back_ios</span>
+                    </button>
+                </div>
+            </div>
+        
+            <div id="radar-container">
+                <canvas id="radar"></canvas>
+            </div>
         </div>
-    </div>
-
-    <div id="radar_container">
-        <h2>Radar de Brazo Robotico</h2>
-        <!--<canvas id="radar" width="400" height="400"></canvas>-->
-    </div>
-
-    <div id="control_container">
-        <h2>Control de Brazo Robotico</h2>
-        <form method="get" id="form-control">
-            <label for="base">Base:</label>
-            <input type="range" id="base" name="base" min="0" max="180" value="90">
-            <span id="anguloBas">{{ base }}</span>
     
-            <label for="hombro">Hombro:</label>
-            <input type="range" id="hombro" name="hombro" min="0" max="180" value="90">
-            <span id="anguloHom">{{ hombro }}</span>
-    
-            <label for="Codo">Codo:</label>
-            <input type="range" id="codo" name="codo" min="0" max="180" value="90">
-            <span id="anguloCod">{{ codo }}</span>
-    
-            <label for="muneca">Muñeca:</label>
-            <input type="range" id="muneca" name="muneca" min="0" max="180" value="90">
-            <span id="anguloMun">{{ muneca }}</span>
-    
-            <label for="pinza">Pinza:</label>
-            <input type="range" id="pinza" name="pinza" min="0" max="180" value="90">
-            <span id="anguloPin">{{ pinza }}</span>
+        <div id="control-container">
+            <form method="get" id="form-control">
+                <label for="base">Base:</label>
+                <input type="range" id="base" name="base" min="0" max="180" value="90">
+                <span id="anguloBas">{{ base }}</span>
+        
+                <label for="hombro">Hombro:</label>
+                <input type="range" id="hombro" name="hombro" min="0" max="180" value="90">
+                <span id="anguloHom">{{ hombro }}</span>
+        
+                <label for="codo">Codo:</label>
+                <input type="range" id="codo" name="codo" min="0" max="180" value="90">
+                <span id="anguloCod">{{ codo }}</span>
+        
+                <label for="muneca">Muñeca:</label>
+                <input type="range" id="muneca" name="muneca" min="0" max="180" value="90">
+                <span id="anguloMun">{{ muneca }}</span>
+        
+                <label for="pinza">Pinza:</label>
+                <input type="range" id="pinza" name="pinza" min="0" max="180" value="90">
+                <span id="anguloPin">{{ pinza }}</span>
 
-            <button id="forward" type="button">Adelante</button>
-            <button id="backward" type="button">Atras</button>
-            <button id="right" type="button">Derecha</button>
-            <button id="left" type="button">Izquierda</button>
-
-            <button id="reset" type="reset">Limpiar</button>
-        </form>    
-    </div>
+                <div id="car-buttons">
+                    <button id="forward" type="button">
+                        <span class="material-symbols-outlined">arrow_circle_up</span>
+                    </button>
+                    <button id="backward" type="button">
+                        <span class="material-symbols-outlined">arrow_circle_down</span>
+                    </button>
+                    <button id="right" type="button">
+                        <span class="material-symbols-outlined">arrow_circle_right</span>
+                    </button>
+                    <button id="left" type="button">
+                        <span class="material-symbols-outlined">arrow_circle_left</span>
+                    </button>
+                </div>
+    
+                <button id="reset" type="reset">Limpiar</button>
+            </form>    
+        </div>
+    </section>
 {% endblock %}
 
 {% block scripts %}
