@@ -188,7 +188,7 @@ imagen {
     color: #000000;
     border-radius: 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     view-timeline-name: --reveal;
     animation-name: show;
@@ -196,6 +196,10 @@ imagen {
     animation-timeline: --reveal;
     animation-range: entry 25% cover 50%;
     padding: 10px;
+}
+
+.card h3{
+    color: black;
 }
 
 .documentation-card {
