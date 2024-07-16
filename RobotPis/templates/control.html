@@ -32,7 +32,8 @@
             </div>
         
             <div id="radar-container">
-                <canvas id="radar"></canvas>
+                <img id="radar" src="{% static "images/radar_bg.png" %}" alt="radar">
+                <img id="radar-aguja" src="{% static "images/radar_aguja.png" %}" alt="radar">
             </div>
         </div>
     
@@ -79,6 +80,7 @@
     </section>
 {% endblock %}
 
-{% block scripts %}
+{% block scripts %} 
     <script src="{% static "js/control.js" %}"></script>
+    <script src="{% static "js/radar.js" %}"></script>
 {% endblock %}
