@@ -14,8 +14,9 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: black;
+    background-color: rgb(7, 10, 9);
     overflow-x: hidden;
+    
 }
 
 header {
@@ -24,16 +25,18 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 #logo {
-    display: flex;
+    display: none;
     margin: 0 10px;
     width: 15%;
+    /*
     top: 0;
     z-index: 1000;
     position: absolute;
+    */
 }
 
 #menu-responsive {
@@ -46,10 +49,12 @@ nav {
     justify-content: right;
     align-items: center;
     width: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.0);
+    
     position: absolute;
     top: 0;
     z-index: 1000;
+
 }
 
 #link-container {
@@ -88,7 +93,6 @@ nav {
 }
 
 #control {
-    background-color: #088395;
     height: 40px;
     padding: 0px 15px;
 }
@@ -106,7 +110,7 @@ nav {
 }
 
 .content {
-    padding: 0px 10px 20px 10px;
+    padding: 0px 0px 0px 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
