@@ -136,7 +136,7 @@ footer p {
     justify-content: space-between;
     align-items: center;
 }
- 
+
 .contacto-item {
     list-style: none;
     display: flex;
@@ -157,32 +157,34 @@ imagen {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-}   
-
-imagen   img{
-    width: 100px; 
-    height: 100px; 
-    display: block;
-    object-fit: cover;
 }
 
-.card-container img{
+.documentation-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-container img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
-.card-container{
+
+.card-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
 }
-.card{
-    background-color:  #CED0E1;
+
+.card {
+    background-color: #CED0E1;
     color: #000000;
     border-radius: 50px;
     display: flex;
@@ -196,39 +198,31 @@ imagen   img{
     padding: 10px;
 }
 
-.documentation-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Opcional: Si quieres que el contenido se apile verticalmente */
-}
-
-.documentation-card imagen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.documentation-card img {
-    width: 150px; 
-    height: 150px; 
-    object-fit: cover; 
-    border-radius: 10px;
-}
-
-p{
+.card h3{
     color: black;
 }
 
-texto p{
+.documentation-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p {
+    color: black;
+}
+
+texto p {
     color: white;
 }
 
-titlen h3{
+titlen h3 {
     color: black;
 }
 
-form p{
+form p {
     color: white;
 }
 
