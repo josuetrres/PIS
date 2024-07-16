@@ -1,16 +1,16 @@
-]{% extends "basePage.html" %}
+{% extends "basePage.html" %}
 {% load static %}
 
 {% block title %}
-Inicio
-{% endblock  %}
+    Inicio
+{% endblock %}
 
 {% block styles %}
-<link href="{% static 'css/page/home.css' %}" rel="stylesheet" type="text/css">
-{% endblock  %}
+    <link href="{% static 'css/page/home.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
 
 {% block content %}
-<!--
+    <!--
 <section class="banner_main">
     <div id="banner1" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -69,15 +69,13 @@ Inicio
         <i class="fa fa-arrow-right" aria-hidden="true"></i>
         </a>
     </div>
-    
 </section>
-s
 -->
-<div class = "section" id="section1">
-    <div class= 'title'>
-        
+
+    <div class="section" id="section1">
+        <img class="background-video" src="{% static 'images/bg_gif.gif' %}">
+        <div class="text-container">
+            <h1>Jabed Robotics</h1>
+        </div>
     </div>
-</div>
-
-
 {% endblock %}
