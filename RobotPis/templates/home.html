@@ -83,6 +83,16 @@
                 transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
             }
         }
+
+        .logo-container img {
+            width: 200px; /* Adjust as needed */
+            height: auto;
+            z-index: 1000; /* Ensure it's above other elements */
+            position: absolute; /* Ensure it's positioned correctly */
+            top: 20px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            background-color: transparent; /* Ensure no background color */
+        }
     </style>
 {% endblock %}
 
@@ -152,13 +162,9 @@
         <div class="text-container">
             <h1>Jabed Robotics</h1>
         </div>
-    </div>
-
-    <a href="https://github.com/josuetrres/PIS.git">
-        <img src="https://icon-library.com/images/github-icon-for-resume/github-icon-for-resume-12.jpg" alt="GitHub" width="10%"/>
-    </a>
-
-    <div class="section" id="section1">
+        <div class="logo-container">
+            <img src="{% static 'images/logo-largo.png' %}" alt="Logo">
+        </div>
     </div>
 
     <div class="section" id="section2">
@@ -171,6 +177,9 @@
                 </div>
                 <img src="{% static "images/brazo3-removebg.png" %}" alt="#" width="50%"/>
             </div>
+            <a href="https://github.com/josuetrres/PIS.git" class="logo-container">
+                <img src="https://icon-library.com/images/github-icon-for-resume/github-icon-for-resume-12.jpg" alt="GitHub">
+            </a>
         </div>
     </div>
 {% endblock %}
