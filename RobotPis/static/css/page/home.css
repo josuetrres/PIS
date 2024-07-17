@@ -121,13 +121,15 @@ body {
         transform: translate3d(0,-3px,0) rotateZ(0.01deg);
     }
 }
+/* Estilo para el logo de GitHub */
+.github-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
 
-.logo-container img {
-    width: 200px; /* Ajustar según sea necesario */
-    height: auto;
-    z-index: 1000; /* Asegurarse de que esté encima de otros elementos */
-    position: absolute; /* Asegurarse de que esté posicionado correctamente */
-    top: 20px; /* Ajustar según sea necesario */
-    left: 20px; /* Ajustar según sea necesario */
-    background-color: transparent; /* Asegurarse de que no tenga color de fondo */
+.github-logo img {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    filter: invert(100%);
 }

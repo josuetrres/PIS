@@ -83,87 +83,39 @@
                 transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
             }
         }
+        /* Estilo para el logo de GitHub */
+        .github-logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
 
-        .logo-container img {
-            width: 200px; /* Adjust as needed */
-            height: auto;
-            z-index: 1000; /* Ensure it's above other elements */
-            position: absolute; /* Ensure it's positioned correctly */
-            top: 20px; /* Adjust as needed */
-            left: 20px; /* Adjust as needed */
-            background-color: transparent; /* Ensure no background color */
+        .github-logo img {
+            width: 95px; /* Ajusta el tamaño según sea necesario */
+            filter: invert(100%);
+        }
+
+        .jabot-logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .jabot-logo img {
+            width: 300px; /* Ajusta el tamaño según sea necesario */
         }
     </style>
 {% endblock %}
 
 {% block content %}
-    <!--
-<section class="banner_main">
-    <div id="banner1" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#banner1" data-slide-to="0" class="active"></li>
-          <li data-target="#banner1" data-slide-to="1"></li>
-          <li data-target="#banner1" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <div class="text-bg">
-                            <h1> <span class="blu">Bienvenidos <br></span>Proyecto "JABED"</h1>
-                            <span class="blu">Repositorio:</span> <br>
-
-                            <figure><img src="{% static "images/brazo1.jpeg" %}" alt="#" width="80%"/></figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <div class="text-bg">
-                            <h1> <span class="blu">Bienvenidos <br></span>Proyecto "JABED"</h1>
-                            <span class="blu">Repositorio:</span> <br>
-                            <a href="https://github.com/josuetrres/PIS.git">
-                                <img src="https://icon-library.com/images/github-icon-for-resume/github-icon-for-resume-12.jpg" alt="#" width="10%"/>
-                            </a>
-                            <figure><img src="{% static "images/brazo2.jpeg" %}" alt="#" width="80%"/></figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <div class="text-bg">
-                            <h1> <span class="blu">Bienvenidos <br></span>Proyecto "JABED"</h1>
-                            <span class="blu">Repositorio:</span> <br>
-                            <a href="https://github.com/josuetrres/PIS.git">
-                                <img src="https://icon-library.com/images/github-icon-for-resume/github-icon-for-resume-12.jpg" alt="#" width="10%"/>
-                            </a>
-                            <figure><img src="{% static "images/brazo3.jpeg" %}" alt="#" width="80%"/></figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        </a>
-        <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
-        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-        </a>
+    <div class="jabot-logo">
+        <img src="{% static 'images/logo-largo.png' %}" alt="Jabed Robotics Logo">
     </div>
-</section>
--->
-
     <div class="section" id="section1">
         <img class="background-video" src="{% static 'images/bg_gif.gif' %}">
         <div class="text-container">
             <h1>Jabed Robotics</h1>
-        </div>
-        <div class="logo-container">
-            <img src="{% static 'images/logo-largo.png' %}" alt="Logo">
         </div>
     </div>
 
@@ -175,11 +127,16 @@
                     <h1>Descubre el Poder de la Precisión</h1>
                     <p>Nuestro brazo robótico de vanguardia ofrece precisión y versatilidad incomparables, transformando la forma en que aborda sus proyectos.</p>
                 </div>
-                <img src="{% static "images/brazo3-removebg.png" %}" alt="#" width="50%"/>
+                <img src="{% static 'images/brazo3-removebg.png' %}" alt="#" width="50%">
             </div>
-            <a href="https://github.com/josuetrres/PIS.git" class="logo-container">
-                <img src="https://icon-library.com/images/github-icon-for-resume/github-icon-for-resume-12.jpg" alt="GitHub">
-            </a>
+            <div class="github-logo">
+                <a href="https://github.com/josuetrres/PIS.git">
+                    <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Symbol.png" alt="GitHub Logo">
+                </a>
+            </div>
+            <div>
+                <p>jabedrobotica@gmail.com</p>
+            </div>
         </div>
     </div>
 {% endblock %}
