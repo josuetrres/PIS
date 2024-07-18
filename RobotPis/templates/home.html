@@ -27,6 +27,23 @@
             align-items: center;
             overflow: hidden;
         }
+        .section button{
+            position: relative;
+            border: none;
+            height: 50px;
+            width: 200px;
+            font-size: 22px;
+            transition: .3s linear;
+            cursor: pointer;
+            background-color: #02022e;
+            margin-top: 10px ;
+        }
+
+        .section button:hover{
+            background-color: #000000;
+            box-shadow: 0 0 5px #02022e, 0 0 25px #02022e, 0 0 50px #02022e, 0 0 100px #02022e, 0 0 300px #02022e;
+
+        }
 
         #section1 {
             position: relative;
@@ -90,16 +107,24 @@
             align-items: center;
             justify-content: center;
             margin-top: 20px;
+            padding: 25px;
         }
 
         .robot-info img {
-            margin-left: 20px;
+            padding-left: 100px;
+            display: block;
+            position: relative;
+            border: none;
+            width: 25%
         }
 
         .robot-text {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            text-align: left;
+            gap: 20px;
+
         }
 
         .robot-text h1 {
@@ -108,11 +133,9 @@
         }
 
         .robot-text p {
-            margin: 40px 0 0 0;
             color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px 20px;
-            border-radius: 5px;
+            
+
         }
 
         .slider-thumb::before {
@@ -187,7 +210,10 @@
             <div class="robot-info">
                 <div class="robot-text">
                     <h1>Descubre el Poder de la Precisión</h1>
-                    <p>Nuestro brazo robótico de vanguardia ofrece precisión y versatilidad incomparables, transformando la forma en que aborda sus proyectos.</p>
+                    <p>Nuestro brazo robótico de vanguardia ofrece precisión y versatilidad <br> incomparables, transformando la forma en que aborda sus proyectos.</p>
+                    <button>
+                        <a href="{% url 'documentacion' %}" class="nav-link"> Descubre más </a>
+                    </button>
                 </div>
                 <img src="{% static 'images/brazo3-removebg.png' %}" alt="#" width="50%">
             </div>
