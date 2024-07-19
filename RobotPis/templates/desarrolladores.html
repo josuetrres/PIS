@@ -1,63 +1,221 @@
 {% extends "basePage.html" %}
 {% load static %}
 
-{% block title %}Desarrolladores:{% endblock %}
+{% block title %}Desarrolladores{% endblock %}
 
 {% block styles %}
-<link href="{% static 'css/page/desarrolladores.css' %}" rel="stylesheet" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+        }
+
+        .developers-section {
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+            padding: 4rem 2rem;
+            background-color: #000000;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .slider-thumb {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .slider-thumb::before {
+            content: "";
+            position: absolute;
+            left: 30%;
+            top: 20%;
+            width: 300px;
+            height: 300px;
+            background: #686262;  /* Gris medio */
+            border-radius: 50%;
+            will-change: transform, opacity;
+            animation: sliderShape 8s linear infinite;
+            box-shadow: 0 0 20px #a0a0a0;  /* Sombra sutil gris claro */
+            filter: blur(0px);  /* Sin desenfoque */
+            opacity: 0.7;  /* Un poco de transparencia */
+        }
+
+        @keyframes sliderShape {
+            0% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(100px, 100px) scale(1.2); }
+            50% { transform: translate(-100px, 150px) scale(0.8); }
+            75% { transform: translate(150px, -100px) scale(1.1); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+
+        .titlepage {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        #tituloDesarrolladores {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #f0f0f0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        #p1 {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #d0d0d0;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 3rem;
+            justify-items: center;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #5b5b5c, #20203e);
+            border-radius: 20px;
+            overflow: hidden;
+            width: 360px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgb(32, 32, 62), 0 6px 6px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: relative;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #0863ff, #0161ff, #2e71e5);
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgb(32, 32, 62), 0 10px 10px rgb(24, 2, 71);
+        }
+
+        .card figure {
+            width: 100px;
+            height: 200px;
+            margin: 0;
+            position: relative;
+            padding-left: 50px;
+
+        }
+
+        .card figure img {
+            transition: transform 0.3s ease;
+            padding-right: 50px;
+            position: relative;
+        }
+
+        .card:hover figure img {
+            transform: scale(1.1);
+        }
+
+        .card-text {
+            padding: 1.8rem;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+        }
+
+        .card-text h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.7rem;
+            font-weight: 700;
+            color: #cccccc;
+            text-shadow: 0 0 5px rgba(204, 204, 204, 0.5);
+        }
+
+        .card-text p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.5;
+            font-weight: 400;
+            color: #ffffff;
+        }
+    </style>
 {% endblock %}
 
 {% block content %}
+    <div class="developers-section">
+        <div class="slider-thumb"></div>
+        <div class="content-wrapper">
+            <div class="titlepage">
+                <h1 id="tituloDesarrolladores">Desarrolladores</h1>
+                <p id="p1">Los desarrolladores de este proyecto son los estudiantes de segundo ciclo de la carrera de computación de la Universidad Nacional de Loja-Ecuador.</p>
+            </div>
 
-<div class="titlepage">
-   <h1 id= "tituloDesarrolladores">Desarrolladores:</h1>
-   <texto><p id= "p1">Los desarrolladores de este proyecto son los estudiantes de segundo ciclo
-   de la carrera de computación de la Universidad Nacional de Loja-Ecuador.</p></texto>
-</div>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://i.ibb.co/7SD8pm9/danielS.jpg" alt="Holguer Daniel Sánchez Valle"/>
+                    <div class="card-text">
+                        <h3>Holguer Daniel Sánchez Valle</h3>
+                        <p>Estudiante Universidad Nacional de Loja</p>
+                    </div>
+                </div>
 
-<div class="card-container">
-   <div class="card">
-      <figure><img src="https://i.ibb.co/7SD8pm9/danielS.jpg" alt="#"/></figure>
-         <div class="card-text">
-            <titlen><h3>Holguer Daniel Sánchez Valle</h3></titlen>
-            <p>Estudiante Univesidad Nacional de Loja</p>
-         </div>
-   </div>
+                <div class="card">
+                    <img src="https://i.ibb.co/XSmdmxs/tuy.jpg" alt="Alexis Vinicio Román Avila"/>
+                    <div class="card-text">
+                        <h3>Alexis Vinicio Román Avila</h3>
+                        <p>Estudiante Universidad Nacional de Loja</p>
+                    </div>
+                </div>
 
-   <div class="card">
-      <figure><img src="https://i.ibb.co/XSmdmxs/tuy.jpg" alt="#"/></figure>
-         <div class="card-text">
-            <titlen><h3>Alexis Vinicio Román Avila</h3></titlen>
-                     <p>Estudiante Univesidad Nacional de Loja</p>
-         </div>
-   </div>
-         
-   <div class="card">
-      <figure><img src="https://i.ibb.co/L01JwBx/IMG-20240221-070614-508.jpg" alt="#"/></figure>
-         <div class="card-text">
-            <titlen><h3>Manuel Benito Minga Chalán</h3></titlen>
-            <p>Estudiante Univesidad Nacional de Loja</p>
-         </div>
-   </div>
-      
+                <div class="card">
+                    <img src="https://i.ibb.co/L01JwBx/IMG-20240221-070614-508.jpg" alt="Manuel Benito Minga Chalán"/>
+                    <div class="card-text">
+                        <h3>Manuel Benito Minga Chalán</h3>
+                        <p>Estudiante Universidad Nacional de Loja</p>
+                    </div>
+                </div>
 
-   <div class="card">
-            <figure><img src="https://i.ibb.co/zH36vNW/Imagen-de-Whats-App-2024-07-11-a-las-10-40-17-0b327c08.jpg" alt="#"/></figure>
-               <div class="card-text">
-                  <titlen><h3>Emilio Ramiro Jaramillo Chamba</h3></titlen>
-                  <p>Estudiante Univesidad Nacional de Loja</p>
-               </div>
-   </div>
-         
-   <div class="card">
-      <figure><img src="https://i.ibb.co/88TrgQh/iourt.jpg" alt="#"/></figure>
-         <div class="card-text">
-            <titlen><h3>Josue Rodolfo Torres Guiracocha</h3></titlen>
-            <p>Estudiante Univesidad Nacional de Loja</p>
-         </div>
-   </div>        
-</div>
-   
+                <div class="card">
+                    <img src="https://i.ibb.co/zH36vNW/Imagen-de-Whats-App-2024-07-11-a-las-10-40-17-0b327c08.jpg" alt="Emilio Ramiro Jaramillo Chamba"/>
+                    <div class="card-text">
+                        <h3>Emilio Ramiro Jaramillo Chamba</h3>
+                        <p>Estudiante Universidad Nacional de Loja</p>
+                    </div>
+                </div>
 
-    
+                <div class="card">
+                    <img src="https://i.ibb.co/88TrgQh/iourt.jpg" alt="Josue Rodolfo Torres Guiracocha"/>
+                    <div class="card-text">
+                        <h3>Josue Rodolfo Torres Guiracocha</h3>
+                        <p>Estudiante Universidad Nacional de Loja</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

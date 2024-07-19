@@ -1,31 +1,124 @@
 {% extends "basePage.html" %}
 
-{% block title %}
-Testimonios
-{% endblock %}
+{% block title %}Testimonios{% endblock %}
 
 {% block content %}
-<div id="contact" class="contact">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .testimonials-section {
+            padding: 40px 0;
+        }
+        .section-title {
+            font-size: 2.5em;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .testimonial-item {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .testimonial-content {
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        .testimonial-author {
+            font-weight: bold;
+            color: #4a90e2;
+        }
+        .testimonial-date {
+            font-size: 14px;
+            color: #888;
+        }
+        .form-section {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        .form-title {
+            color: #4a90e2;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #bbb;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #333;
+            background-color: #2a2a2a;
+            color: #fff;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 150px;
+        }
+        button {
+            background-color: #4a90e2;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #64b5f6;
+        }
+    </style>
+
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <form id="request" class="main_form" method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button class="send_btn">Enviar</button>
-                </form>
-            </div>
+        <div class="testimonials-section">
+            <h1 class="section-title">Testimonios de Nuestros Clientes</h1>
+
+            {% for testimonio in testimonios %}
+                <div class="testimonial-item">
+                    <p class="testimonial-content">"{{ testimonio.mensaje }}"</p>
+                    <p class="testimonial-author">{{ testimonio.nombre }}</p>
+                    <p class="testimonial-date">{{ testimonio.fecha }}</p>
+                </div>
+                {% empty %}
+                <p style="text-align: center; font-style: italic;">Aún no hay testimonios. ¡Sé el primero en compartir tu experiencia!</p>
+            {% endfor %}
         </div>
-        <div id="testimonios">
-            <h2>Testimonios</h2>
-        
-            <ul>
-                {% for testimonio in testimonios %}
-                    <li><strong>{{ testimonio.nombre }}</strong>: {{ testimonio.mensaje }} <em>({{ testimonio.fecha }})</em></li>
+
+        <div class="form-section">
+            <h2 class="form-title">Comparte Tu Experiencia</h2>
+            <form id="testimonialForm" method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                    </div>
                 {% endfor %}
-            </ul>
+                <button type="submit">Enviar Testimonio</button>
+            </form>
         </div>
     </div>
-    
-</div>
 {% endblock %}
