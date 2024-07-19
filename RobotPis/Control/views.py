@@ -4,16 +4,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def control(request):
-    if ('base' in request.GET 
-        and 'hombro' in request.GET
-        and 'codo' in request.GET
-        and 'muneca' in request.GET
-        and 'pinza' in request.GET
-        and 'camera' in request.GET
-        and 'forward' in request.GET
-        and 'backward' in request.GET
-        and 'left' in request.GET
-        and 'right' in request.GET):
+    if ('base' in request.GET and 'hombro' in request.GET and 'muneca' in request.GET and 'codo' in request.GET and 'pinza' in request.GET and 'camera' in request.GET and 'forward' in request.GET and 'backward' in request.GET and 'left' in request.GET and 'right' in request.GET) :
         camera = request.GET['camera']
         base = request.GET['base']
         hombro = request.GET['hombro']

@@ -1,21 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Orbitron:wght@700&family=Raleway:wght@700&family=Roboto:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=DotGothic16&display=swap');
-
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #000000;
-}
-
-.developers-section {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-    padding: 4rem 2rem;
-}
-
 .content-wrapper {
     position: relative;
     z-index: 1;
@@ -28,16 +10,16 @@ body {
     top: 20%;
     width: 600px;
     height: 600px;
-    background: #333333;  /* Gris oscuro sólido */
+    background: #333333;
     border-radius: 50%;
     will-change: transform, opacity;
     animation: sliderShape 15s linear infinite;
     display: block;
     z-index: -1;
     -webkit-animation: sliderShape 15s linear infinite;
-    box-shadow: 0 0 50px #444444;  /* Sombra sutil */
-    filter: blur(0px);  /* Sin desenfoque */
-    opacity: 1;  /* Totalmente opaco */
+    box-shadow: 0 0 50px #444444;
+    filter: blur(0px);
+    opacity: 1;
 }
 
 @keyframes sliderShape {
@@ -153,13 +135,6 @@ body {
     color: #ffffff;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-}
-
 .section {
     position: relative;
     width: 100%;
@@ -170,15 +145,11 @@ body {
     overflow: hidden;
 }
 
-#section1 {
-    position: relative;
-}
-
 .background-video {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 50%; /* Reducido al 50% */
+    width: 50%;
     height: auto;
     transform: translate(-50%, -50%);
     object-fit: cover;
@@ -232,16 +203,23 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    padding: 25px;
 }
 
 .robot-info img {
-    margin-left: 20px;
+    padding-left: 100px;
+    display: block;
+    position: relative;
+    border: none;
+    width: 25%
 }
 
 .robot-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
+    gap: 20px;
 }
 
 .robot-text h1 {
@@ -250,43 +228,13 @@ body {
 }
 
 .robot-text p {
-    margin: 40px 0 0 0;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.slider-thumb::before {
-    position: absolute;
-    content: "";
-    left: 30%;
-    top: 20%;
-    width: 600px;
-    height: 600px;
-    background: #02022e;
-    border-radius: 50%;
-    will-change: transform, opacity;
-    animation: sliderShape 15s linear infinite;
-    display: block;
-    z-index: -1;
-    -webkit-animation: sliderShape 15s linear infinite;
-    box-shadow: 0 0 50px #180247;
-    filter: blur(0px);
-    opacity: 1;
-}
-
-@keyframes sliderShape {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    25% { transform: translate(50px, 50px) scale(1.1); }
-    50% { transform: translate(-50px, 50px) scale(0.9); }
-    75% { transform: translate(50px, -50px) scale(1.2); }
 }
 
 .github-logo {
     display: flex;
     justify-content: center;
-    margin-top: 30px; /* Aumentado el margen superior */
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
@@ -308,4 +256,21 @@ body {
 
 .contact-info {
     margin-top: 20px;
+}
+
+.section button {
+    position: relative;
+    border: none;
+    height: 50px;
+    width: 200px;
+    font-size: 22px;
+    transition: .3s linear;
+    cursor: pointer;
+    background-color: #02022e;
+    margin-top: 10px;
+}
+
+.section button:hover {
+    background-color: #000000;
+    box-shadow: 0 0 5px #02022e, 0 0 25px #02022e, 0 0 50px #02022e, 0 0 100px #02022e, 0 0 300px #02022e;
 }

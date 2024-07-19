@@ -1,0 +1,42 @@
+ul {
+    color: white;
+}
+
+imagen {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.documentation-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.documentation-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p {
+    color: black;
+}
+
+texto p {
+    color: white;
+}
+
+titlen h3 {
+    color: black;
+}
+
+form p {
+    color: white;
+}
