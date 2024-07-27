@@ -1,3 +1,5 @@
+/* Estilos generales */
+
 body {
     font-family: Arial, sans-serif;
     
@@ -8,6 +10,12 @@ body {
     width: 100%;
 }
 
+<<<<<<< HEAD
+.bg-gradient-to-r {
+    background: linear-gradient(to bottom, #000000, #00008b); /* Degradado de negro a azul de arriba hacia abajo */
+}
+=======
+>>>>>>> a39e8ebf2bca05973155fb3e0b7afec9480dc63f
 
 .py-12 {
     padding-top: 3rem;
@@ -186,7 +194,7 @@ form p {
 }
 
 .developers-section {
-    min-height: 100vh;
+    min-height: 100vh;s
     padding: 4rem 2rem;
     position: relative;
     background: linear-gradient(to bottom, #000000 70%, #00004d);
@@ -244,6 +252,7 @@ form p {
 
 #tituloDocumentacion {
     font-size: 3.5rem;
+    margin-top: 2rem; 
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -253,8 +262,62 @@ form p {
 
 #p1 {
     font-size: 1.2rem;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     line-height: 1.6;
     color: #d0d0d0;
+}
+
+/* Estilos para historias de usuario */
+
+.single-column-container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 1rem; 
+}
+
+.single-column-container .documentation-card {
+    width: 100%;
+    margin-bottom: 1.5rem; 
+    border: 1px solid #1e88e5;
+    background: rgba(0, 0, 0, 0.7); 
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.single-column-container .documentation-card:hover {
+    background-color: #1e88e5; 
+    transform: scale(1.05); 
+    border-color: #000000;
+    border-width: 4px;
+}
+
+.single-column-container .glasses_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.single-column-container .glasses_box figure {
+    margin: 0;
+}
+
+.single-column-container .glasses_box h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.single-column-container .glasses_box p {
+    color: #ffffff;
 }

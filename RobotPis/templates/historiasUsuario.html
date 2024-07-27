@@ -1,53 +1,50 @@
-{% extends 'basePage.html'%}
+{% extends 'basePage.html' %}
 {% load static %}
 
 {% block title %}Historias de Usuario{% endblock %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/page/documentacion.css' %}">
+{% endblock %}
 
 {% block content %}
 
 <div class="titlepage">
-   <h1 id="tituloDocumentacion">Documentación</h1>
-   <texto>
-      <p id="p1">El proyecto JABED Robotics es un proyecto de la Universidad Nacional de Loja, que tiene como objetivo
-         principal la recolección de basuras en un espacio físico.</p>
-   </texto>
+    <h1 id="tituloDocumentacion">Historias de Usuario</h1>
+    <div class="texto">
+        <p id="p1">El proyecto JABED Robotics es un proyecto de la Universidad Nacional de Loja, que tiene como objetivo principal la recolección de basuras en un espacio físico.</p>
+    </div>
 </div>
 
-<div class="container-fluid">
-   <div class="row">
-      <div class="card documentation-card">
-         <div class="glasses_box">
+<div class="single-column-container">
+    <div class="documentation-card">
+        <div class="glasses_box">
             <figure><img src="https://cdn-icons-png.flaticon.com/128/6584/6584972.png" alt="#" /></figure>
             <h3><span class="blu">-</span>Historia 1</h3>
-            <p>Como usuario, quiero poder controlar el movimiento del brazo robótico a través de la interfaz web para
-               realizar tareas específicas.</p>
-         </div>
-      </div>
-      <div class="card documentation-card">
-         <div class="glasses_box">
+            <p>Como usuario, quiero poder controlar el movimiento del brazo robótico a través de la interfaz web para realizar tareas específicas.</p>
+        </div>
+    </div>
+    <div class="documentation-card">
+        <div class="glasses_box">
             <figure><img src="https://cdn-icons-png.flaticon.com/128/6584/6584972.png" alt="#" /></figure>
             <h3><span class="blu">-</span>Historia 2</h3>
-            <p>Como usuario, quiero poder programar secuencias de movimientos para que el brazo robótico los ejecute
-               automáticamente.</p>
-         </div>
-      </div>
-      <div class="card documentation-card">
-         <div class="glasses_box">
+            <p>Como usuario, quiero poder programar secuencias de movimientos para que el brazo robótico los ejecute automáticamente.</p>
+        </div>
+    </div>
+    <div class="documentation-card">
+        <div class="glasses_box">
             <figure><img src="https://cdn-icons-png.flaticon.com/128/6584/6584972.png" alt="#" /></figure>
             <h3><span class="blu">-</span>Historia 3</h3>
-            <p>Como usuario, quiero recibir feedback en tiempo real del estado y posición del brazo robótico para
-               asegurarme de que está funcionando correctamente.</p>
-         </div>
-      </div>
-      <div class="card documentation-card">
-         <div class="glasses_box">
+            <p>Como usuario, quiero recibir feedback en tiempo real del estado y posición del brazo robótico para asegurarme de que está funcionando correctamente.</p>
+        </div>
+    </div>
+    <div class="documentation-card">
+        <div class="glasses_box">
             <figure><img src="https://cdn-icons-png.flaticon.com/128/6584/6584972.png" alt="#" /></figure>
             <h3><span class="blu">-</span>Historia 4</h3>
-            <p>Como usuario me gustaria que la aplicacion de control del brazo robotico cuente con imagen de video en
-               vivo.</p>
-         </div>
-      </div>
-   </div>
+            <p>Como usuario, me gustaría que la aplicación de control del brazo robótico cuente con imagen de video en vivo.</p>
+        </div>
+    </div>
+</div>
 
-   {% endblock %}
+{% endblock %}
