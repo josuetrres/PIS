@@ -185,6 +185,7 @@
     background-image: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2pod2xkb3VjZG10cXp6djJpMXkzZGQ2M2wwb296ZndodXl1dzdhNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/58bRXhtksCaOqmOrZp/giphy.webp");
     background-repeat: repeat;
     -webkit-background-clip: text;
+    background-clip: text;
     animation: animate 15s ease-in-out infinite;
     text-align: center;
     text-transform: uppercase;
