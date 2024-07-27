@@ -10,13 +10,6 @@ body {
     width: 100%;
 }
 
-<<<<<<< HEAD
-.bg-gradient-to-r {
-    background: linear-gradient(to bottom, #000000, #00008b); /* Degradado de negro a azul de arriba hacia abajo */
-}
-=======
->>>>>>> a39e8ebf2bca05973155fb3e0b7afec9480dc63f
-
 .py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -194,7 +187,7 @@ form p {
 }
 
 .developers-section {
-    min-height: 100vh;s
+    min-height: 100vh;
     padding: 4rem 2rem;
     position: relative;
     background: linear-gradient(to bottom, #000000 70%, #00004d);
