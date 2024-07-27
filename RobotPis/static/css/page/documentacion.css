@@ -67,6 +67,12 @@ body {
     text-align: center;
     position: relative;
     z-index: 1;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.documentation-card:hover {
+    background-color: #1e88e5; /* Azul mecánico */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del card */
 }
 
 .card-image {
@@ -85,18 +91,33 @@ body {
 
 .card-content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-text-box {
+    background-color: #000000;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid #1e88e5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
-    margin-bottom: 0.5rem;
     font-size: 1.5rem;
     font-weight: bold;
     color: #ffffff;
+    margin-bottom: 0.5rem;
 }
 
 .card-text {
-    margin-bottom: 1.5rem;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
 }
 
 .card-button {
