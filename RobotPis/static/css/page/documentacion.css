@@ -71,8 +71,10 @@ body {
 }
 
 .documentation-card:hover {
-    background-color: #1e88e5; /* Azul mecánico */
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño del card */
+    background-color: #1e88e5; 
+    transform: scale(1.05); 
+    border-color: #000000;
+    border-width: 4px;
 }
 
 .card-image {
@@ -133,12 +135,15 @@ body {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     color: black;
-    transition: background-color 0.3s;
+    border: 2px solid #000000; /* Borde negro */
+    transition: background-color 0.3s, border-color 0.3s;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .card-button:hover {
     background-color: #1565c0;
+    border-color: #1565c0; /* Borde negro se vuelve azul al pasar el mouse */
 }
 
 .card-button:focus {
@@ -202,6 +207,7 @@ form p {
     width: 100%;
     height: 100%;
     pointer-events: none;
+    z-index: 0; /* Asegura que esté por debajo del contenido principal */
 }
 
 .slider-thumb::before {
@@ -233,6 +239,8 @@ form p {
     color: #fff;
     text-align: center;
     margin-bottom: 4rem;
+    position: relative;
+    z-index: 1; /* Asegura que el título esté por encima de la animación */
 }
 
 #tituloDocumentacion {
