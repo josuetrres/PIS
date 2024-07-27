@@ -253,6 +253,7 @@
     align-items: flex-start;
     text-align: left;
     gap: 20px;
+    width: 600px;
 }
 
 .robot-text h1 {
