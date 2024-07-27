@@ -1,35 +1,40 @@
 {% extends "basePage.html" %}
 
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/page/documentacion.css' %}">
+{% endblock %}
+
 {% block title %}Servos{% endblock %}
 
 {% block content %}
-
-
-<div class="glasses">
-   <div class="container">
-      <div class="row">
-         <div class="col-md-10 offset-md-1">
-            <div class="titlepage">
-               <h2 class = "margintitle">Servomotores Usados:</h2>
-               <p>Los servomotores que hemos usado para el brazo robotico son:
-               </p>
+<div class="developers-section">
+    <div class="content-wrapper">
+        <div class="w-full bg-gradient-to-r from-[#b3e5fc] to-[#1e88e5] py-12 md:py-16 lg:py-20">
+            <div class="container">
+                <div class="titlepage">
+                    <h1 id="tituloDocumentacion">Servomotores Usados</h1>
+                    <p id="p1">Los servomotores que hemos usado para el brazo robótico son:</p>
+                </div>
+                
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8">
+                    {% for servo in servos %}
+                    <div class="documentation-card">
+                        <div class="card-image">
+                            <figure><img src="{{ servo.imagen }}" alt="{{ servo.nombre }}" /></figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">{{ servo.nombre }}</h3>
+                            <p class="card-text">{{ servo.descripcion }}</p>
+                            <a class="card-button" href="{% static 'dataSheet/' %}{{ servo.nombre }}.pdf" download="{{ servo.nombre }}">Ver más</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
-   <div class="container-fluid">
-      <div class="row">
-         {%for servo in servos %}
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">           
-               <div class="glasses_box">
-                  <figure><img src="{{servo.imagen}}" alt="#"/></figure>
-                  <p>{{servo.nombre}}</p>
-                  <div class="col-md-12">
-                     <a class="read_more" href="/servo/{{ servo.id }}">Ver más</a>
-                  </div>
-               </div>  
-          </div>
-         {%endfor%}  
-      </div>
-   </div>
+        </div>
+        <div class="slider-thumb"></div>
+    </div>
+</div>
 {% endblock %}
