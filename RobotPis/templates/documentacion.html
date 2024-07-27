@@ -2,72 +2,124 @@
 {% load static %}
 
 {% block title %} Documentación {% endblock %}
+
 {% block styles %}
-   <link rel="stylesheet" href="{% static 'css/page/documentacion.css' %}">
-{% endblock  %}
+    <link rel="stylesheet" href="{% static 'css/page/documentacion.css' %}">
+{% endblock %}
 
 {% block content %}
 
-
-   <div class="titlepage">
-      <h1 id= "tituloDocumentacion">Documentación</h1>
-      <texto><p id= "p1">El proyecto JABED Robotics es un proyecto de la Universidad Nacional de Loja, que tiene como objetivo principal la recolección de basuras en un espacio físico.</p></texto>
-      
-   </div>
-    <div class="container-fluid">
-       <div class="row">
-          <div class="card documentation-card">
-             <div class="glasses_box">
-                <imagen><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Componentes.JPG/800px-Componentes.JPG" alt="#"/></imagen>
-                <h3><span class="blu">-</span>Materiales</h3>
-                <p>Materiales que se utilizaran en el proyecto</p>
-                <div class="col-md-12">
-                  <a class="read_more" href="{% url 'materiales' %}">Ver más</a>
-               </div>
-             </div>
-          </div>
-          <div class="card documentation-card">
-             <div class="glasses_box">
-                <imagen><img src="https://i.ibb.co/QF5cLxM/Imagen-de-Whats-App-2024-02-26-a-las-02-20-27-d4ad993d.jpg" alt="#"/></imagen>
-                <h3><span class="blu">-</span>Funcionamiento</h3>
-                <p>Funcionamiento del Proyecto de Brazo Robotico.</p>
-                <div class="col-md-12">
-                  <a class="read_more" href="{% url 'funcionamiento' %}">Ver más</a>
-               </div>
-             </div>
-          </div>
-          <div class="card documentation-card">
-             <div class="glasses_box">
-                <imagen><img src="https://www.galileo.edu/fisicc/files/2020/06/preview_video_fisicc-compressor.jpg" alt="#"/></imagen>
-                <h3><span class="blu">-</span>Integración de Materias.</h3>
-                <p>Conjunto de conocimientos que se aplicaran segmentados por materias</p>
-                <div class="col-md-12">
-                  <a class="read_more" href="{% url 'materias' %}">Ver más</a>
-               </div>
-             </div>
-          </div>
-          <div class="card documentation-card">
-            <div class="glasses_box">
-               <imagen><img src="https://cdn-icons-png.flaticon.com/128/863/863823.png" alt="#"/></imagen>
-               <h3><span class="blu">-</span>Historias de Usuario</h3>
-               <p>Historias de usuarios y requerimmientos que debe tener el brazo robotico</p>
-               <div class="col-md-12">
-                 <a class="read_more" href="{% url 'historiaUsuario' %}">Ver más</a>
-              </div>
+<div class="developers-section">
+  <div class="content-wrapper">
+    <div class="w-full bg-gradient-to-r from-[#b3e5fc] to-[#1e88e5] py-12 md:py-16 lg:py-20">
+      <div class="container">
+        <div class="titlepage">
+          <h1 id="tituloDocumentacion">Documentación</h1>
+          <p id="p1">
+            El proyecto JABED Robotics es un proyecto de la Universidad Nacional de Loja, que tiene como objetivo principal la recolección de basuras en un espacio físico.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div class="documentation-card">
+            <div class="card-image">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Componentes.JPG/800px-Componentes.JPG"
+                alt="Componentes"
+              />
             </div>
-         </div>
-          <div class="card documentation-card">
-             <div class="glasses_box">
-                <imagen><img src="https://i.ibb.co/bXW2PZD/329444411-66bca65e-eeb0-44f2-ab53-42f265d3af67-1.jpg" alt="#"/></imagen>
-                <h3><span class="blu">-</span>Diagrama de Clases</h3>
-                <p>Diagrama de Clases de POO</p>
-                <div class="col-md-12">
-                  <a class="read_more" href="{% url 'diagramaClases' %}">Ver más</a>
-               </div>
-             </div>
+            <div class="card-content">
+              <div class="card-text-box">
+                <h3 class="card-title">Materiales</h3>
+                <p class="card-text">
+                  Materiales que se utilizarán en el proyecto.
+                </p>
+              </div>
+              <a class="card-button" href="{% url 'materiales' %}">
+                Ver más
+              </a>
+            </div>
           </div>
-       </div>
+          <div class="documentation-card">
+            <div class="card-image">
+              <img
+                src="https://i.ibb.co/QF5cLxM/Imagen-de-Whats-App-2024-02-26-a-las-02-20-27-d4ad993d.jpg"
+                alt="Funcionamiento"
+              />
+            </div>
+            <div class="card-content">
+              <div class="card-text-box">
+                <h3 class="card-title">Funcionamiento</h3>
+                <p class="card-text">
+                  Funcionamiento del Proyecto de Brazo Robótico.
+                </p>
+              </div>
+              <a class="card-button" href="{% url 'funcionamiento' %}">
+                Ver más
+              </a>
+            </div>
+          </div>
+          <div class="documentation-card">
+            <div class="card-image">
+              <img
+                src="https://www.galileo.edu/fisicc/files/2020/06/preview_video_fisicc-compressor.jpg"
+                alt="Integración de Materias"
+              />
+            </div>
+            <div class="card-content">
+              <div class="card-text-box">
+                <h3 class="card-title">Integración de Materias</h3>
+                <p class="card-text">
+                  Conjunto de conocimientos que se aplicarán segmentados por materias.
+                </p>
+              </div>
+              <a class="card-button" href="{% url 'materias' %}">
+                Ver más
+              </a>
+            </div>
+          </div>
+          <div class="documentation-card">
+            <div class="card-image">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/863/863823.png"
+                alt="Historias de Usuario"
+              />
+            </div>
+            <div class="card-content">
+              <div class="card-text-box">
+                <h3 class="card-title">Historias de Usuario</h3>
+                <p class="card-text">
+                  Historias de usuarios y requerimientos que debe tener el brazo robótico.
+                </p>
+              </div>
+              <a class="card-button" href="{% url 'historiaUsuario' %}">
+                Ver más
+              </a>
+            </div>
+          </div>
+          <div class="documentation-card">
+            <div class="card-image">
+              <img
+                src="https://i.ibb.co/bXW2PZD/329444411-66bca65e-eeb0-44f2-ab53-42f265d3af67-1.jpg"
+                alt="Diagrama de Clases"
+              />
+            </div>
+            <div class="card-content">
+              <div class="card-text-box">
+                <h3 class="card-title">Diagrama de Clases</h3>
+                <p class="card-text">
+                  Diagrama de Clases de POO.
+                </p>
+              </div>
+              <a class="card-button" href="{% url 'diagramaClases' %}">
+                Ver más
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="slider-thumb"></div>
+  </div>
+</div>
 
-    
 {% endblock %}

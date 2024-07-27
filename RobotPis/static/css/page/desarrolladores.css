@@ -1,6 +1,9 @@
 .developers-section {
     min-height: 100vh;
     padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #000000, #00008b); /* Degradado de negro a azul oscuro */
+    position: relative;
+
 }
 
 .content-wrapper {
