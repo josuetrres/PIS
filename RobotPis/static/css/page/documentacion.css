@@ -1,14 +1,13 @@
 body {
     font-family: Arial, sans-serif;
+    
+
 }
 
 .w-full {
     width: 100%;
 }
 
-.bg-gradient-to-r {
-    background: linear-gradient(to bottom, #000000, #00008b); 
-}
 
 .py-12 {
     padding-top: 3rem;
@@ -190,7 +189,7 @@ form p {
     min-height: 100vh;
     padding: 4rem 2rem;
     position: relative;
-    background: linear-gradient(to bottom, #000000, #00008b); /* Degradado de negro a azul de arriba hacia abajo */
+    background: linear-gradient(to bottom, #000000 70%, #00004d);
 }
 
 .content-wrapper {
