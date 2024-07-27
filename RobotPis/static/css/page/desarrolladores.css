@@ -133,7 +133,9 @@
     text-shadow: 0 0 5px rgba(204, 204, 204, 0.5);
     margin-bottom: 10px;
 }
-
+.card-container a {
+    text-decoration: none;
+}
 .card-text p {
     font-size: 12px;
     opacity: 0.9;
