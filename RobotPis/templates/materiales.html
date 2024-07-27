@@ -1,71 +1,114 @@
 {% extends "basePage.html" %}
 
+{% load static %}
+
 {% block title %} Materiales {% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/page/documentacion.css' %}">
+{% endblock %}
+
 
 {% block content %}
 
-<div class="titlepage">
-   <h1 id= "tituloMateriales">Materiales</h1>
-   <texto><p id= "p1">Los materiales que estamos usando en nuestro proyecto son:</p></texto>
-   
+<div class="developers-section">
+   <div class="content-wrapper">
+      <div class="w-full bg-gradient-to-r from-[#b3e5fc] to-[#1e88e5] py-12 md:py-16 lg:py-20">
+         <div class="container">
+            <div class="titlepage">
+               <h1 id="tituloDocumentacion">Materiales</h1>
+               <p id="p1">
+                  Los materiales que estamos usando en nuestro proyecto son:
+               </p>
+            </div>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+               <div class="documentation-card">
+                  <div class="card-image">
+                     <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3J0XHprZ-dZBAK-yx8W5u05eJM4dKK6SQkw&s"
+                        alt="Articulaciones" />
+                  </div>
+                  <div class="card-content">
+                     <h3 class="card-title">Articulaciones</h3>
+                     <p class="card-text">
+                        Los materiales para la articulaciones del brazo:
+                     </p>
+                     <a class="card-button" href="{% url 'articulaciones' %}">
+                        Ver más
+                     </a>
+                  </div>
+               </div>
+               <div class="documentation-card">
+                  <div class="card-image">
+                     <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx0LeGWunwnggj3c23klB_H3Dbn5jm55sRvw&s"
+                        alt="Servomotores" />
+                  </div>
+                  <div class="card-content">
+                     <h3 class="card-title">Servomotores</h3>
+                     <p class="card-text">
+                        Los servomotores que están implementados en el proyecto:
+                     </p>
+                     <a class="card-button" href="{% url 'servo' %}">
+                        Ver más
+                     </a>
+                  </div>
+               </div>
+               <div class="documentation-card">
+                  <div class="card-image">
+                     <img
+                        src="https://electronicamade.com/wp-content/uploads/2020/03/sensor-distancia-ultrasonido-1.jpg"
+                        alt="Sensores" />
+                  </div>
+                  <div class="card-content">
+                     <h3 class="card-title">Sensores</h3>
+                     <p class="card-text">
+                        Los sensores que están implementados en el proyecto:
+                     </p>
+                     <a class="card-button" href="{% url 'materias' %}">
+                        Ver más
+                     </a>
+                  </div>
+               </div>
+               <div class="documentation-card">
+                  <div class="card-image">
+                     <img src="https://http2.mlstatic.com/D_NQ_NP_617717-MEC49548174570_042022-O.webp"
+                        alt="Motorreductor" />
+                  </div>
+                  <div class="card-content">
+                     <h3 class="card-title">Motorreductor</h3>
+                     <p class="card-text">
+                        El motor de DC que estamos implementando
+                     </p>
+                     <a class="card-button" href="{% url 'motorDC' %}">
+                        Ver más
+                     </a>
+                  </div>
+               </div>
+               <div class="documentation-card">
+                  <div class="card-image">
+                     <img src="https://media.naylampmechatronics.com/148-superlarge_default/driver-puente-h-l298n.jpg"
+                        alt="Controlador de Motor" />
+                  </div> 
+                  <div class="card-content">
+                     <h3 class="card-title">Controlador de Motor</h3>
+                     <p class="card-text">
+                        Controlador para el coche del brazo robótico.
+                     </p>
+                     <a class="card-button" href="{% url 'controladorMotor' %}">
+                        Ver más
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="slider-thumb"></div>
+   </div>
 </div>
 
-<div class="container-fluid">
-   <div class="row">
-      <div class="card documentation-card">
-         <div class="glasses_box">
-            <imagen><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3J0XHprZ-dZBAK-yx8W5u05eJM4dKK6SQkw&s" alt="#"/></imagen>
-            <h3><span class="blu">-</span>Articulaciones</h3>
-            <p>Los materiales para la articulaciones del brazo:</p>
-            <div class="col-md-12">
-               <a class="read_more" href="{% url 'articulaciones' %}">Ver más</a>
-            </div>
-         </div>
-      </div>
-      <div class="card documentation-card">
-         <div class="glasses_box">
-            <imagen><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx0LeGWunwnggj3c23klB_H3Dbn5jm55sRvw&s" alt="#"/></imagen>
-            <h3><span class="blu">-</span>Servomotores</h3>
-            <p>Los servomotores que estan implementados en el proyecto:</p>
-            <div class="col-md-12">
-               <a class="read_more" href="{% url 'servo' %}"> Ver más</a>
-            </div>
-         </div>
-      </div>
-      <div class="card documentation-card">
-      <div class="glasses_box">
-         <imagen><img src="https://electronicamade.com/wp-content/uploads/2020/03/sensor-distancia-ultrasonido-1.jpg" alt="#"/></imagen>
-         <h3><span class="blu">-</span>Sensores</h3>
-         <p>Los sensores que estan implementados en el proyecto:</p>
-         <div class="col-md-12">
-               <a class="read_more" href="{% url 'sensores' %}"> Ver más</a>
-            </div>
-      </div>
-   </div>
-      <div class="card documentation-card">
-         <div class="glasses_box">
-            <imagen><img src="https://http2.mlstatic.com/D_NQ_NP_617717-MEC49548174570_042022-O.webp" alt="#"/></imagen>
-            <h3><span class="blu">-</span>Motorreductor</h3>
-            <p>El motor de DC que estamos implementndo.</p>
-            <div class="col-md-12">
-               <a class="read_more" href="{% url 'motorDC' %}">Ver más</a>
-            </div>
-         </div>
-      </div>
-      <div class="card documentation-card">
-         <div class="glasses_box">
-            <imagen><img src="https://media.naylampmechatronics.com/148-superlarge_default/driver-puente-h-l298n.jpg" alt="#"/></imagen>
-            <imagen><img src="https://megatronica.cc/wp-content/uploads/2022/02/MD-L298N-800x800-1.jpg" alt="#"/></imagen>
-            <h3><span class="blu">-</span>Controlador de Motor</h3>
-            <p>Controlador para el coche del brazo robotico</p>
-            <div class="col-md-12">
-               <a class="read_more" href="{% url 'controladorMotor' %}">Ver más</a>
-            </div>
-         </div>
-      </div>
-      
-      
-   </div>
-</div>
+
+
+
 
 {% endblock %}

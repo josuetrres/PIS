@@ -7,7 +7,7 @@ body {
 }
 
 .bg-gradient-to-r {
-    background: linear-gradient(to bottom, #000000, #08004e); /* Degradado de negro a azul de arriba hacia abajo */
+    background: linear-gradient(to bottom, #000000, #00008b); 
 }
 
 .py-12 {
@@ -57,7 +57,7 @@ body {
 
 .documentation-card {
     border: 1px solid #1e88e5;
-    background: rgba(0, 0, 0, 0.7); /* Fondo negro con transparencia */
+    background: rgba(0, 0, 0, 0.7); 
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -164,7 +164,7 @@ form p {
     min-height: 100vh;
     padding: 4rem 2rem;
     position: relative;
-    background: linear-gradient(to bottom, #000000, #08004e); /* Degradado de negro a azul de arriba hacia abajo */
+    background: linear-gradient(to bottom, #000000, #00008b); /* Degradado de negro a azul de arriba hacia abajo */
 }
 
 .content-wrapper {

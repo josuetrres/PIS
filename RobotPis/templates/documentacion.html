@@ -112,4 +112,59 @@
   </div>
 </div>
 
+<div class="container">
+   <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+      <div class="documentation-card">
+         <div class="card-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3J0XHprZ-dZBAK-yx8W5u05eJM4dKK6SQkw&s" alt="Articulaciones"/>
+         </div>
+         <div class="card-content">
+            <h3 class="card-title"><span class="blu">-</span> Articulaciones</h3>
+            <p class="card-text">Los materiales para la articulaciones del brazo:</p>
+            <a class="card-button" href="{% url 'articulaciones' %}">Ver más</a>
+         </div>
+      </div>
+      <div class="documentation-card">
+         <div class="card-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx0LeGWunwnggj3c23klB_H3Dbn5jm55sRvw&s" alt="Servomotores"/>
+         </div>
+         <div class="card-content">
+            <h3 class="card-title"><span class="blu">-</span> Servomotores</h3>
+            <p class="card-text">Los servomotores que están implementados en el proyecto:</p>
+            <a class="card-button" href="{% url 'servo' %}">Ver más</a>
+         </div>
+      </div>
+      <div class="documentation-card">
+         <div class="card-image">
+            <img src="https://electronicamade.com/wp-content/uploads/2020/03/sensor-distancia-ultrasonido-1.jpg" alt="Sensores"/>
+         </div>
+         <div class="card-content">
+            <h3 class="card-title"><span class="blu">-</span> Sensores</h3>
+            <p class="card-text">Los sensores que están implementados en el proyecto:</p>
+            <a class="card-button" href="{% url 'sensores' %}">Ver más</a>
+         </div>
+      </div>
+      <div class="documentation-card">
+         <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_617717-MEC49548174570_042022-O.webp" alt="Motorreductor"/>
+         </div>
+         <div class="card-content">
+            <h3 class="card-title"><span class="blu">-</span> Motorreductor</h3>
+            <p class="card-text">El motor de DC que estamos implementando.</p>
+            <a class="card-button" href="{% url 'motorDC' %}">Ver más</a>
+         </div>
+      </div>
+      <div class="documentation-card">
+         <div class="card-image">
+            <img src="https://media.naylampmechatronics.com/148-superlarge_default/driver-puente-h-l298n.jpg" alt="Controlador de Motor"/>
+            <img src="https://megatronica.cc/wp-content/uploads/2022/02/MD-L298N-800x800-1.jpg" alt="Controlador de Motor"/>
+         </div>
+         <div class="card-content">
+            <h3 class="card-title"><span class="blu">-</span> Controlador de Motor</h3>
+            <p class="card-text">Controlador para el coche del brazo robótico.</p>
+            <a class="card-button" href="{% url 'controladorMotor' %}">Ver más</a>
+         </div>
+      </div>
+   </div>
+</div>
 {% endblock %}
