@@ -2,7 +2,7 @@
 #include <ESPAsyncWebServer.h>
 #include <HTTPClient.h>
 #include <ESP32Servo.h>
-#include "articulacion.h"
+#include "articulacion.h" 
 
 //CONTRASEÑA DE LA RED
 const char* ssid = "ROSA";

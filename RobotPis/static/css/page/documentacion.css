@@ -1,8 +1,8 @@
-ul {
+p, ul, li, a {
     color: white;
 }
 
-imagen {
+.imagen {
     margin: 0;
     padding: 0;
     display: flex;
@@ -23,18 +23,6 @@ imagen {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-p {
-    color: black;
-}
-
-texto p {
-    color: white;
-}
-
-titlen h3 {
-    color: black;
 }
 
 form p {

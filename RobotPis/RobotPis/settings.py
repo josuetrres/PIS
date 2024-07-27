@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'Carrito',
     'WebSite',
     'Sensores',
+    'rest_framework',
+    'api',
 ]
 
 MIDDLEWARE = [

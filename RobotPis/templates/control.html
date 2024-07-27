@@ -32,8 +32,11 @@
             </div>
         
             <div id="radar-container">
-                <img id="radar" src="{% static "images/radar_bg.png" %}" alt="radar">
-                <img id="radar-aguja" src="{% static "images/radar_aguja.png" %}" alt="radar">
+                <div class="radar">
+                    <img src="{% static "images/radar_bg.png" %}" alt="Radar">
+                    <div class="line"></div>
+                    <div class="dot" id="dot"></div>
+                </div>
             </div>
         </div>
     
