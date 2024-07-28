@@ -42,4 +42,8 @@ urlpatterns = [
     path('control/', control, name='control'),
     path('estadisticas/', estadisticas, name='estadisticas'),
     path('api/', include('api.urls')),
+    path('documentacionPoo/',documentacionPoo,name = "documentacionPoo"),
+    path('documentacionCircuitos/',documentacionCircuitos,name = "documentacionCircuitos"),
+    path('documentacionAnalisis/',documentacionAnalisis,name = "documentacionAnalisis"),
+
 ]

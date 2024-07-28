@@ -1,0 +1,144 @@
+{% extends "basePage.html" %}
+{% load static %}
+
+{% block title %}
+    POO y Nuestro Proyecto Web
+{% endblock %}
+
+{% block styles %}
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #02022e;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .topic {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .topic:hover {
+            transform: translateY(-5px);
+        }
+        .topic h2 {
+            color: #4747df;
+            border-bottom: 2px solid #4747df;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: #4747df;
+            color: white;
+            padding: 3px 7px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .topic-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .topic-text {
+            flex: 1;
+        }
+        .topic-image {
+            flex: 0 0 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .topic-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .topic-image:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Programación Orientada a Objetos y Nuestro Proyecto Web</h1>
+
+        <div class="topic">
+            <h2>1. Tipos de interfaces</h2>
+            <div class="topic-content">
+                <div class="topic-text">
+                    <p>En POO, exploramos diversos tipos de interfaces, lo que fue fundamental para diseñar una <span class="highlight">interfaz de usuario intuitiva</span> en nuestra página web. Implementamos interfaces como Command para manejar diferentes acciones del usuario, y Observer para mantener actualizadas distintas partes de nuestra interfaz. Esto nos permitió crear una experiencia de usuario coherente y fácil de usar, mejorando significativamente la interactividad de nuestra aplicación web.</p>
+                </div>
+                <div class="topic-image">
+                    <img src="https://www.antiersolutions.com/wp-content/uploads/2021/08/white_lable_Cryptocurrency_MLM-min.webp" alt="Tipos de interfaces">
+                </div>
+            </div>
+        </div>
+
+        <div class="topic">
+            <h2>2. Interfaz gráfica de usuario</h2>
+            <div class="topic-content">
+                <div class="topic-text">
+                    <p>Gracias a los conceptos de POO, implementamos una <span class="highlight">interfaz gráfica atractiva</span> en nuestra página web. Utilizamos clases y objetos para representar diferentes elementos de la interfaz, como botones, formularios y paneles de navegación. Esto no solo facilitó su manejo y personalización, sino que también nos permitió crear componentes reutilizables, mejorando la eficiencia de nuestro desarrollo y la consistencia visual de nuestra aplicación.</p>
+                </div>
+                <div class="topic-image">
+                    <img src="https://th.bing.com/th/id/R.33584cdd93be1c44ffc6cfb8f3bb2b20?rik=yyzc5oBc%2bE9lWQ&riu=http%3a%2f%2funivia.info%2fwp-content%2fuploads%2f2015%2f09%2f14.jpg&ehk=eJLVQBe73g%2bX2pI47SgNyMPuc4pVX50fY5ZeLuFAvU8%3d&risl=&pid=ImgRaw&r=0" alt="Interfaz gráfica de usuario">
+                </div>
+            </div>
+        </div>
+
+        <div class="topic">
+            <h2>3. Uso de API's y librerías estándares</h2>
+            <div class="topic-content">
+                <div class="topic-text">
+                    <p>La POO nos enseñó a trabajar eficientemente con API's y librerías, lo que fue crucial para integrar <span class="highlight">funcionalidades avanzadas</span> en nuestra página web. Implementamos la API de Google Maps para mostrar la ubicación de nuestros productos, y utilizamos librerías de procesamiento de pagos para garantizar transacciones seguras.</p>
+                    <p>Una de las implementaciones más innovadoras en nuestro proyecto fue la integración de <span class="highlight">Chatbase</span>, un servicio de chatbot personalizado basado en ChatGPT. Utilizamos esta API para crear un asistente virtual altamente especializado, entrenado específicamente con nuestra data para responder a todas las dudas de los usuarios sobre nuestro proyecto y servicios. Esta implementación no solo mejoró significativamente la experiencia del usuario, proporcionando respuestas instantáneas y precisas, sino que también demostró cómo los principios de POO pueden aplicarse en la integración de tecnologías de inteligencia artificial avanzadas.</p>
+                    <p>Estos componentes se integraron perfectamente en nuestra estructura orientada a objetos, permitiéndonos extender fácilmente las capacidades de nuestra aplicación y ofrecer un servicio más completo y personalizado a nuestros usuarios.</p>
+                </div>
+                <div class="topic-image">
+                    <img src="https://lifetimo.com/wp-content/uploads/2023/05/Chatbase-Lifetime-Deal-Image.jpg" alt=" Uso de API's y librerías estándares">
+                </div>
+            </div>
+        </div>
+
+        <div class="topic">
+            <h2>4. Conexión y acceso a base de datos</h2>
+            <div class="topic-content">
+                <div class="topic-text">
+                    <p>Aprendimos a conectar nuestra aplicación con bases de datos utilizando principios de POO. Implementamos el patrón DAO (Data Access Object) para <span class="highlight">almacenar y recuperar datos</span> de manera eficiente en nuestra página web. Esto no solo mejoró la experiencia del usuario al proporcionar acceso rápido a la información, sino que también nos permitió mantener una clara separación entre la lógica de negocio y el acceso a datos, facilitando el mantenimiento y la escalabilidad de nuestra aplicación.</p>
+                    <p>Además, implementamos nuestro proyecto utilizando <span class="highlight">Django</span>, un potente framework de Python que sigue los principios de POO. Django nos permitió aprovechar al máximo los conceptos de POO en un entorno web, facilitando la creación de modelos, vistas y controladores de manera estructurada y eficiente. Su sistema de ORM (Object-Relational Mapping) fue particularmente útil para manejar nuestras interacciones con la base de datos de forma orientada a objetos.</p>
+                </div>
+                <div class="topic-image">
+                    <img src="https://s1.significados.com/foto/basededatos.png" alt=" Conexión y acceso a base de datos">
+                </div>
+            </div>
+        </div>
+
+        <div class="topic">
+            <h2>Diagramas UML</h2>
+            <div class="topic-content">
+                <div class="topic-text">
+                    <p>Gracias a esta materia, dominamos la creación de <span class="highlight">diagramas UML</span> que funcionaron como planos esenciales para nuestra página web. Estos diagramas nos ayudaron a visualizar la estructura de nuestras clases, sus relaciones y las interacciones entre diferentes componentes de nuestro sistema antes de comenzar a programar. Utilizamos diagramas de clases para definir la estructura de nuestros modelos, y diagramas de secuencia para planificar flujos de interacción complejos.</p>
+                </div>
+                <div class="topic-image">
+                    <img src="https://th.bing.com/th/id/OIP.UAy69-0dERhXoq-qhkGo1AHaEQ?rs=1&pid=ImgDetMain" alt="Diagrama UML">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

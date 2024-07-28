@@ -1,0 +1,185 @@
+{% extends "basePage.html" %}
+{% load static %}
+
+{% block title %}
+    Diseño de Circuitos para Nuestro Robot Recolector
+{% endblock %}
+
+{% block styles %}
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #f1f3f4;
+            background-color: #02022e;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #f1f3f4;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+        .component {
+            background-color: #180247;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgb(241, 243, 244);
+            transition: transform 0.3s ease;
+        }
+        .component:hover {
+            transform: translateY(-5px);
+        }
+        .component h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: #3498db;
+            color: #20203e;
+            padding: 3px 7px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .component-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .component-text {
+            flex: 1;
+        }
+        .component-image {
+            flex: 0 0 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgb(241, 243, 244);
+        }
+        .component-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .component-image:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Diseño de Circuitos para Nuestro Robot Recolector</h1>
+
+        <div class="component">
+            <h2>1. Servomotores</h2>
+            <div class="component-content">
+                <div class="component-text">
+                    <p>Los <span class="highlight">servomotores</span> son fundamentales para el movimiento preciso de cada articulación de nuestro brazo robótico. Implementamos señales PWM (Modulación por Ancho de Pulso) para controlar el ángulo de rotación de cada servo. Esto nos permite un control fino sobre el movimiento del brazo, esencial para la recolección eficiente de basura.</p>
+                    <p>Utilizamos servomotores de alto torque para las articulaciones principales y servos más pequeños para los movimientos finos de la pinza. La implementación de un controlador PID nos ayuda a mantener la precisión y estabilidad en el movimiento.</p>
+                </div>
+                <div class="component-image">
+                    <img src="https://ettron.com/wp-content/uploads/2019/10/4-SG90-servo-motor-positional-rotation-servo-motor-967x800.jpg" alt="Servomotores">
+                </div>
+            </div>
+        </div>
+
+        <div class="component">
+            <h2>2. Sensores</h2>
+            <div class="component-content">
+                <div class="component-text">
+                    <p>Implementamos varios tipos de sensores para optimizar el funcionamiento de nuestro robot:</p>
+                    <ul>
+                        <li><span class="highlight">Sensor de temperatura:</span> Monitorea constantemente el ambiente para asegurar condiciones óptimas de operación y seguridad para los humanos cercanos.</li>
+                        <li><span class="highlight">Sensor de fuerza y peso:</span> Instalado en la pinza del brazo, nos permite medir el peso de los objetos recogidos y ajustar la fuerza de agarre para evitar daños.</li>
+                        <li><span class="highlight">Sensores de proximidad:</span> Ubicados alrededor del carrito, estos sensores ultrasónicos detectan obstáculos y ayudan a navegar hacia los puntos de recolección de basura.</li>
+                    </ul>
+                    <p>Todos estos sensores están conectados a nuestro controlador principal, permitiendo una toma de decisiones en tiempo real basada en los datos recopilados.</p>
+                </div>
+                <div class="component-image">
+                    <img src="https://tienda.starware.com.ar/wp-content/uploads/2020/01/sensor-de-temperatura-arduino-termometro-infrarrojo-gy-906-mlx90614-1750-1414.jpg" alt="Sensores">
+                </div>
+            </div>
+        </div>
+
+        <div class="component">
+            <h2>3. Módulo GPS</h2>
+            <div class="component-content">
+                <div class="component-text">
+                    <p>El <span class="highlight">módulo GPS</span> es crucial para la navegación autónoma de nuestro carrito. Utilizamos un módulo GPS de alta precisión que nos proporciona datos de latitud, longitud y altitud. Esto nos permite:</p>
+                    <ul>
+                        <li>Rastrear la ubicación exacta del carrito en tiempo real.</li>
+                        <li>Planificar rutas eficientes para la recolección de basura.</li>
+                        <li>Crear un mapa de las áreas limpiadas y por limpiar.</li>
+                    </ul>
+                    <p>Integramos los datos del GPS con un algoritmo de planificación de ruta para optimizar el recorrido del robot y maximizar la eficiencia de recolección.</p>
+                </div>
+                <div class="component-image">
+                    <img src="https://th.bing.com/th/id/OIP.GuBZZ0tWEAY0mx8CzuJ8SQHaHa?rs=1&pid=ImgDetMain" alt="Módulo GPS">
+                </div>
+            </div>
+        </div>
+
+        <div class="component">
+            <h2>4. Motorreductor y Controlador de Motor</h2>
+            <div class="component-content">
+                <div class="component-text">
+                    <p>Para el movimiento del carrito, utilizamos <span class="highlight">motorreductores</span> de alta eficiencia. Estos motores proporcionan el torque necesario para mover el carrito incluso cuando está cargado de basura. El <span class="highlight">controlador de motor</span> nos permite:</p>
+                    <ul>
+                        <li>Controlar la velocidad y dirección de cada rueda independientemente.</li>
+                        <li>Implementar giros precisos invirtiendo la polaridad de los motores.</li>
+                        <li>Realizar un arranque y frenado suave para evitar sacudidas en el brazo robótico.</li>
+                    </ul>
+                    <p>Utilizamos un controlador de puente H para manejar los motorreductores, lo que nos permite un control bidireccional y eficiente del movimiento.</p>
+                </div>
+                <div class="component-image">
+                    <img src="https://www.steren.com.mx/media/catalog/product/m/o/mot-120_x1.jpg" alt="Motorreductor y Controlador de Motor">
+                </div>
+            </div>
+        </div>
+
+        <div class="component">
+            <h2>5. Controlador ESP32</h2>
+            <div class="component-content">
+                <div class="component-text">
+                    <p>El <span class="highlight">controlador ESP32</span> es el cerebro de nuestro robot. Este potente microcontrolador se encarga de:</p>
+                    <ul>
+                        <li>Controlar los servomotores del brazo robótico.</li>
+                        <li>Procesar los datos de todos los sensores implementados.</li>
+                        <li>Manejar la comunicación con el controlador de motorreductores.</li>
+                        <li>Enviar y recibir datos a través de Wi-Fi para el monitoreo remoto.</li>
+                    </ul>
+                    <p>Aprovechamos la capacidad de procesamiento del ESP32 para implementar algoritmos de control avanzados y toma de decisiones en tiempo real, mejorando la autonomía y eficiencia de nuestro robot recolector.</p>
+                </div>
+                <div class="component-image">
+                    <img src="https://th.bing.com/th/id/R.4ad8547041fd201982cd5069d8e6e080?rik=R9%2bsTnZ9T8%2fKIg&riu=http%3a%2f%2fblog.espol.edu.ec%2fgirni%2ffiles%2f2019%2f08%2fESP32_placaPinOut01.png&ehk=WELh%2bBopSO0hDcPwBinu1LCYIqGhHADH%2foOWubMB4UY%3d&risl=&pid=ImgRaw&r=0" alt="Controlador ESP32">
+                </div>
+            </div>
+        </div>
+
+        <div class="component">
+            <h2>6. Controlador ESP32-CAM</h2>
+            <div class="component-content">
+                <div class="component-text">
+                    <p>El <span class="highlight">ESP32-CAM</span> es una adición crucial para la funcionalidad visual de nuestro robot. Este módulo:</p>
+                    <ul>
+                        <li>Crea un servidor web que transmite video en tiempo real.</li>
+                        <li>Está montado en la parte delantera del carrito para una visión clara del entorno.</li>
+                        <li>Permite a los operadores remotos ver el área de trabajo del robot.</li>
+                        <li>Facilita la identificación visual de basura y obstáculos.</li>
+                    </ul>
+                    <p>Integramos la transmisión de video en nuestra interfaz web principal, permitiendo un control y monitoreo completo del robot desde cualquier dispositivo con acceso a internet.</p>
+                </div>
+                <div class="component-image">
+                    <img src="https://th.bing.com/th/id/OIP.7Krw3kaGVojAFmt67HrjpgHaGJ?rs=1&pid=ImgDetMain" alt="Controlador ESP32-CAM">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

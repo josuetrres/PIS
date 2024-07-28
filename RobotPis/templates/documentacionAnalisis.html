@@ -1,0 +1,170 @@
+{% extends "basePage.html" %}
+{% load static %}
+
+{% block title %}
+    Análisis Matemático en Nuestro Robot Recolector
+{% endblock %}
+
+{% block styles %}
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #f1f3f4;
+            background-color: #02022e;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #f1f3f4;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+        .concept {
+            background-color: #180247;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgb(241, 243, 244);
+            transition: transform 0.3s ease;
+        }
+        .concept:hover {
+            transform: translateY(-5px);
+        }
+        .concept h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: #3498db;
+            color: #20203e;
+            padding: 3px 7px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .concept-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .concept-text {
+            flex: 1;
+        }
+        .concept-image {
+            flex: 0 0 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgb(241, 243, 244);
+        }
+        .concept-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .concept-image:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Análisis Matemático en Nuestro Robot Recolector</h1>
+
+        <div class="concept">
+            <h2>1. Cálculo Diferencial</h2>
+            <div class="concept-content">
+                <div class="concept-text">
+                    <p>El <span class="highlight">cálculo diferencial</span> fue crucial para optimizar el movimiento de nuestro robot. Lo aplicamos en:</p>
+                    <ul>
+                        <li>Cálculo de velocidades y aceleraciones del brazo robótico.</li>
+                        <li>Optimización de trayectorias para minimizar el consumo de energía.</li>
+                        <li>Análisis de la eficiencia en la recolección de basura.</li>
+                    </ul>
+                    <p>Utilizamos derivadas para determinar las tasas de cambio en el movimiento del robot, permitiéndonos ajustar su comportamiento en tiempo real.</p>
+                </div>
+                <div class="concept-image">
+                    <img src="https://th.bing.com/th/id/OIP.V8FT3rZcHVXtpRNuQsQQGwHaFj?rs=1&pid=ImgDetMain" alt="Cálculo Diferencial">
+                </div>
+            </div>
+        </div>
+
+        <div class="concept">
+            <h2>2. Cálculo Integral</h2>
+            <div class="concept-content">
+                <div class="concept-text">
+                    <p>El <span class="highlight">cálculo integral</span> nos permitió:</p>
+                    <ul>
+                        <li>Calcular el área total cubierta por el robot en su recorrido.</li>
+                        <li>Determinar el volumen de basura recolectada a lo largo del tiempo.</li>
+                        <li>Analizar el consumo de energía acumulado durante la operación.</li>
+                    </ul>
+                    <p>Implementamos integrales definidas para evaluar la eficiencia global del robot en diferentes escenarios de recolección.</p>
+                </div>
+                <div class="concept-image">
+                    <img src="https://th.bing.com/th/id/OIP.5d_MWigLlbF4UeW1NbaligHaFj?rs=1&pid=ImgDetMain" alt="Cálculo Integral">
+                </div>
+            </div>
+        </div>
+
+        <div class="concept">
+            <h2>3. Ecuaciones Diferenciales</h2>
+            <div class="concept-content">
+                <div class="concept-text">
+                    <p>Las <span class="highlight">ecuaciones diferenciales</span> fueron esenciales para modelar:</p>
+                    <ul>
+                        <li>El comportamiento dinámico del brazo robótico.</li>
+                        <li>La respuesta del sistema de control a perturbaciones externas.</li>
+                        <li>La estabilidad del robot en diferentes terrenos.</li>
+                    </ul>
+                    <p>Utilizamos ecuaciones diferenciales de segundo orden para describir el movimiento del brazo, permitiéndonos predecir y optimizar su comportamiento.</p>
+                </div>
+                <div class="concept-image">
+                    <img src="https://th.bing.com/th/id/OIP.p-y7t_BMvwnqqaH5JLt43gHaFO?rs=1&pid=ImgDetMain" alt="Ecuaciones Diferenciales">
+                </div>
+            </div>
+        </div>
+
+        <div class="concept">
+            <h2>4. Optimización</h2>
+            <div class="concept-content">
+                <div class="concept-text">
+                    <p>Los métodos de <span class="highlight">optimización</span> nos ayudaron a:</p>
+                    <ul>
+                        <li>Encontrar las rutas más eficientes para la recolección de basura.</li>
+                        <li>Maximizar la capacidad de recolección minimizando el consumo de energía.</li>
+                        <li>Optimizar los parámetros del controlador PID para el movimiento del brazo.</li>
+                    </ul>
+                    <p>Implementamos técnicas como el método del gradiente para ajustar continuamente el rendimiento del robot.</p>
+                </div>
+                <div class="concept-image">
+                    <img src="https://th.bing.com/th/id/OIP.d9weiOq252NbMnTOoE_KowHaFL?rs=1&pid=ImgDetMain" alt="Optimización">
+                </div>
+            </div>
+        </div>
+
+        <div class="concept">
+            <h2>5. Series y Transformadas</h2>
+            <div class="concept-content">
+                <div class="concept-text">
+                    <p>El estudio de <span class="highlight">series y transformadas</span> fue aplicado en:</p>
+                    <ul>
+                        <li>Análisis de señales de los sensores mediante series de Fourier.</li>
+                        <li>Filtrado de ruido en las lecturas de los sensores.</li>
+                        <li>Procesamiento de imágenes capturadas por la cámara del robot.</li>
+                    </ul>
+                    <p>Utilizamos la transformada rápida de Fourier (FFT) para analizar y mejorar la calidad de los datos recopilados por nuestros sensores.</p>
+                </div>
+                <div class="concept-image">
+                    <img src="https://th.bing.com/th/id/OIP.B8I6xGvskvnfqe-lYXCKLQHaEK?rs=1&pid=ImgDetMain" alt="Series y Transformadas">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

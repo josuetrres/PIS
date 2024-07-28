@@ -13,6 +13,12 @@ def desarrolladores(request):
 def documentacion(request):
     return render(request, 'documentacion.html')
 
+def documentacionPoo(request):
+    return render(request, 'documentacionPoo.html')
+def documentacionCircuitos(request):
+    return render(request, 'documentacionCircuitos.html')
+def documentacionAnalisis(request):
+    return render(request, 'documentacionAnalisis.html')
 def funcionamiento (request):
     return render(request, 'funcionamiento.html')
 
