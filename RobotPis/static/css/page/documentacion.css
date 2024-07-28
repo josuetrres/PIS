@@ -127,7 +127,7 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     color: black;
-    border: 2px solid #000000; /* Borde negro */
+    border: 2px solid #000000; 
     transition: background-color 0.3s, border-color 0.3s;
     cursor: pointer;
     text-decoration: none;
@@ -135,7 +135,7 @@
 
 .card-button:hover {
     background-color: #1565c0;
-    border-color: #1565c0; /* Borde negro se vuelve azul al pasar el mouse */
+    border-color: #1565c0;
 }
 
 .card-button:focus {
@@ -207,7 +207,7 @@ form p {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 0; /* Asegura que esté por debajo del contenido principal */
+    z-index: 0;
 }
 
 .slider-thumb::before {
@@ -240,7 +240,7 @@ form p {
     text-align: center;
     margin-bottom: 4rem;
     position: relative;
-    z-index: 1; /* Asegura que el título esté por encima de la animación */
+    z-index: 1;
 }
 
 #tituloDocumentacion {
@@ -322,6 +322,46 @@ form p {
 
 .video-container iframe {
     width: 800px;
-    max-width: 1100px; /* Ajusta este valor según sea necesario */
-    height: 450px; /* Ajusta este valor según sea necesario */
+    max-width: 1100px;
+    height: 450px;
+}
+
+.custom-cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.custom-documentation-card {
+    flex: 0 1 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+    box-sizing: border-box;
+    border: 1px solid #1e88e5;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+}
+
+.custom-documentation-card:hover {
+    background-color: #1e88e5;
+    transform: scale(1.05);
+    border-color: #000000;
+    border-width: 4px;
+}
+
+@media (max-width: 1024px) {
+    .custom-documentation-card {
+        flex: 0 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-documentation-card {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
 }
