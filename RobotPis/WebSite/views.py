@@ -38,8 +38,8 @@ def testimonios(request):
         }
     return render(request, 'testimonios.html', content)
 
-def diagramaClases (request):
-    return render(request, 'diagramaClases.html')
+def modelosysimulaciones (request):
+    return render(request, 'modelosysimulaciones.html')
 
 def materias (request):
     return render(request, 'materias.html')
