@@ -2,23 +2,44 @@
 #include <ESPAsyncWebServer.h>
 #include <HTTPClient.h>
 #include <ESP32Servo.h>
+#include <Robojax_L298N_DC_motor.h>
 #include "articulacion.h" 
 
 //CONTRASEÑA DE LA RED
-const char* ssid = "ROSA";
-const char* password = "SKS.2022.1";
+const char* ssid = "Nettplus-VChamba";
+const char* password = "Vchamba26";
 
 AsyncWebServer server(80); //Inicia un server que recibe datos de la app en el puerto 80
 
 Servo s_camera, s_base, s_hombro, s_codo, s_muneca, s_pinza;
 
 //Se crean los objetos de la clase Articulacion
-Articulacion camera(s_camera, 2);
-Articulacion base(s_base, 15);
-Articulacion hombro(s_hombro, 16);
-Articulacion codo(s_codo, 17);
-Articulacion muneca(s_muneca, 18);
-Articulacion pinza(s_pinza, 19);
+Articulacion camera(s_camera, 32);
+Articulacion base(s_base, 33);
+Articulacion hombro(s_hombro, 26);
+Articulacion codo(s_codo, 27);
+Articulacion muneca(s_muneca, 14);
+Articulacion pinza(s_pinza, 25);
+
+//MOTORES
+#define CHA 0
+#define ENA 19
+#define IN1 18
+#define IN2 5
+
+// motor 2 settings
+#define IN3 17
+#define IN4 16
+#define ENB 4
+#define CHB 1
+
+const int CCW = 2; // do not change
+const int CW  = 1;
+
+#define motor1 1 // do not change
+#define motor2 2
+
+Robojax_L298N_DC_motor carrito(IN1, IN2, ENA, CHA,  IN3, IN4, ENB, CHB);
 
 void setup() {
   Serial.begin(115200);
@@ -40,6 +61,9 @@ void setup() {
   codo.inicializar();
   muneca.inicializar();
   pinza.inicializar();
+
+  carrito.begin();
+
 
   //Recibe los datos de la app por GET
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
@@ -77,6 +101,38 @@ void setup() {
       muneca.mover(munecaVal.toInt());
       pinza.mover(pinzaVal.toInt());
 
+      if (forwardVal == "1") {
+        carrito.rotate(motor1, 80, CW);
+        carrito.rotate(motor2, 80, CW);
+      } else {
+        carrito.brake(1);
+        carrito.brake(2);
+      }
+
+      if (backwardVal == "1") {
+        carrito.rotate(motor1, 80, CCW);
+        carrito.rotate(motor2, 80, CCW);
+      } else {
+        carrito.brake(1);
+        carrito.brake(2);
+      }
+
+      if (leftVal == "1") {
+        carrito.rotate(motor1, 80, CW);
+        carrito.rotate(motor2, 80, CCW);
+      } else {
+        carrito.brake(1);
+        carrito.brake(2);
+      }
+
+      if (rightVal == "1") {
+        carrito.rotate(motor1, 80, CCW);
+        carrito.rotate(motor2, 80, CW);
+      } else {
+        carrito.brake(1);
+        carrito.brake(2);
+      }
+
       //Respuesta del ESP32
       request->send(200, "text/plain", "Servomotores movidos");
 
@@ -89,6 +145,7 @@ void setup() {
 }
 
 void loop() {
+  /*
   if (WiFi.status() == WL_CONNECTED){
     //Crea un http para enviar datos a la api externa
     HTTPClient http;
@@ -115,4 +172,5 @@ void loop() {
   }
 
   delay(1000);
+  */
 }
