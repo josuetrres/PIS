@@ -1,0 +1,39 @@
+{% extends "basePage.html" %}
+{% load static %}
+
+{% block title %}
+Funcionamiento
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/page/documentacion.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="titlepage">
+    <h1 id="tituloDocumentacion">Modelos y Simulaciones</h1>
+    <div class="texto">
+        <p id="p1">Diseños, modelos y Simulaciones del proyecto JABED.</p>
+    </div>
+</div>
+<div class="single-column-container">
+    <div class="documentation-card">
+        <div class="glasses_box">
+            <figure class="video-container">
+                <img src="https://i.ibb.co/bXW2PZD/329444411-66bca65e-eeb0-44f2-ab53-42f265d3af67-1.jpg" allow="autoplay"></img>
+            </figure>
+            <h3><span class="blu">-</span>Diagrama de Clases</h3>
+        </div>
+    </div>
+</div>
+
+<div class="single-column-container">
+    <div class="documentation-card">
+        <div class="glasses_box">
+            <figure class="video-container">
+                <img src="https://i.ibb.co/bXW2PZD/329444411-66bca65e-eeb0-44f2-ab53-42f265d3af67-1.jpg" alt="Imagen" width="840" height="630">
+            </figure>
+        </div>
+    </div>
+</div>
+{% endblock %}
