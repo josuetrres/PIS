@@ -1,39 +1,41 @@
 {% extends "basePage.html" %}
 
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/page/documentacion.css' %}">
+{% endblock %}
+
 {% block title %}Sensores{% endblock %}
 
 {% block content %}
-
-
-<div class="glasses">
-   <div class="container">
-      <div class="row">
-         <div class="col-md-10 offset-md-1">
-            <div class="titlepage">
-               <h2 class = "margintitle">Sensores Usados:</h2>
-               <p>Los sensores que se implementaran son los siguientes:
-               </p>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="container-fluid">
-      <div class="row">
-         {%for sensores_list in sensoresTotales %}
-            {% for sensor in sensores_list %}
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">           
-                    <div class="glasses_box">
-                        <figure>
-                           <img src="{{sensor.imagen}}" alt="Imagen del sensor"/>
-                        </figure>
-                        <p>{{sensor.nombre}}</p>
-                        <div class="col-md-12">
-                            <a class="read_more" href="/sensores/{{ sensor.id }}">Ver más</a>
-                        </div>
-                    </div>  
+<div class="developers-section">
+    <div class="content-wrapper">
+        <div class="w-full bg-gradient-to-r from-[#b3e5fc] to-[#1e88e5] py-12 md:py-16 lg:py-20">
+            <div class="container">
+                <div class="titlepage">
+                    <h1 id="tituloDocumentacion">Sensores Usados</h1>
+                    <p id="p1">Los sensores que se implementarán son los siguientes:</p>
                 </div>
-            {% endfor %}
-         {%endfor%}  
-      </div>
-   </div>
+
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8">
+                    {% for sensores_list in sensoresTotales %}
+                        {% for sensor in sensores_list %}
+                            <div class="documentation-card">
+                                <div class="card-image">
+                                    <figure><img src="{{ sensor.imagen }}" alt="Imagen del sensor" /></figure>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">{{ sensor.nombre }}</h3>
+                                    <a class="card-button" href="{% static 'dataSheet/' %}{{ sensor.nombre }}.pdf" download="{{ sensor.nombre }}">Ver más</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="slider-thumb"></div>
+    </div>
+</div>
 {% endblock %}
