@@ -3,17 +3,15 @@
 }
 
 .py-12 {
-    padding-top: 3rem;
     padding-bottom: 3rem;
 }
 
 .md\:py-16 {
-    padding-top: 4rem;
     padding-bottom: 4rem;
 }
 
 .lg\:py-20 {
-    padding-top: 5rem;
+
     padding-bottom: 5rem;
 }
 
@@ -75,6 +73,7 @@
     overflow: hidden;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+    margin: 1rem 0;
 }
 
 .card-image img {
@@ -127,7 +126,7 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     color: black;
-    border: 2px solid #000000; 
+    border: 2px solid #000000;
     transition: background-color 0.3s, border-color 0.3s;
     cursor: pointer;
     text-decoration: none;
