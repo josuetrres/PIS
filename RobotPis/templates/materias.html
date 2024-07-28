@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-Inicio
+    Inicio
 {% endblock  %}
 
 {% block styles %}
@@ -11,76 +11,78 @@ Inicio
 
 {% block content %}
 
-<div class="developers-section">
-    <div class="content-wrapper">
-        <div class="container">
-            <div class="titlepage">
-                <h1 id="tituloDocumentacion">Implementación de materias:</h1>
-                <p id="p1">Implementación de las materias impartidas en el ciclo</p>
+    <div class="developers-section">
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="titlepage">
+                    <h1 id="tituloDocumentacion">Implementación de materias:</h1>
+                    <p id="p1">Implementación de las materias impartidas en el ciclo</p>
+                </div>
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <div class="documentation-card">
+                        <div class="card-image">
+                            <img src="https://4.bp.blogspot.com/-MbBkFV4pyzI/V5J6GNfR41I/AAAAAAAAByI/JN-ERBrWoOgHHdjzaXmFHXJAyIA8UAhQACLcB/s1600/POO1-450x370.jpg" alt="Programacion Orientada a Objetos">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text-box">
+                                <h3 class="card-title">Programación Orientada a Objetos</h3>
+                                <p class="card-text">Usamos los conocimientos de la materia para poder desarrollar los códigos para el manejo del brazo robótico y para la web de el proyecto.</p>
+                                <a href="{% url 'documentacionPoo' %}" class="card-button">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="documentation-card">
+                        <div class="card-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkw3INK6xm9P5eSKxSMuMpMYUZZBqMAQuQVQ&s" alt="Diseño de Circuitos">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text-box">
+                                <h3 class="card-title">Diseño de Circuitos</h3>
+                                <p class="card-text">Usamos los conocimientos de la materia para diseñar los circuitos necesarios para alimentar el brazo robótico y sus componentes.</p>
+                                <a href="{% url 'documentacionCircuitos' %}" class="card-button">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="documentation-card">
+                        <div class="card-image">
+                            <img src="https://th.bing.com/th/id/R.7c1e696a80e842ceb42ddb6b67132b9d?rik=bpTY5jf7pDeE%2bg&riu=http%3a%2f%2fs03.s3c.es%2fimag%2f_v0%2f770x420%2fc%2f6%2f7%2fmatematicas-dreams.jpg&ehk=BjaviK04lTKjKmKY93ZuJwcQS7UPolzYuZPEBqzHKCs%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt="Análisis Matemático">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text-box">
+                                <h3 class="card-title">Análisis Matemático</h3>
+                                <p class="card-text">Usamos los conocimientos de la materia para implementar en la lógica y en los detalles del brazo robótico.</p>
+                                <a href="{% url 'documentacionAnalisis' %}" class="card-button">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="documentation-card">
+                        <div class="card-image">
+                            <img src="https://th.bing.com/th/id/OIP.PDhD9pFOXsrx1zGrzFILWgHaFF?rs=1&pid=ImgDetMain" alt="Emprendimiento e Innovación Tecnológica">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text-box">
+                                <h3 class="card-title">Emprendimiento e Innovación Tecnológica</h3>
+                                <p class="card-text">Utilizamos los conocimientos de esta materia para publicar el proyecto y tener una aceptación buena.</p>
+                                <a href="{% url 'documentacionEmprendimiento' %}" class="card-button">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="documentation-card">
+                        <div class="card-image">
+                            <img src="https://www.esan.edu.pe/images/blog/2016/10/10/probabilidades-principal.jpg" alt="Teoría de la Distribución y Probabilidad">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text-box">
+                                <h3 class="card-title">Teoría de la Distribución y Probabilidad</h3>
+                                <p class="card-text">Usamos los conocimientos de esta materia para la estadística del proyecto.</p>
+                                <a href="{% url 'documentacionProbabilidad' %}" class="card-button">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                <div class="documentation-card">
-                    <div class="card-image">
-                        <img src="https://4.bp.blogspot.com/-MbBkFV4pyzI/V5J6GNfR41I/AAAAAAAAByI/JN-ERBrWoOgHHdjzaXmFHXJAyIA8UAhQACLcB/s1600/POO1-450x370.jpg" alt="Programacion Orientada a Objetos">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-text-box">
-                            <h3 class="card-title">Programación Orientada a Objetos</h3>
-                            <p class="card-text">Usamos los conocimientos de la materia para poder desarrollar los códigos para el manejo del brazo robótico y para la web de el proyecto.</p>
-                            <a href="{% url 'documentacionPoo' %}" class="btn-link">Ver Documentación POO</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="documentation-card">
-                    <div class="card-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkw3INK6xm9P5eSKxSMuMpMYUZZBqMAQuQVQ&s" alt="Diseño de Circuitos">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-text-box">
-                            <h3 class="card-title">Diseño de Circuitos</h3>
-                            <p class="card-text">Usamos los conocimientos de la materia para diseñar los circuitos necesarios para alimentar el brazo robótico y sus componentes.</p>
-                            <a href="{% url 'documentacionCircuitos' %}" class="btn-link">Ver Documentación de Circuitos</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="documentation-card">
-                    <div class="card-image">
-                        <img src="https://th.bing.com/th/id/R.7c1e696a80e842ceb42ddb6b67132b9d?rik=bpTY5jf7pDeE%2bg&riu=http%3a%2f%2fs03.s3c.es%2fimag%2f_v0%2f770x420%2fc%2f6%2f7%2fmatematicas-dreams.jpg&ehk=BjaviK04lTKjKmKY93ZuJwcQS7UPolzYuZPEBqzHKCs%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt="Análisis Matemático">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-text-box">
-                            <h3 class="card-title">Análisis Matemático</h3>
-                            <p class="card-text">Usamos los conocimientos de la materia para implementar en la lógica y en los detalles del brazo robótico.</p>
-                            <a href="{% url 'documentacionAnalisis' %}" class="btn-link">Ver Documentación de Análisis Matemático</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="documentation-card">
-                    <div class="card-image">
-                        <img src="https://th.bing.com/th/id/OIP.PDhD9pFOXsrx1zGrzFILWgHaFF?rs=1&pid=ImgDetMain" alt="Emprendimiento e Innovación Tecnológica">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-text-box">
-                            <h3 class="card-title">Emprendimiento e Innovación Tecnológica</h3>
-                            <p class="card-text">Utilizamos los conocimientos de esta materia para publicar el proyecto y tener una aceptación buena.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="documentation-card">
-                    <div class="card-image">
-                        <img src="https://www.esan.edu.pe/images/blog/2016/10/10/probabilidades-principal.jpg" alt="Teoría de la Distribución y Probabilidad">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-text-box">
-                            <h3 class="card-title">Teoría de la Distribución y Probabilidad</h3>
-                            <p class="card-text">Usamos los conocimientos de esta materia para la estadística del proyecto.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="slider-thumb"></div>
         </div>
-        <div class="slider-thumb"></div>
     </div>
-</div>
 
 {% endblock %}

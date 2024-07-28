@@ -45,5 +45,7 @@ urlpatterns = [
     path('documentacionPoo/',documentacionPoo,name = "documentacionPoo"),
     path('documentacionCircuitos/',documentacionCircuitos,name = "documentacionCircuitos"),
     path('documentacionAnalisis/',documentacionAnalisis,name = "documentacionAnalisis"),
+    path('documentacionEmprendimiento/',documentacionEmprendimiento,name = "documentacionEmprendimiento"),
+    path('documentacionProbabilidad/',documentacionProbabilidad,name = "documentacionProbabilidad"),
 
 ]

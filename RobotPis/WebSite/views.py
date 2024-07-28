@@ -19,6 +19,10 @@ def documentacionCircuitos(request):
     return render(request, 'documentacionCircuitos.html')
 def documentacionAnalisis(request):
     return render(request, 'documentacionAnalisis.html')
+def documentacionEmprendimiento(request):
+    return render(request, 'documentacionEmprendimiento.html')
+def documentacionProbabilidad(request):
+    return render(request, 'documentacionProbabilidad.html')
 def funcionamiento (request):
     return render(request, 'funcionamiento.html')
 

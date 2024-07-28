@@ -1,0 +1,68 @@
+{% extends "basePage.html" %}
+{% load static %}
+
+{% block title %}
+    Teoría de la Distribución y Probabilidad en Nuestro Robot Recolector
+{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/page/docMaterias.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <h1>Teoría de la Distribución y Probabilidad en Nuestro Robot Recolector</h1>
+
+        <div class="concept">
+            <h2>Distribuciones de Probabilidad en Sensores</h2>
+            <div class="concept-content">
+                <div class="concept-text">
+                    <p>La <span class="highlight">Teoría de la Distribución y Probabilidad</span> juega un papel crucial en el análisis de datos de nuestros sensores. Aplicamos diversos modelos probabilísticos para interpretar y optimizar la información recopilada:</p>
+                    <ul>
+                        <li><strong>Distribución Normal:</strong> Utilizada para modelar las lecturas de sensores de temperatura y humedad, permitiendo identificar desviaciones significativas en las condiciones ambientales.</li>
+                        <li><strong>Distribución de Poisson:</strong> Aplicada en el análisis de la frecuencia de detección de objetos, ayudando a optimizar las rutas de recolección.</li>
+                        <li><strong>Distribución Exponencial:</strong> Empleada para modelar el tiempo entre detecciones de basura, mejorando la eficiencia en la planificación de recorridos.</li>
+                    </ul>
+                    <p>Estas distribuciones nos permiten realizar predicciones más precisas y tomar decisiones basadas en datos estadísticos robustos.</p>
+                </div>
+                <div class="concept-image">
+                    <img src="https://quizizz.com/media/resource/gs/quizizz-media/quizzes/f0efb5d5-e734-474a-bbe0-d27247305348" alt="Distribuciones de Probabilidad">
+                </div>
+            </div>
+        </div>
+
+        <div class="concept">
+            <h2>Inferencia Estadística y Toma de Decisiones</h2>
+            <div class="concept-content">
+                <div class="concept-text">
+                    <p>La <span class="highlight">inferencia estadística</span> es fundamental para interpretar los datos de nuestros sensores y tomar decisiones informadas:</p>
+                    <ul>
+                        <li><strong>Pruebas de Hipótesis:</strong> Utilizadas para determinar si las variaciones en las lecturas de los sensores son estadísticamente significativas, evitando falsos positivos en la detección de anomalías.</li>
+                        <li><strong>Intervalos de Confianza:</strong> Aplicados para estimar rangos de valores probables para parámetros críticos como la capacidad de carga y el consumo de energía.</li>
+                        <li><strong>Análisis de Regresión:</strong> Empleado para modelar relaciones entre variables, como la correlación entre la temperatura ambiente y el rendimiento de los motores.</li>
+                    </ul>
+                    <p>Estas técnicas nos permiten optimizar continuamente el rendimiento y la fiabilidad de nuestro robot recolector.</p>
+                </div>
+                <div class="concept-image">
+                    <img src="https://economipedia.com/wp-content/uploads/Teor%C3%ADa-de-la-probabilidad-1.png" alt="Inferencia Estadística">
+                </div>
+            </div>
+        </div>
+
+        <div class="concept">
+            <h2>Modelado Estocástico y Simulación</h2>
+            <div class="concept-content">
+                <div class="concept-text">
+                    <p>El <span class="highlight">modelado estocástico</span> y la simulación son herramientas poderosas que aplicamos en nuestro proyecto:</p>
+                    <ul>
+                        <li><strong>Procesos de Markov:</strong> Utilizados para modelar el comportamiento del robot en diferentes entornos, permitiendo predecir y optimizar sus movimientos.</li>
+                        <li><strong>Simulación de Monte Carlo:</strong> Empleada para evaluar el rendimiento del robot bajo diversas condiciones, ayudando a identificar áreas de mejora y estimar la vida útil de los componentes.</li>
+                        <li><strong>Teoría de Colas:</strong> Aplicada en la optimización de los procesos de recogida y descarga de residuos, minimizando los tiempos de espera y maximizando la eficiencia.</li>
+                    </ul>
+                    <p>Estas técnicas de modelado nos permiten realizar pruebas virtuales extensivas, reduciendo costos y tiempo en el desarrollo y mejora continua de nuestro robot.</p>
+                </div>
+                <div class="concept-image">
+                    <img src="https://media.istockphoto.com/id/1494003582/photo/rearranges-the-wood-cubes-to-the-same-category.jpg?s=612x612&w=0&k=20&c=DH71-Xweykb38HhUBjxfMV_qnQcUupOaMLCpD3X2CXU=" alt="Modelado Estocástico">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
