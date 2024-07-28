@@ -28,10 +28,10 @@ const buttonRight = document.getElementById('right');
 
 //VALORES PARA LOS BOTONES
 let directionValue = {
-    forward: 0,
-    backward: 0,
-    left: 0,
-    right: 0
+    forward: 'f0',
+    backward: 'b0',
+    left: 'l0',
+    right: 'r0'
 };
 
 //RESET
@@ -119,13 +119,13 @@ reset.addEventListener('click', function() {
 
 //BOTON ADELANTE
 buttonForward.addEventListener('mousedown', function() {
-    directionValue.forward = 1;
+    directionValue.forward = 'f1';
     fetchGet();
     console.log('forward: ' + directionValue.forward);
 });
 
 buttonForward.addEventListener('mouseup', function() {
-    directionValue.forward = 0;
+    directionValue.forward = 'f0';
     fetchGet();
     console.log('forward: ' + directionValue.forward);
 });
@@ -133,39 +133,39 @@ buttonForward.addEventListener('mouseup', function() {
 
 //BOTON ATRAS
 buttonBackward.addEventListener('mousedown', function() {
-    directionValue.backward = 1;
+    directionValue.backward = 'b1';
     fetchGet();
     console.log('backward: ' + directionValue.backward);
 });
 
 buttonBackward.addEventListener('mouseup', function() {
-    directionValue.backward = 0;
+    directionValue.backward = 'b0';
     fetchGet();
     console.log('backward: ' + directionValue.backward);
 });
 
 //BOTON IZQUIERDA
 buttonLeft.addEventListener('mousedown', function() {
-    directionValue.left = 1;
+    directionValue.left = 'l1';
     fetchGet();
     console.log('left: ' + directionValue.left);
 });
 
 buttonLeft.addEventListener('mouseup', function() {
-    directionValue.left = 0;
+    directionValue.left = 'l0';
     fetchGet();
     console.log('left: ' + directionValue.left);
 });
 
 //BOTON DERECHA
 buttonRight.addEventListener('mousedown', function() {
-    directionValue.right = 1;
+    directionValue.right = 'r1';
     fetchGet();
     console.log('right: ' + directionValue.right);
 });
 
 buttonRight.addEventListener('mouseup', function()   {
-    directionValue.right = 0;
+    directionValue.right = 'r0';
     fetchGet();
     console.log('right: ' + directionValue.right);
 });
@@ -175,25 +175,25 @@ document.addEventListener('keydown', function(event) {
     switch(event.key) {
         case 'w':
         case 'W':
-            directionValue.forward = 1;
+            directionValue.forward = 'f1';
             fetchGet();
             console.log('forward: start');
             break;
         case 's':
         case 'S':
-            directionValue.backward = 1;
+            directionValue.backward = 'b1';
             fetchGet();
             console.log('backward: start');
             break;
         case 'a':
         case 'A':
-            directionValue.left = 1;
+            directionValue.left = 'l1';
             fetchGet();
             console.log('left: start');
             break;
         case 'd':
         case 'D':
-            directionValue.right = 1;
+            directionValue.right = 'r1';
             fetchGet();
             console.log('right: start');
             break;
@@ -204,25 +204,25 @@ document.addEventListener('keyup', function(event) {
     switch(event.key) {
         case 'w':
         case 'W':
-            directionValue.forward = 0;
+            directionValue.forward = 'f0';
             fetchGet();
             console.log('forward: stop');
             break;
         case 's':
         case 'S':
-            directionValue.backward = 0;
+            directionValue.backward = 'b0';
             fetchGet();
             console.log('backward: stop');
             break;
         case 'a':
         case 'A':
-            directionValue.left = 0;
+            directionValue.left = 'l0';
             fetchGet();
             console.log('left: stop');
             break;
         case 'd':
         case 'D':
-            directionValue.right = 0;
+            directionValue.right = 'r0';
             fetchGet();
             console.log('right: stop');
             break;
