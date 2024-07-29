@@ -2,8 +2,8 @@
 #include <ESPAsyncWebServer.h>
 #include <HTTPClient.h>
 #include <ESP32Servo.h>
-#include <Robojax_L298N_DC_motor.h>
-#include "articulacion.h" 
+#include "Articulacion.h"
+#include "Motor.h"
 
 //CONTRASEÑA DE LA RED
 const char* ssid = "Nettplus-VChamba";
@@ -21,25 +21,8 @@ Articulacion codo(s_codo, 27);
 Articulacion muneca(s_muneca, 14);
 Articulacion pinza(s_pinza, 25);
 
-//MOTORES
-#define CHA 0
-#define ENA 19
-#define IN1 18
-#define IN2 5
-
-// motor 2 settings
-#define IN3 17
-#define IN4 16
-#define ENB 4
-#define CHB 1
-
-const int CCW = 2; // do not change
-const int CW  = 1;
-
-#define motor1 1 // do not change
-#define motor2 2
-
-Robojax_L298N_DC_motor carrito(IN1, IN2, ENA, CHA,  IN3, IN4, ENB, CHB);
+Motor motor1(19, 18, 5);
+Motor motor2(4, 17, 16);
 
 void setup() {
   Serial.begin(115200);
@@ -55,27 +38,28 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   //Inicializar los servos de la clase Articulacion
-  camera.inicializar();
+  /*camera.inicializar();
   base.inicializar();
   hombro.inicializar();
   codo.inicializar();
   muneca.inicializar();
-  pinza.inicializar();
+  pinza.inicializar();*/
+  s_base.attach(33);
 
-  carrito.begin();
-
+  motor1.inicializar();
+  motor2.inicializar();
 
   //Recibe los datos de la app por GET
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
     String cameraVal, baseVal, hombroVal, codoVal, munecaVal, pinzaVal, forwardVal, backwardVal, leftVal, rightVal;
 
     //Verifica si la app envia esos datos correctamente
-    if (request->hasParam("camera") 
-    && request->hasParam("base") 
+    if (request->hasParam("base") 
     && request->hasParam("hombro") 
     && request->hasParam("codo") 
     && request->hasParam("muneca") 
     && request->hasParam("pinza") 
+    && request->hasParam("camera") 
     && request->hasParam("forward") 
     && request->hasParam("backward") 
     && request->hasParam("left") 
@@ -89,48 +73,49 @@ void setup() {
       pinzaVal = request->getParam("pinza")->value();
 
       forwardVal = request->getParam("forward")->value();
+      Serial.println(forwardVal);
       backwardVal = request->getParam("backward")->value();
+      Serial.println(backwardVal);
       leftVal = request->getParam("left")->value();
+      Serial.println(leftVal);
       rightVal = request->getParam("right")->value();
+      Serial.println(rightVal);
 
       //Mueve los servos a los angulos que se le envian desde la app
-      camera.mover(cameraVal.toInt());
+      /*camera.mover(cameraVal.toInt());
       base.mover(baseVal.toInt());
       hombro.mover(hombroVal.toInt());
       codo.mover(codoVal.toInt());
       muneca.mover(munecaVal.toInt());
-      pinza.mover(pinzaVal.toInt());
+      pinza.mover(pinzaVal.toInt());*/
 
-      if (forwardVal == "1") {
-        carrito.rotate(motor1, 80, CW);
-        carrito.rotate(motor2, 80, CW);
-      } else {
-        carrito.brake(1);
-        carrito.brake(2);
-      }
+      s_base.write(baseVal.toInt());
+      s_camera.write(cameraVal.toInt());
+      s_hombro.write(hombroVal.toInt());
+      s_codo.write(codoVal.toInt());
+      s_muneca.write(munecaVal.toInt());
+      s_pinza.write(pinzaVal.toInt());
 
-      if (backwardVal == "1") {
-        carrito.rotate(motor1, 80, CCW);
-        carrito.rotate(motor2, 80, CCW);
+      if (forwardVal.toInt() == 1){
+        motor1.adelante();
+        motor2.adelante();
+        Serial.println("Adelante");
+      } else if (backwardVal.toInt() == 1){
+        motor1.atras();
+        motor2.atras();
+        Serial.println("Atras");
+      } else if (leftVal.toInt() == 1){
+        motor1.adelante();
+        motor2.parar();
+        Serial.println("Izquierda");
+      } else if (rightVal.toInt() == 1){
+        motor1.parar();
+        motor2.adelante();
+        Serial.println("Derecha");
       } else {
-        carrito.brake(1);
-        carrito.brake(2);
-      }
-
-      if (leftVal == "1") {
-        carrito.rotate(motor1, 80, CW);
-        carrito.rotate(motor2, 80, CCW);
-      } else {
-        carrito.brake(1);
-        carrito.brake(2);
-      }
-
-      if (rightVal == "1") {
-        carrito.rotate(motor1, 80, CCW);
-        carrito.rotate(motor2, 80, CW);
-      } else {
-        carrito.brake(1);
-        carrito.brake(2);
+        motor1.parar();
+        motor2.parar();
+        Serial.println("Parar");
       }
 
       //Respuesta del ESP32
@@ -158,7 +143,7 @@ void loop() {
 
     int httpCode = http.POST(data); //Codigo de respuesta
 
-    if (httpCode > 0) {
+      if (httpCode > 0) {
       Serial.println("Codigo de respuesta" + String(httpCode));
       if (httpCode == 200) { //200 es que se envio correctamente
         Serial.println("El servidor respondio correctamente");

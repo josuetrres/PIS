@@ -1,20 +1,7 @@
 #ifndef _ARTICULACION_H
 #define _ARTICULACION_H
 
-/**
- * @brief Clase de articulacion para el manejo de servos
- * 
- * @author Alexis Roman
- * @author Daniel Sanchez
- * @author Josue Torres
- * @author Emilio Jaramillo
- * @author Benito Minga
- * 
- * @version 0.1
- * @date 2024-02-28
- * 
- * @copyright Copyright (c) 2024
- */
+//Autores: Alexis Roman, Daniel Sanchez, Josue Torres, Emilio Jaramillo, Benito Minga
 
 #include <ESP32Servo.h>
 
@@ -55,6 +42,7 @@ public:
         }
 
         posInicial = posNueva;
+        Serial.println("Servo movido");
     }
 };
 
