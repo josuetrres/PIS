@@ -4,122 +4,140 @@
 {% block title %} Documentación {% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{% static 'css/page/documentacion.css' %}">
+<link rel="stylesheet" href="{% static 'css/page/documentacion.css' %}">
 {% endblock %}
 
 {% block content %}
-
 <div class="developers-section">
-  <div class="content-wrapper">
-    <div class="w-full bg-gradient-to-r from-[#b3e5fc] to-[#1e88e5] py-12 md:py-16 lg:py-20">
-      <div class="container">
-        <div class="titlepage">
-          <h1 id="tituloDocumentacion">Documentación</h1>
-          <p id="p1">
-            El proyecto JABED Robotics es un proyecto de la Universidad Nacional de Loja, que tiene como objetivo principal la recolección de basuras en un espacio físico.
-          </p>
-        </div>
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <div class="documentation-card">
-            <div class="card-image">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Componentes.JPG/800px-Componentes.JPG"
-                alt="Componentes"
-              />
-            </div>
-            <div class="card-content">
-              <div class="card-text-box">
-                <h3 class="card-title">Materiales</h3>
-                <p class="card-text">
-                  Materiales que se utilizarán en el proyecto.
-                </p>
-              </div>
-              <a class="card-button" href="{% url 'materiales' %}">
-                Ver más
-              </a>
-            </div>
-          </div>
-          <div class="documentation-card">
-            <div class="card-image">
-              <img
-                src="https://i.ibb.co/QF5cLxM/Imagen-de-Whats-App-2024-02-26-a-las-02-20-27-d4ad993d.jpg"
-                alt="Funcionamiento"
-              />
-            </div>
-            <div class="card-content">
-              <div class="card-text-box">
-                <h3 class="card-title">Funcionamiento</h3>
-                <p class="card-text">
-                  Funcionamiento del Proyecto de Brazo Robótico.
-                </p>
-              </div>
-              <a class="card-button" href="{% url 'funcionamiento' %}">
-                Ver más
-              </a>
-            </div>
-          </div>
-          <div class="documentation-card">
-            <div class="card-image">
-              <img
-                src="https://www.galileo.edu/fisicc/files/2020/06/preview_video_fisicc-compressor.jpg"
-                alt="Integración de Materias"
-              />
-            </div>
-            <div class="card-content">
-              <div class="card-text-box">
-                <h3 class="card-title">Integración de Materias</h3>
-                <p class="card-text">
-                  Conjunto de conocimientos que se aplicarán segmentados por materias.
-                </p>
-              </div>
-              <a class="card-button" href="{% url 'materias' %}">
-                Ver más
-              </a>
-            </div>
-          </div>
-          <div class="documentation-card">
-            <div class="card-image">
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/863/863823.png"
-                alt="Historias de Usuario"
-              />
-            </div>
-            <div class="card-content">
-              <div class="card-text-box">
-                <h3 class="card-title">Historias de Usuario</h3>
-                <p class="card-text">
-                  Historias de usuarios y requerimientos que debe tener el brazo robótico.
-                </p>
-              </div>
-              <a class="card-button" href="{% url 'historiaUsuario' %}">
-                Ver más
-              </a>
-            </div>
-          </div>
-          <div class="documentation-card">
-            <div class="card-image">
-              <img
-                src="https://th.bing.com/th/id/R.2a4f292c24f5639a888d26773915401e?rik=P043tCflC8A5Kw&pid=ImgRaw&r=0"
-                alt="Diagrama de Clases"
-              />
-            </div>
-            <div class="card-content">
-              <div class="card-text-box">
-                <h3 class="card-title">Modelos y Simulaciones</h3>
-                <p class="card-text">
-                  Diseños, modelos y simulaciones del proyecto.
-                </p>
-              </div>
-              <a class="card-button" href="{% url 'modelosysimulaciones' %}">
-                Ver más
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="slider-thumb"></div>
-  </div>
-</div>
+    <div class="content-wrapper">
+        <div class="w-full bg-gradient-to-r from-[#b3e5fc] to-[#1e88e5] py-12 md:py-16 lg:py-20">
+            <div class="container">
+                <div class="titlepage">
+                    <h1 id="tituloDocumentacion">Documentación</h1>
+                    <p id="p1">
+                        El proyecto JABED Robotics es un proyecto de la Universidad Nacional de Loja, que tiene como objetivo principal la recolección de basuras en un espacio físico.
+                    </p>
+                </div>
 
+                <div class="horizontal-cards-container">
+                    <div class="horizontal-card">
+                        <img src="{% static 'images/objetivo.png' %}" alt="Objetivo">
+                        <div class="expandable-card">
+                            <h3>Objetivos</h3>
+                            <h2>Objetivo general:</h2>
+                            <p>Desarrollar tecnología que contribuya a la sostenibilidad del medio ambiente con la implementación de un brazo robótico recolector de basura, controlado por un software web. </p>
+                            <h2>Objetivos Especificos:</h2>
+                            <p>-Diseñar un algoritmo aplicando los conceptos de programación que nos permita el desarrollo de la aplicación web, que abarcara la documentación y el correcto funcionamiento del brazo robótico.</p>
+                            <p>-Ensamblar el brazo robótico con el circuito electrónico adecuado, asegurando su fácil manipulación y comunicación efectiva con la aplicación.</p>
+                            <p>-Crear una interfaz intuitiva y accesible para la aplicación, facilitando la navegación y comprensión del proyecto por parte del usuario.</p>
+                        </div>
+                    </div>
+                    <div class="horizontal-card">
+                        <img src="{% static 'images/mision.png' %}" alt="Mision">
+                        <div class="expandable-card">
+                            <h3>Mision</h3>
+                            <br>
+                            <p>Proyectar nuestro proyecto como una solución tecnológica de control remoto para brazos robóticos articulados por
+                                servomotores programables,potenciandos u aplicación tanto en aplicaciones comerciales
+                                como en el ámbito educativo, además implementado estadísticas de uso para maximizar la
+                                productividad de los clientes.</p>
+                        </div>
+                    </div>
+                    <div class="horizontal-card">
+                        <img src="{% static 'images/vision.png' %}" alt="Card Image 3">
+                        <div class="expandable-card">
+                            <h3>Vision</h3>
+                            <br>
+                            <p> Que nuestro proyecto se consolide como un referente en tecnología para la sostenibilidad ambiental, desarrollando robots
+                                que recojan y gestionen residuos de manera eficiente en espacios urbanos y naturales, integrando soluciones de inteligencia
+                                artificial para optimizar la recolección de basura y el reciclaje, educando a las comunidades sobre prácticas ambientales responsables,
+                                siendo asi un proyecto que tambien colabore con la conservación, el monitoreo ambiental y la reducción de la huella ecológica </p>
+                        </div>
+                    </div>
+                    <div class="horizontal-card">
+                        <img src="{% static 'images/valores.png' %}" alt="Card Image 4">
+                        <div class="expandable-card">
+                            <h3>Valores</h3>
+                            <br>
+                            <p><strong>Responsabilidad:</strong> Asumimos la responsabilidad de nuestras acciones y sus impactos, actuando con integridad y ética en todas nuestras actividades.</p>
+                            <p><strong>Innovación:</strong> Fomentamos la creatividad y la innovación para desarrollar soluciones tecnológicas avanzadas que contribuyan a la sostenibilidad ambiental.</p>
+                            <p><strong>Sostenibilidad:</strong> Comprometidos con la protección del medio ambiente, promovemos prácticas sostenibles y amigables en todo nuestro proyecto.</p>
+                            <p><strong>Colaboración:</strong> Valoramos el trabajo en equipo y la colaboración interdisciplinaria para alcanzar objetivos comunes y superar desafíos complejos.</p>
+                            <p><strong>Educación:</strong> Creemos en la importancia de la educación y la divulgación científica para concienciar a las comunidades sobre prácticas ambientales responsables.</p>
+                            <p><strong>Calidad:</strong> Nos esforzamos por alcanzar la excelencia en cada aspecto de nuestro proyecto, garantizando una funcionalidad de alta calidad.</p>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cards Grid -->
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <!-- Cards existentes aquí -->
+                    <div class="documentation-card">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Componentes.JPG/800px-Componentes.JPG" alt="Componentes" />
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text-box">
+                                <h3 class="card-title">Materiales</h3>
+                                <p class="card-text">Materiales que se utilizarán en el proyecto.</p>
+                            </div>
+                            <a class="card-button" href="{% url 'materiales' %}">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="documentation-card">
+                        <div class="card-image">
+                            <img src="https://i.ibb.co/QF5cLxM/Imagen-de-Whats-App-2024-02-26-a-las-02-20-27-d4ad993d.jpg" alt="Funcionamiento" />
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text-box">
+                                <h3 class="card-title">Funcionamiento</h3>
+                                <p class="card-text">Funcionamiento del Proyecto de Brazo Robótico.</p>
+                            </div>
+                            <a class="card-button" href="{% url 'funcionamiento' %}">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="documentation-card">
+                        <div class="card-image">
+                            <img src="https://www.galileo.edu/fisicc/files/2020/06/preview_video_fisicc-compressor.jpg" alt="Integración de Materias" />
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text-box">
+                                <h3 class="card-title">Integración de Materias</h3>
+                                <p class="card-text">Conjunto de conocimientos que se aplicarán segmentados por materias.</p>
+                            </div>
+                            <a class="card-button" href="{% url 'materias' %}">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="documentation-card">
+                        <div class="card-image">
+                            <img src="https://cdn-icons-png.flaticon.com/128/863/863823.png" alt="Historias de Usuario" />
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text-box">
+                                <h3 class="card-title">Historias de Usuario</h3>
+                                <p class="card-text">Historias de usuarios y requerimientos que debe tener el brazo robótico.</p>
+                            </div>
+                            <a class="card-button" href="{% url 'historiaUsuario' %}">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="documentation-card">
+                        <div class="card-image">
+                            <img src="https://th.bing.com/th/id/R.2a4f292c24f5639a888d26773915401e?rik=P043tCflC8A5Kw&pid=ImgRaw&r=0" alt="Diagrama de Clases" />
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text-box">
+                                <h3 class="card-title">Modelos y Simulaciones</h3>
+                                <p class="card-text">Diseños, modelos y simulaciones del proyecto.</p>
+                            </div>
+                            <a class="card-button" href="{% url 'modelosysimulaciones' %}">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-thumb"></div>
+    </div>
+</div>
 {% endblock %}
+

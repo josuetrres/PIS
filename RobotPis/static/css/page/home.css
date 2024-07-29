@@ -222,7 +222,7 @@
     height: 100%;
 }
 @keyframes fadeSlide {
-    0%, 35% { transform: translateX(0%); }    /* Primera tarjeta */
+    0%, 35% { transform: translateX(0%); }   
     40%, 65% { transform: translateX(-100%); } 
     70%, 100% { transform: translateX(-200%); } 
     
@@ -234,7 +234,7 @@
     justify-content: center;
     margin-top: 20px;
     padding: 25px;
-    animation: fadeSlide 20s infinite alternate ease-in-out;
+    animation: fadeSlide 10s infinite alternate ease-in-out;
     transition: opacity 1s ease-in-out;
     min-width: 100%;
 }
