@@ -100,7 +100,18 @@
       }
    </script>
    <script src="https://www.chatbase.co/embed.min.js" chatbotId="nQzfBMH7IMewQKo-bmzfG" domain="www.chatbase.co" defer></script>
-   
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+    const menuButton = document.getElementById('menu-responsive');
+    const navList = document.getElementById('nav-list');
+
+    menuButton.addEventListener('click', function() {
+        navList.classList.toggle('show');
+    });
+});
+
+   </script>
+
    {% block scripts %}
    {% endblock %}
 </body>
