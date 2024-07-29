@@ -16,7 +16,7 @@ def control(request):
         left = request.GET['left']
         right = request.GET['right']
 
-        esp32_ip = 'http://192.168.0.13' # Cambia a la IP de tu ESP32
+        esp32_ip = 'http://10.20.138.171xxxxz' # Cambia a la IP de tu ESP32
         response = requests.get(f'{esp32_ip}/?base={base}&hombro={hombro}&codo={codo}&muneca={muneca}&pinza={pinza}&camera={camera}&forward={forward}&backward={backward}&left={left}&right={right}')
 
         return HttpResponse(f'Servomotores movidos', content_type='text/plain')

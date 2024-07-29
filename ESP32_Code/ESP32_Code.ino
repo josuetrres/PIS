@@ -2,27 +2,39 @@
 #include <ESPAsyncWebServer.h>
 #include <HTTPClient.h>
 #include <ESP32Servo.h>
-#include "Articulacion.h"
 #include "Motor.h"
 
 //CONTRASEÑA DE LA RED
-const char* ssid = "Nettplus-VChamba";
-const char* password = "Vchamba26";
+const char* ssid = "Internet_UNL";
+const char* password = "UNL1859WiFi";
 
 AsyncWebServer server(80); //Inicia un server que recibe datos de la app en el puerto 80
 
-Servo s_camera, s_base, s_hombro, s_codo, s_muneca, s_pinza;
+Servo s_camera, s_base, s_hombro, s_codo, s_muneca, s_pinza, s_radar;
+int posCamera = 90, posBase = 90, posHombro = 90, posCodo = 90, posMuneca = 90, posPinza = 90, posRadar = 90;
 
-//Se crean los objetos de la clase Articulacion
-Articulacion camera(s_camera, 32);
-Articulacion base(s_base, 33);
-Articulacion hombro(s_hombro, 26);
-Articulacion codo(s_codo, 27);
-Articulacion muneca(s_muneca, 14);
-Articulacion pinza(s_pinza, 25);
+Motor motor1(18, 5);
+Motor motor2(17, 16);
 
-Motor motor1(19, 18, 5);
-Motor motor2(4, 17, 16);
+void iniciarServo(Servo &servo, int pin, int pos = 90){
+  servo.attach(pin);
+  servo.write(pos);
+}
+
+void moverServo(Servo &servo, int &posAnt, int posNew, int velocidad = 20){
+  if (posAnt > posNew) {
+      for (int i = posAnt; i >= posNew; i--) {
+          servo.write(i);
+          delay(velocidad);
+      }
+  } else {
+      for (int i = posAnt; i <= posNew; i++) {
+          servo.write(i);
+          delay(velocidad);
+      }
+  }
+  posAnt = posNew;
+}
 
 void setup() {
   Serial.begin(115200);
@@ -37,14 +49,13 @@ void setup() {
   Serial.println("Connected to WiFi");
   Serial.println(WiFi.localIP());
 
-  //Inicializar los servos de la clase Articulacion
-  /*camera.inicializar();
-  base.inicializar();
-  hombro.inicializar();
-  codo.inicializar();
-  muneca.inicializar();
-  pinza.inicializar();*/
-  s_base.attach(33);
+  iniciarServo(s_camera, 32, posCamera);
+  iniciarServo(s_base, 33, posBase);
+  iniciarServo(s_hombro, 27, posHombro);
+  iniciarServo(s_codo, 14, posCodo);
+  iniciarServo(s_muneca, 12, posMuneca);
+  iniciarServo(s_pinza, 13, posPinza);
+  iniciarServo(s_radar, 2, posRadar);
 
   motor1.inicializar();
   motor2.inicializar();
@@ -73,28 +84,24 @@ void setup() {
       pinzaVal = request->getParam("pinza")->value();
 
       forwardVal = request->getParam("forward")->value();
-      Serial.println(forwardVal);
       backwardVal = request->getParam("backward")->value();
-      Serial.println(backwardVal);
       leftVal = request->getParam("left")->value();
-      Serial.println(leftVal);
       rightVal = request->getParam("right")->value();
-      Serial.println(rightVal);
 
       //Mueve los servos a los angulos que se le envian desde la app
-      /*camera.mover(cameraVal.toInt());
-      base.mover(baseVal.toInt());
-      hombro.mover(hombroVal.toInt());
-      codo.mover(codoVal.toInt());
-      muneca.mover(munecaVal.toInt());
-      pinza.mover(pinzaVal.toInt());*/
-
-      s_base.write(baseVal.toInt());
-      s_camera.write(cameraVal.toInt());
-      s_hombro.write(hombroVal.toInt());
-      s_codo.write(codoVal.toInt());
-      s_muneca.write(munecaVal.toInt());
-      s_pinza.write(pinzaVal.toInt());
+      moverServo(s_base, posBase, baseVal.toInt());
+      Serial.println(baseVal);
+      moverServo(s_camera, posCamera, cameraVal.toInt());
+      Serial.println(cameraVal);
+      moverServo(s_hombro, posHombro, hombroVal.toInt());
+      Serial.println(hombroVal);
+      moverServo(s_codo, posCodo, codoVal.toInt());
+      Serial.println(codoVal);
+      moverServo(s_muneca, posMuneca, munecaVal.toInt());
+      Serial.println(munecaVal);
+      moverServo(s_pinza, posPinza, pinzaVal.toInt());
+      Serial.println(pinzaVal);
+      moverServo(s_radar, posRadar, 90);
 
       if (forwardVal.toInt() == 1){
         motor1.adelante();
