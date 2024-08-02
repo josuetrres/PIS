@@ -1,14 +1,14 @@
-#ifndef _MOTOR_H
-#define _MOTOR_H
+#ifndef _CONTROLADORMOTOR_H
+#define _CONTROLADORMOTOR_H
 
 //Autores: Alexis Roman, Daniel Sanchez, Josue Torres, Emilio Jaramillo, Benito Minga
 
-class Motor {
+class ControladorMotor {
 private:
     int in1;
     int in2;
 public:
-    Motor(int _in1, int _in2){
+    ControladorMotor(int _in1, int _in2){
         in1 = _in1;
         in2 = _in2;
     }
