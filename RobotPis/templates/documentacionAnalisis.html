@@ -1,0 +1,106 @@
+{% extends "basePage.html" %}
+{% load static %}
+
+{% block title %}
+    Análisis Matemático
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/page/docMaterias.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Análisis Matemático en Nuestro Robot Recolector</h1>
+
+        <div class="concept">
+            <h2>1. Funciones y sus Gráficas</h2>
+            <div class="concept-content">
+                <div class="concept-text">
+                    <p>El estudio de <span class="highlight">funciones y sus gráficas</span> fue fundamental para:</p>
+                    <ul>
+                        <li>Modelar el movimiento del brazo robótico en diferentes planos.</li>
+                        <li>Representar las trayectorias de recolección de basura.</li>
+                        <li>Analizar la eficiencia del robot en diferentes terrenos.</li>
+                    </ul>
+                    <p>Aplicamos conceptos de dominio y rango para definir los límites operativos del robot, y utilizamos funciones compuestas para describir secuencias complejas de movimientos.</p>
+                </div>
+                <div class="concept-image">
+                    <img src="https://th.bing.com/th/id/R.9c56656402dde60b1282dac3e0a00db6?rik=6eoJHm%2fF5xLOeg&pid=ImgRaw&r=0" alt="Funciones y Gráficas">
+                </div>
+            </div>
+        </div>
+
+        <div class="concept">
+            <h2>2. Límites y Continuidad</h2>
+            <div class="concept-content">
+                <div class="concept-text">
+                    <p>Los conceptos de <span class="highlight">límites y continuidad</span> se aplicaron para:</p>
+                    <ul>
+                        <li>Analizar el comportamiento del robot en situaciones extremas.</li>
+                        <li>Optimizar la transición entre diferentes modos de operación.</li>
+                        <li>Asegurar un movimiento suave y continuo del brazo robótico.</li>
+                    </ul>
+                    <p>Utilizamos límites por la derecha e izquierda para prever y manejar discontinuidades en el terreno o en la distribución de la basura.</p>
+                </div>
+                <div class="concept-image">
+                    <img src="https://4.bp.blogspot.com/-50-gbFzMsoI/Ws5lWDfxfOI/AAAAAAAAAGw/tCfZ-IyVn8kmqPLsZaRO3_nV7HbCMqQAACLcBGAs/s1600/13225259-male-teacher-writing-various-high-school-maths-and-science-formula-on-whiteboard.jpg" alt="Límites y Continuidad">
+                </div>
+            </div>
+        </div>
+
+        <div class="concept">
+            <h2>3. Derivadas y sus Aplicaciones</h2>
+            <div class="concept-content">
+                <div class="concept-text">
+                    <p>Las <span class="highlight">derivadas</span> fueron esenciales para:</p>
+                    <ul>
+                        <li>Calcular velocidades y aceleraciones instantáneas del robot.</li>
+                        <li>Optimizar la eficiencia energética del movimiento.</li>
+                        <li>Implementar control de precisión en el brazo robótico.</li>
+                    </ul>
+                    <p>Aplicamos métodos de derivación, incluyendo diferenciación implícita y logarítmica, para analizar y mejorar el rendimiento del robot en tiempo real.</p>
+                </div>
+                <div class="concept-image">
+                    <img src="https://media.licdn.com/dms/image/C5612AQEENgb7UIdeKA/article-cover_image-shrink_600_2000/0/1520102476485?e=2147483647&v=beta&t=19cofuP-iQiXUat9Vup9QntpWzYtHdtVYTxjYN965do" alt="Derivadas">
+                </div>
+            </div>
+        </div>
+
+        <div class="concept">
+            <h2>4. Integración y sus Aplicaciones</h2>
+            <div class="concept-content">
+                <div class="concept-text">
+                    <p>La <span class="highlight">integración</span> se utilizó para:</p>
+                    <ul>
+                        <li>Calcular el área total cubierta durante la operación del robot.</li>
+                        <li>Determinar el volumen de basura recolectada a lo largo del tiempo.</li>
+                        <li>Analizar el consumo de energía acumulado.</li>
+                    </ul>
+                    <p>Implementamos diversos métodos de integración, incluyendo integración numérica e hiperbólica, para evaluar la eficiencia global del robot en diferentes escenarios.</p>
+                </div>
+                <div class="concept-image">
+                    <img src="https://images.theconversation.com/files/174499/original/file-20170619-12429-1gk46ay.jpg?ixlib=rb-1.1.0&q=30&auto=format&w=600&h=400&fit=crop&dpr=2" alt="Integración">
+                </div>
+            </div>
+        </div>
+
+        <div class="concept">
+            <h2>5. Integrales Múltiples</h2>
+            <div class="concept-content">
+                <div class="concept-text">
+                    <p>Las <span class="highlight">integrales múltiples</span> se aplicaron para:</p>
+                    <ul>
+                        <li>Calcular volúmenes complejos de basura en diferentes contenedores.</li>
+                        <li>Analizar la distribución espacial de la basura en áreas extensas.</li>
+                        <li>Optimizar rutas de recolección en espacios tridimensionales.</li>
+                    </ul>
+                    <p>Utilizamos integrales dobles y triples para modelar y analizar escenarios complejos de recolección, mejorando la eficiencia operativa del robot.</p>
+                </div>
+                <div class="concept-image">
+                    <img src="https://images.ctfassets.net/o2gysnvd04sg/2N1GDfuMFjaS9rn84SyfmM/1f754a73b9bd0235f3148539353d5e7b/calculate-borrowing-power.jpg" alt="Integrales Múltiples">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

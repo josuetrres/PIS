@@ -1,0 +1,89 @@
+{% extends "baseControl.html" %}
+{% load static %}
+
+{% block title %}Control de Servomotor{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/control/control.css" %}">
+{% endblock %}
+
+{% block content %}
+    <header>
+        <h1>Control</h1>
+    </header>
+        
+    <section id="control">
+        <div id="vision-tools-container">
+            <div id="camera-container">
+                <img id="video-stream" src="http://10.20.138.123:81/stream">
+                <div id="camera-slider">
+                    <input type="range" id="camera" name="camera" min="0" max="180" value="90">
+                    <span id="anguloCam">{{ camera }}</span>
+                </div>
+                <div id="camera-buttons">
+                    <button id="increment_camera" type="button">
+                        <span class="material-symbols-outlined">arrow_forward_ios</span>
+                    </button>
+                    <button id="decrement_camera" type="button">
+                        <span class="material-symbols-outlined">arrow_back_ios</span>
+                    </button>
+                </div>
+            </div>
+        
+            <div id="radar-container">
+                <div class="radar">
+                    <img src="{% static "images/radar_bg.png" %}" alt="Radar">
+                    <div class="line"></div>
+                    <div class="dot" id="dot"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="control-container">
+            <form method="get" id="form-control">
+                <label for="base">Base:</label>
+                <input type="range" id="base" name="base" min="0" max="180" value="90">
+                <span id="anguloBas">{{ base }}</span>
+        
+                <label for="hombro">Hombro:</label>
+                <input type="range" id="hombro" name="hombro" min="0" max="180" value="90">
+                <span id="anguloHom">{{ hombro }}</span>
+        
+                <label for="codo">Codo:</label>
+                <input type="range" id="codo" name="codo" min="0" max="180" value="90">
+                <span id="anguloCod">{{ codo }}</span>
+        
+                <label for="muneca">Muñeca:</label>
+                <input type="range" id="muneca" name="muneca" min="0" max="180" value="90">
+                <span id="anguloMun">{{ muneca }}</span>
+        
+                <label for="pinza">Pinza:</label>
+                <input type="range" id="pinza" name="pinza" min="0" max="180" value="90">
+                <span id="anguloPin">{{ pinza }}</span>
+
+                <div id="car-controls">
+                    <div class="car-buttons-grid">
+                        <button id="forward" type="button" class="car-button">
+                            <svg viewBox="0 0 24 24" class="arrow-icon"><path d="M12 2L4 10h6v12h4V10h6z"/></svg>
+                        </button>
+                        <button id="left" type="button" class="car-button">
+                            <svg viewBox="0 0 24 24" class="arrow-icon"><path d="M10 4L2 12l8 8v-6h12v-4H10z"/></svg>
+                        </button>
+                        <button id="right" type="button" class="car-button">
+                            <svg viewBox="0 0 24 24" class="arrow-icon"><path d="M14 4l8 8-8 8v-6H2v-4h12z"/></svg>
+                        </button>
+                        <button id="backward" type="button" class="car-button">
+                            <svg viewBox="0 0 24 24" class="arrow-icon"><path d="M12 22l8-8h-6V2h-4v12H4z"/></svg>
+                        </button>
+                    </div>
+                    <button id="reset" type="reset" class="reset-button">Limpiar</button>
+                </div>
+            </form>    
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %} 
+    <script src="{% static "js/control.js" %}"></script>
+    <script src="{% static "js/radar.js" %}"></script>
+{% endblock %}

@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Orbitron:wght@700&family=Raleway:wght@700&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: black;
+    overflow-x: hidden;
+    color: white;
+    
+}
+
+header {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+}
+
+#logo {
+    display: none;
+    margin: 0 10px;
+    width: 15%;
+    /*
+    top: 0;
+    z-index: 1000;
+    position: absolute;
+    */
+}
+
+#menu-responsive {
+    display: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.0);
+    
+    position: absolute;
+    top: 10px;
+    z-index: 1000;
+
+}
+
+#link-container {
+    background-color: transparent;
+    border-radius: 30px;
+    height: 100%;
+}
+
+#nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    margin: 5px;
+    padding: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    border-radius: 30px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: #376297;
+    transform: translateY(-5px);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+#control {
+    height: 40px;
+    padding: 0px 15px;
+}
+
+#control:hover {
+    background-color: #A9B1E1;
+}
+
+#control a {
+    color: white;
+}
+
+#control a:hover {
+    color: #202236;
+}
+
+.content {
+    padding: 20px 0px 0px 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:black;
+    color: white;
+    padding: 10px;
+    margin: 30px 0;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white; /* Asegura que el color del texto sea blanco, ya está definido pero lo incluyo por claridad */
+}
+
+#contacto-container {
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+#contacto {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacto-item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.contacto-item a {
+    color: white;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        position: static;
+        justify-content: space-between;
+    }
+
+    #menu-responsive {
+        display: block;
+        font-size: 30px;
+        margin-right: 20px;
+    }
+
+    #nav-list {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 999;
+    }
+
+    .nav-item {
+        margin: 20px 0;
+    }
+
+    #nav-list.show {
+        display: flex;
+    }
+}
+

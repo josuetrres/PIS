@@ -1,31 +1,41 @@
 {% extends "basePage.html" %}
+{% load static %}
 
-{% block title %}
-Testimonios
+{% block title %}Testimonios{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/page/testimonios.css' %}">
 {% endblock %}
 
 {% block content %}
-<div id="contact" class="contact">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <form id="request" class="main_form" method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button class="send_btn">Enviar</button>
-                </form>
-            </div>
+        <div class="testimonials-section">
+            <h1 class="section-title">Testimonios de Nuestros Clientes</h1>
+
+            {% for testimonio in testimonios %}
+                <div class="testimonial-item">
+                    <p class="testimonial-content">"{{ testimonio.mensaje }}"</p>
+                    <p class="testimonial-author">{{ testimonio.nombre }}</p>
+                    <p class="testimonial-date">{{ testimonio.fecha }}</p>
+                </div>
+                {% empty %}
+                <p style="text-align: center; font-style: italic;">Aún no hay testimonios. ¡Sé el primero en compartir tu experiencia!</p>
+            {% endfor %}
         </div>
-        <div id="testimonios">
-            <h2>Testimonios</h2>
-        
-            <ul>
-                {% for testimonio in testimonios %}
-                    <li><strong>{{ testimonio.nombre }}</strong>: {{ testimonio.mensaje }} <em>({{ testimonio.fecha }})</em></li>
+
+        <div class="form-section">
+            <h2 class="form-title">Comparte Tu Experiencia</h2>
+            <form id="testimonialForm" method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                    </div>
                 {% endfor %}
-            </ul>
+                <button type="submit">Enviar Testimonio</button>
+            </form>
         </div>
     </div>
-    
-</div>
 {% endblock %}
+

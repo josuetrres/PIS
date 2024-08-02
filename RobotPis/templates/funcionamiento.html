@@ -1,53 +1,39 @@
 {% extends "basePage.html" %}
+
 {% load static %}
 
-{% block title %}
-Funcionamiento
-{% endblock  %}
+{% block title %}Funcionamiento{% endblock %}
 
 {% block styles %}
-{% endblock  %}
+    <link rel="stylesheet" href="{% static 'css/page/documentacion.css' %}">
+{% endblock %}
 
 {% block content %}
-<section class="banner_main">
-    <div id="banner1" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#banner1" data-slide-to="0" class="active"></li>
-          <li data-target="#banner1" data-slide-to="1"></li>
-          <li data-target="#banner1" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <div class="text-bg">
-                            <h1> <span class="blu">Funcionamiento de Proyecto <br></span>Funcionamiento de Brazo Robotico</h1>
-                            <figure >
-                                <iframe src="https://drive.google.com/file/d/147hK-8u0G1-z9jQZ_6aogLQ3BdN4Jfb-/preview" width="80%" height="500px" allow="autoplay"></iframe>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <div class="text-bg">
-                            <h1> <span class="blu">Funcionamiento de Proyecto <br></span>Funcionamiento de Brazo Robotico</h1>
-                            <figure >
-                                <iframe src="https://drive.google.com/file/d/1Dkajbhot2xR25mzid7SmvgagVDVJlSGO/preview" width="80%" height="500px" allow="autoplay"></iframe>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        </a>
-        <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
-        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-        </a>
+<div class="titlepage">
+    <h1 id="tituloDocumentacion">Funcionamiento del Proyecto</h1>
+    <div class="texto">
+        <p id="p1">Aquí se muestra el funcionamiento del brazo robótico.</p>
     </div>
-</section>
+</div>
+
+<div class="single-column-container">
+    <div class="documentation-card">
+        <div class="glasses_box">
+            <figure class="video-container">
+                <iframe src="https://drive.google.com/file/d/147hK-8u0G1-z9jQZ_6aogLQ3BdN4Jfb-/preview" allow="autoplay"></iframe>
+            </figure>
+            <h3><span class="blu">-</span>Funcionamiento del Brazo Robótico 1</h3>
+        </div>
+    </div>
+    <div class="documentation-card">
+        <div class="glasses_box">
+            <figure class="video-container">
+                <iframe src="https://drive.google.com/file/d/1Dkajbhot2xR25mzid7SmvgagVDVJlSGO/preview" allow="autoplay"></iframe>
+            </figure>
+            <h3><span class="blu">-</span>Funcionamiento del Brazo Robótico 2</h3>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
+

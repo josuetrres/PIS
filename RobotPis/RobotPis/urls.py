@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from BrazoRobotico.views import home, servo, articulacion, servodetail
 from Carrito.views import controladorMotor, motorDC
 from WebSite.views import *
@@ -20,12 +20,19 @@ urlpatterns = [
     path('desarrolladores/', desarrolladores, name='desarrolladores'),
     path('documentacion/', documentacion, name='documentacion'),
     path('funcionamiento/', funcionamiento, name='funcionamiento'),
-    path('diagramaClases/', diagramaClases, name='diagramaClases'),
+    path('modelosysimulaciones/', modelosysimulaciones, name='modelosysimulaciones'),
     path('sensores/', sensor, name='sensores'),
     path('sensores/<int:id>/', sensorDetail, name='sensorDetail'),
     path('materias/', materias, name='materias'),
     path('historiaUsuario/', historiaUsuario, name='historiaUsuario'),
-    path('video-upload/', video_upload, name='video_upload'),
+    path('control/', control, name='control'),
+    path('estadisticas/', estadisticas, name='estadisticas'),
+    path('api/', include('api.urls')),
+    path('documentacionPoo/',documentacionPoo,name = "documentacionPoo"),
+    path('documentacionCircuitos/',documentacionCircuitos,name = "documentacionCircuitos"),
+    path('documentacionAnalisis/',documentacionAnalisis,name = "documentacionAnalisis"),
+    path('documentacionEmprendimiento/',documentacionEmprendimiento,name = "documentacionEmprendimiento"),
+    path('documentacionProbabilidad/',documentacionProbabilidad,name = "documentacionProbabilidad"),
 ]
 
 # Esta línea es la que debes agregar para servir archivos multimedia durante el desarrollo

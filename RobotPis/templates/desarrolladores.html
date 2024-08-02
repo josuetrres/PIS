@@ -1,63 +1,63 @@
 {% extends "basePage.html" %}
+{% load static %}
 
-{% block title %}Desarrolladores:{% endblock %}
+{% block title %}Desarrolladores{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/page/desarrolladores.css' %}">
+{% endblock %}
 
 {% block content %}
+    <div class="developers-section">
+        <div class="slider-thumb"></div>
+        <div class="content-wrapper">
+            <div class="titlepage">
+                <h1 id="tituloDesarrolladores">Desarrolladores</h1>
+                <p id="p1">Los desarrolladores de este proyecto son los estudiantes de segundo ciclo de la carrera de computación de la Universidad Nacional de Loja-Ecuador.</p>
+            </div>
 
-
-    <div class="glasses">
-        <div class="container">
-           <div class="row">
-              <div class="col-md-10 offset-md-1">
-                 <div class="titlepage">
-                    <h2 id= "tituloDesarrolladores">Desarrolladores:</h2>
-                    <p id= "p1">Los desarrolladores de este proyecto son los estudiantes de segundo ciclo
-                     de la carrera de computación de la Universidad Nacional de Loja-Ecuador.</p>
-                 </div>
-              </div>
-           </div>
+            <div class="card-container">
+                <a href="https://www.instagram.com/daniiel.yf?igsh=ZWMxYWhnY2NibnNu" target="_blank" class="card">
+                    <img src="https://i.ibb.co/7SD8pm9/danielS.jpg" alt="Holguer Daniel Sánchez Valle"/>
+                    <div class="card-text">
+                        <h3>Holguer Daniel Sánchez Valle</h3>
+                        <p>Estudiante Universidad Nacional de Loja</p>
+                    </div>
+                </a>
+            
+                <a href="https://www.instagram.com/alexis_romaan/" target="_blank" class="card">
+                    <img src="https://i.ibb.co/XSmdmxs/tuy.jpg" alt="Alexis Vinicio Román Avila"/>
+                    <div class="card-text">
+                        <h3>Alexis Vinicio Román Avila</h3>
+                        <p>Estudiante Universidad Nacional de Loja</p>
+                    </div>
+                </a>
+            
+                <a href="https://www.instagram.com/mbenito_chalan/" target="_blank" class="card">
+                    <img src="https://i.ibb.co/L01JwBx/IMG-20240221-070614-508.jpg" alt="Manuel Benito Minga Chalán"/>
+                    <div class="card-text">
+                        <h3>Manuel Benito Minga Chalán</h3>
+                        <p>Estudiante Universidad Nacional de Loja</p>
+                    </div>
+                </a>
+            
+                <a href="https://www.instagram.com/emilio.j.4/" target="_blank" class="card">
+                    <img src="https://i.ibb.co/WcbyMB7/Imagen-de-Whats-App-2024-07-29-a-las-00-40-18-be02fe09.jpg" alt="Emilio Ramiro Jaramillo Chamba"/>
+                    <div class="card-text">
+                        <h3>Emilio Ramiro Jaramillo Chamba</h3>
+                        <p>Estudiante Universidad Nacional de Loja</p>
+                    </div>
+                </a>
+            
+                <a href="https://www.instagram.com/josue__.t/" target="_blank" class="card">
+                    <img src="https://i.ibb.co/88TrgQh/iourt.jpg" alt="Josue Rodolfo Torres Guiracocha"/>
+                    <div class="card-text">
+                        <h3>Josue Rodolfo Torres Guiracocha</h3>
+                        <p>Estudiante Universidad Nacional de Loja</p>
+                    </div>
+                </a>
+            </div>
+            
         </div>
-        <div class="container-fluid">
-           <div class="row">
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                 <div class="glasses_box">
-                    <figure><img src="https://i.ibb.co/7SD8pm9/danielS.jpg" alt="#"/></figure>
-                    <h3><span class="blu">-</span>Holguer Daniel Sánchez Valle</h3>
-                    <p>Estudiante Univesidad Nacional de Loja</p>
-                 </div>
-              </div>
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                 <div class="glasses_box">
-                    <figure><img src="https://i.ibb.co/XSmdmxs/tuy.jpg" alt="#"/></figure>
-                    <h3><span class="blu">-</span>Alexis Vinicio Román Avila</h3>
-                    <p>Estudiante Univesidad Nacional de Loja</p>
-                 </div>
-              </div>
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                 <div class="glasses_box">
-                    <figure><img src="https://i.ibb.co/L01JwBx/IMG-20240221-070614-508.jpg" alt="#"/></figure>
-                    <h3><span class="blu">-</span>Manuel Benito Minga Chalán</h3>
-                    <p>Estudiante Univesidad Nacional de Loja</p>
-                 </div>
-              </div>
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                 <div class="glasses_box">
-                    <figure><img src="https://i.ibb.co/X3ZpFwd/Imagen-de-Whats-App-2024-06-07-a-las-00-28-28-41b9c933.jpg" alt="#"/></figure>
-                    <h3><span class="blu">-</span>Emilio Ramiro Jaramillo Chamba</h3>
-                    <p>Estudiante Univesidad Nacional de Loja</p>
-                 </div>
-              </div>
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                 <div class="glasses_box">
-                    <figure><img src="https://i.ibb.co/88TrgQh/iourt.jpg" alt="#"/></figure>
-                    <h3><span class="blu">-</span>Josue Rodolfo Torres Guiracocha</h3>
-                    <p>Estudiante Univesidad Nacional de Loja</p>
-                 </div>
-              </div>
-              
-           </div>
-        </div>
-     </div>
-
-    
+    </div>
 {% endblock %}
