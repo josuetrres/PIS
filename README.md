@@ -9,8 +9,8 @@ INTEGRANTES:
 
 ---
 **DIAGRAMA DE CLASES:**  
-  
-![PIS](https://github.com/josuetrres/PIS/assets/166523266/66bca65e-eeb0-44f2-ab53-42f265d3af67)
+  ![Diagrama_clases](https://github.com/user-attachments/assets/00072377-32f3-438f-8f13-e1c79aac015b)
+
 
 ---
 # Carácteristicas del sitio web
